@@ -1,0 +1,10 @@
+@each $value in right, left, none {
+  .float-#{$value} {
+    float: $value;
+  }
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}

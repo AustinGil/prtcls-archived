@@ -1,0 +1,36 @@
+@each $color in white, black, transparent {
+  @include withVariants("color-#{$color}") {
+    color: $color;
+  }
+  @include withVariants("bg-#{$color}") {
+    background-color: $color;
+  }
+}
+
+@each $color in $colors {
+  @for $i from 1 through 9 {
+    $name: nth($color, 1);
+    $h: nth($color, 2);
+    $s: 70%;
+    $l: 100 - ($i * 10) * 1%;
+
+    @if length($color) > 2 {
+      $s: nth($color, 3);
+    }
+    @if $name == "gray" {
+      $s: 0;
+    }
+
+    @include withVariants("color-#{$name}-#{$i}") {
+      color: hsl($h, $s, $l);
+    }
+
+    @include withVariants("bg-#{$name}-#{$i}") {
+      background-color: hsl($h, $s, $l);
+    }
+
+    @include withVariants("border-#{$name}-#{$i} ") {
+      border-color: hsl($h, $s, $l);
+    }
+  }
+}

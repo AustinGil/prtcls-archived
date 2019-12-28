@@ -1,0 +1,50 @@
+.display-none {
+  display: none;
+}
+
+$displays: inline, block, inline-block, flex, inline-flex, grid, inline-grid, table, table-row,
+  table-cell;
+@for $i from 1 through length($displays) {
+  $value: nth($displays, $i);
+  .#{$value} {
+    display: $value;
+  }
+}
+
+@for $i from 0 through 10 {
+  $value: $i * 0.1;
+  .opacity-#{$i} {
+    opacity: $value;
+  }
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@each $value in auto, hidden, visible, scroll {
+  .overflow-#{$value} {
+    overflow: $value;
+  }
+  .overflow-x-#{$value} {
+    overflow-x: $value;
+  }
+  .overflow-y-#{$value} {
+    overflow-y: $value;
+  }
+}

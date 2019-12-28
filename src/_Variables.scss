@@ -1,0 +1,7 @@
+$breakpoints: 40rem, 48rem, 64rem, 80rem !default;
+
+$pseudos: hover, focus, (within, focus-within), active, visited, disabled, (first, first-child),
+  (last, last-child), (even, nth-child(even)), (odd, nth-child(odd)) !default;
+
+$colors: ("gray", 0), ("red", 0), ("orange", 25), ("yellow", 55), ("green", 110), ("cyan", 170),
+  ("blue", 210), ("purple", 270), ("pink", 300) !default;

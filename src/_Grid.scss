@@ -1,0 +1,56 @@
+/**
+ * NOTE: Display is defined in Display.scss
+ * NOTE: Algin and Justify are defined in Flex.scss
+ */
+
+.grid {
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+$gridColumns: 2, 3, 4, 5, 6, 7, 8 !default;
+@for $i from 1 through length($gridColumns) {
+  $count: nth($gridColumns, $i);
+  .columns-#{$count} {
+    grid-template-columns: repeat($count, 1fr);
+  }
+  .rows-#{$count} {
+    grid-template-rows: repeat($count, 1fr);
+  }
+}
+
+.column-gap-0,
+.gap-0 {
+  grid-column-gap: 0;
+}
+.row-gap-0,
+.gap-0 {
+  grid-row-gap: 0;
+}
+$gaps: 0.25rem, 0.5rem, 1rem, 1.5rem, 2rem, 3rem, 4rem, 6rem !default;
+@for $i from 1 through length($gaps) {
+  .column-gap-#{$i},
+  .gap-#{$i} {
+    grid-column-gap: nth($gaps, $i);
+  }
+
+  .row-gap-#{$i},
+  .gap-#{$i} {
+    grid-row-gap: nth($gaps, $i);
+  }
+}
+
+.column-span-full {
+  grid-column: span -1/1;
+}
+.row-span-full {
+  grid-row: span -1/1;
+}
+$gridSpans: 2, 3, 4, 5, 6, 7, 8 !default;
+@for $i from 1 through length($gridSpans) {
+  $count: nth($gridSpans, $i);
+  .column-span-#{$count} {
+    grid-column: span $count;
+  }
+  .row-span-#{$count} {
+    grid-row: span $count;
+  }
+}

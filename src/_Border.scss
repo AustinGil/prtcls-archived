@@ -1,0 +1,94 @@
+.border-0 {
+  border-width: 0;
+}
+
+$borderWidths: 1px, 2px, 0.25rem, 0.5rem !default;
+@for $i from 1 through length($borderWidths) {
+  $value: nth($borderWidths, $i);
+  .border-#{$i} {
+    border-width: $value;
+  }
+}
+
+@each $style in solid, dashed, dotted, double, none {
+  .border-#{$style} {
+    border-style: $style;
+  }
+}
+
+.radius-tl-0,
+.radius-t-0,
+.radius-l-0,
+.radius-0 {
+  border-top-left-radius: 0;
+}
+.radius-tr-0,
+.radius-t-0,
+.radius-r-0,
+.radius-0 {
+  border-top-right-radius: 0;
+}
+.radius-br-0,
+.radius-b-0,
+.radius-r-0,
+.radius-0 {
+  border-bottom-right-radius: 0;
+}
+.radius-bl-0,
+.radius-b-0,
+.radius-l-0,
+.radius-0 {
+  border-bottom-left-radius: 0;
+}
+.radius-tl-full,
+.radius-t-full,
+.radius-l-full,
+.radius-full {
+  border-top-left-radius: 9999px;
+}
+.radius-tr-full,
+.radius-t-full,
+.radius-r-full,
+.radius-full {
+  border-top-right-radius: 9999px;
+}
+.radius-br-full,
+.radius-b-full,
+.radius-r-full,
+.radius-full {
+  border-bottom-right-radius: 9999px;
+}
+.radius-bl-full,
+.radius-b-full,
+.radius-l-full,
+.radius-full {
+  border-bottom-left-radius: 9999px;
+}
+$radii: 0.25rem, 0.5rem, 0.75rem, 1rem;
+@for $i from 1 through length($radii) {
+  $value: nth($radii, $i);
+  .radius-tl-#{$i},
+  .radius-t-#{$i},
+  .radius-l-#{$i},
+  .radius-#{$i} {
+    border-top-left-radius: $value;
+  }
+  .radius-tr-#{$i},
+  .radius-t-#{$i},
+  .radius-r-#{$i},
+  .radius-#{$i} {
+    border-top-right-radius: $value;
+  }
+  .radius-br-#{$i},
+  .radius-b-#{$i},
+  .radius-r-#{$i},
+  .radius-#{$i} {
+    border-bottom-right-radius: $value;
+  }
+  .radius-bl-#{$i},
+  .radius-b-#{$i},
+  .radius-l-#{$i},
+  .radius-#{$i} {
+    border-bottom-left-radius: $value;
+  }
+}

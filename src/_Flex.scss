@@ -1,0 +1,52 @@
+$flexDirections: (row, row), (row-r, row-reverse), (column, column), (column-r, column-reverse);
+@each $pair in $flexDirections {
+  $name: nth($pair, 1);
+  $value: nth($pair, 2);
+
+  .flex-#{$name} {
+    flex-direction: $value;
+  }
+}
+
+$flexWraps: (nowrap, nowrap), (wrap, wrap), (wrap-r, wrap-reverse);
+@each $pair in $flexWraps {
+  $name: nth($pair, 1);
+  $value: nth($pair, 2);
+
+  .flex-#{$name} {
+    flex-wrap: $value;
+  }
+}
+
+$itemAlignments: (baseline, baseline), (center, center), (end, end), (end, flex-end), (start, start),
+  (start, flex-start), (stretch, stretch);
+@each $pair in $itemAlignments {
+  $name: nth($pair, 1);
+  $value: nth($pair, 2);
+  .align-items-#{$name},
+  .align-#{$name} {
+    align-items: $value;
+  }
+
+  .justify-items-#{$name},
+  .justify-#{$name} {
+    justify-items: $value;
+  }
+}
+
+$contentAlignments: (center, center), (end, end), (end, flex-end), (start, start),
+  (start, flex-start), (stretch, stretch), (around, space-around), (between, space-between),
+  (evenly, space-evenly), (normal, normal);
+@each $pair in $contentAlignments {
+  $name: nth($pair, 1);
+  $value: nth($pair, 2);
+  .align-content-#{$name},
+  .align-#{$name} {
+    align-content: $value;
+  }
+
+  .justify-content-#{$name},
+  .justify-#{$name} {
+    justify-content: $value;
+  }
+}

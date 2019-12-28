@@ -1,0 +1,47 @@
+@each $value in static, fixed, absolute, relative, sticky {
+  .#{$value} {
+    position: $value;
+  }
+}
+
+// @each $value in 0, auto {
+//   .#{$value} {
+//     position: $value;
+//   }
+// }
+
+.z-auto {
+  z-index: auto;
+}
+@for $i from 0 through 5 {
+  $value: $i * 10;
+  .z-#{$i} {
+    z-index: $value;
+  }
+}
+
+@each $value in 0, auto {
+  .top-#{$value},
+  .inset-y-#{$value},
+  .inset-#{$value} {
+    top: $value;
+  }
+
+  .right-#{$value},
+  .inset-x-#{$value},
+  .inset-#{$value} {
+    right: $value;
+  }
+
+  .bottom-#{$value},
+  .inset-y-#{$value},
+  .inset-#{$value} {
+    bottom: $value;
+  }
+
+  .left-#{$value},
+  .inset-x-#{$value},
+  .inset-#{$value} {
+    left: $value;
+  }
+}

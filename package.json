@@ -1,0 +1,14 @@
+{
+  "name": "foton",
+  "version": "0.0.1",
+  "main": "main.css",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "dev": "parcel serve src/index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.24.0"
+  }
+}

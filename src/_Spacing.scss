@@ -1,0 +1,103 @@
+$baseSpacers: 0, auto;
+@for $i from 1 through length($baseSpacers) {
+  $value: nth($baseSpacers, $i);
+  .mt-#{$value},
+  .my-#{$value},
+  .m-#{$value} {
+    margin-top: $value;
+  }
+
+  .mb-#{$value},
+  .my-#{$value},
+  .m-#{$value} {
+    margin-bottom: $value;
+  }
+
+  .ml-#{$value},
+  .mx-#{$value},
+  .m-#{$value} {
+    margin-left: $value;
+  }
+
+  .mr-#{$value},
+  .mx-#{$value},
+  .m-#{$value} {
+    margin-right: $value;
+  }
+
+  .pt-#{$value},
+  .py-#{$value},
+  .p-#{$value} {
+    padding-top: $value;
+  }
+
+  .pb-#{$value},
+  .py-#{$value},
+  .p-#{$value} {
+    padding-bottom: $value;
+  }
+
+  .pl-#{$value},
+  .px-#{$value},
+  .p-#{$value} {
+    padding-left: $value;
+  }
+
+  .pr-#{$value},
+  .px-#{$value},
+  .p-#{$value} {
+    padding-right: $value;
+  }
+}
+
+$spacers: 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 2rem, 2.5rem, 3rem, 4rem, 5rem, 6rem !default;
+@for $i from 1 through length($spacers) {
+  $value: nth($spacers, $i);
+  .mt-#{$i},
+  .my-#{$i},
+  .m-#{$i} {
+    margin-top: $value;
+  }
+
+  .mb-#{$i},
+  .my-#{$i},
+  .m-#{$i} {
+    margin-bottom: $value;
+  }
+
+  .ml-#{$i},
+  .mx-#{$i},
+  .m-#{$i} {
+    margin-left: $value;
+  }
+
+  .mr-#{$i},
+  .mx-#{$i},
+  .m-#{$i} {
+    margin-right: $value;
+  }
+
+  .pt-#{$i},
+  .py-#{$i},
+  .p-#{$i} {
+    padding-top: $value;
+  }
+
+  .pb-#{$i},
+  .py-#{$i},
+  .p-#{$i} {
+    padding-bottom: $value;
+  }
+
+  .pl-#{$i},
+  .px-#{$i},
+  .p-#{$i} {
+    padding-left: $value;
+  }
+
+  .pr-#{$i},
+  .px-#{$i},
+  .p-#{$i} {
+    padding-right: $value;
+  }
+}

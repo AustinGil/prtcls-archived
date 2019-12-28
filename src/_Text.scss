@@ -1,0 +1,23 @@
+@include withVariants("normal-case") {
+  text-transform: none;
+}
+@each $value in uppercase, lowercase, capitalize {
+  @include withVariants($value) {
+    text-transform: $value;
+  }
+}
+
+@include withVariants("no-line") {
+  text-decoration: none;
+}
+@each $value in underline, overline, line-through {
+  @include withVariants($value) {
+    text-decoration: $value;
+  }
+}
+
+@each $value in center, left, right, justify {
+  @include withVariants("text-#{$value}") {
+    text-align: $value;
+  }
+}

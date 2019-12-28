@@ -1,0 +1,30 @@
+$fontSans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+  "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  "Noto Color Emoji";
+$fontSerif: Georgia, Cambria, "Times New Roman", Times, serif;
+$fontMono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+.font-sans {
+  font-family: $fontSans;
+}
+.font-serif {
+  font-family: $fontSerif;
+}
+.font-mono {
+  font-family: $fontMono;
+}
+
+$fontSizes: 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.5rem, 3rem, 4rem, 6rem !default;
+@for $i from 1 through length($fontSizes) {
+  $value: nth($fontSizes, $i);
+  .size-#{$i} {
+    font-size: #{$value};
+  }
+}
+
+@for $i from 1 through 9 {
+  $value: $i * 100;
+  .weight-#{$i} {
+    font-weight: #{$value};
+  }
+}
