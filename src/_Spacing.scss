@@ -1,6 +1,4 @@
-$baseSpacers: 0, auto;
-@for $i from 1 through length($baseSpacers) {
-  $value: nth($baseSpacers, $i);
+@each $value in 0, auto {
   .mt-#{$value},
   .my-#{$value},
   .m-#{$value} {
@@ -50,7 +48,6 @@ $baseSpacers: 0, auto;
   }
 }
 
-$spacers: 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 2rem, 2.5rem, 3rem, 4rem, 5rem, 6rem !default;
 @for $i from 1 through length($spacers) {
   $value: nth($spacers, $i);
   .mt-#{$i},

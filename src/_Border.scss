@@ -1,8 +1,6 @@
 .border-0 {
   border-width: 0;
 }
-
-$borderWidths: 1px, 2px, 0.25rem, 0.5rem !default;
 @for $i from 1 through length($borderWidths) {
   $value: nth($borderWidths, $i);
   .border-#{$i} {

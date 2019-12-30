@@ -1,0 +1,12 @@
+.list-outside {
+  list-style-position: outside;
+}
+.list-inside {
+  list-style-position: inside;
+}
+
+@each $item in disc, circle, square, decimal, lower-alpha, upper-alpha, lower-roman, upper-roman {
+  .list-#{$item} {
+    list-style-type: $item;
+  }
+}

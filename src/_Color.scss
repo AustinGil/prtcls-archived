@@ -5,6 +5,9 @@
   @include withVariants("bg-#{$color}") {
     background-color: $color;
   }
+  @include withVariants("bg-#{$color}") {
+    border-color: $color;
+  }
 }
 
 @each $color in $colors {

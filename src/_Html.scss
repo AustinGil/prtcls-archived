@@ -1,3 +1,19 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   @extend .m-0;
+}
+
+ul[class],
+ol[class] {
+  @extend .pl-0;
+  list-style-type: none;
 }

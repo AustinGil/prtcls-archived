@@ -1,0 +1,39 @@
+.w-screen {
+  width: 100vw;
+}
+.w-max-screen {
+  max-width: 100vw;
+}
+.h-screen {
+  height: 100vh;
+}
+.h-max-screen {
+  max-height: 100vh;
+}
+@each $item in (0, 0), (auto, auto), (full, 100%) {
+  $name: nth($item, 1);
+  $value: nth($item, 2);
+
+  .w-#{$name} {
+    width: $value;
+  }
+  .max-w-#{$name} {
+    max-width: $value;
+  }
+  .h-#{$name} {
+    height: $value;
+  }
+  .max-h-#{$name} {
+    max-height: $value;
+  }
+}
+@for $denominator from 2 through 12 {
+  @for $numerator from 1 through ($denominator - 1) {
+    .w-#{$numerator}\/#{$denominator} {
+      width: $numerator / $denominator * 100%;
+    }
+    .h-#{$numerator}\/#{$denominator} {
+      height: $numerator / $denominator * 100%;
+    }
+  }
+}
