@@ -1,7 +1,7 @@
 {
-  "name": "foton",
+  "name": "prtcls",
   "version": "0.0.1",
-  "main": "main.css",
+  "main": "src/main.scss",
   "author": "",
   "license": "ISC",
   "scripts": {
