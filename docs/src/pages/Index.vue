@@ -1,5 +1,8 @@
 <template>
   <Layout>
+    <h1>{{ $static.metadata.siteName }}</h1>
+    <p>A customizable SCSS library for utility-first CSS</p>
+
     <section>
       <h2>Base Styles</h2>
       <p>There are very few styles affecting base HTML elements:</p>
@@ -7,8 +10,8 @@
         <li>Everything uses <code>box-sizing: border-box;</code></li>
         <li>Default margin is removed from <code>&lt;body&gt;</code></li>
         <li>
-          Any <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> element with a class defined gets
-          the padding and disc-styl-type removed
+          Any <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> element with a
+          class defined gets the padding and disc-style-type removed
         </li>
       </ul>
     </section>
@@ -25,8 +28,8 @@
       <p class="table-row">.table-row { display: table-row; }</p>
       <p class="table-cell">.table-cell { display: table-cell; }</p>
       <p>
-        <span class="display-none">.display-none { display: none; }</span>.display-none { display:
-        none; }
+        <span class="display-none">.display-none { display: none; }</span
+        >.display-none { display: none; }
       </p>
 
       <p class="opacity-0">.opacity-0 { opacity: 0; }</p>
@@ -43,15 +46,16 @@
 
       <p class="visible">.visible { visibility: visible; }</p>
       <p>
-        <span class="hidden">.hidden { visibility: hidden; }</span><-- .hidden { visibility: hidden;
-        }
+        <span class="hidden">.hidden { visibility: hidden; }</span><-- .hidden {
+        visibility: hidden; }
       </p>
       <p>
         <span class="visually-hidden">
           .visually-hidden { visibility: hidden; }
         </span>
-        &lt;-- .visually-hidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow:
-        hidden; padding: 0; position: absolute; width: 1px; }
+        &lt;-- .visually-hidden { border: 0; clip: rect(0 0 0 0); height: 1px;
+        margin: -1px; overflow: hidden; padding: 0; position: absolute; width:
+        1px; }
       </p>
     </section>
 
@@ -395,7 +399,8 @@
       <hr />
 
       <p>
-        .flex.justify-between { justify-items: between; justify-content: between; }
+        .flex.justify-between { justify-items: between; justify-content:
+        between; }
       </p>
       <div class="flex justify-between">
         <div class="m-2 p-4 bg-gray-2"></div>
@@ -441,11 +446,12 @@
       <p class="w-10/12 bg-gray-3">.w-10/12 { width: 83.3333333%; }</p>
       <p class="w-11/12 bg-gray-3">.w-11/12 { width: 91.6666667%; }</p>
       <p>
-        The same values can be applied for height by changing <code>w-</code> to <code>h-</code> in
-        the class name.
+        The same values can be applied for height by changing <code>w-</code> to
+        <code>h-</code> in the class name.
       </p>
       <p>
-        Max width and max height can be applies by prefixing the respective class names with
+        Max width and max height can be applies by prefixing the respective
+        class names with
         <code>max-</code>.
       </p>
     </section>
@@ -453,106 +459,121 @@
     <section>
       <h2>Margin & Padding</h2>
       <p>
-        Variables: $spacers: .25rem, .5rem, .75rem, 1rem, 1.25rem, 1.5rem, 2rem, 2.5rem, 3rem, 4rem,
-        5rem, 6rem !default;
+        Variables: $spacers: .25rem, .5rem, .75rem, 1rem, 1.25rem, 1.5rem, 2rem,
+        2.5rem, 3rem, 4rem, 5rem, 6rem !default;
       </p>
       <p class="m-auto">
-        .m-auto { margin-top: auto; margin-bottom: auto; margin-left: auto; margin-right: auto; }
+        .m-auto { margin-top: auto; margin-bottom: auto; margin-left: auto;
+        margin-right: auto; }
       </p>
       <p class="m-0">
-        .m-0 { margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0; }
+        .m-0 { margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;
+        }
       </p>
       <p class="m-1">
-        .m-1 { margin-top: 0.25rem; margin-bottom: 0.25rem; margin-left: 0.25rem; margin-right:
-        0.25rem; }
+        .m-1 { margin-top: 0.25rem; margin-bottom: 0.25rem; margin-left:
+        0.25rem; margin-right: 0.25rem; }
       </p>
       <p class="m-2">
-        .m-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; margin-left: 0.5rem; margin-right: 0.5rem;
-        }
+        .m-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; margin-left: 0.5rem;
+        margin-right: 0.5rem; }
       </p>
       <p class="m-3">
-        .m-3 { margin-top: 0.75rem; margin-bottom: 0.75rem; margin-left: 0.75rem; margin-right:
-        0.75rem; }
+        .m-3 { margin-top: 0.75rem; margin-bottom: 0.75rem; margin-left:
+        0.75rem; margin-right: 0.75rem; }
       </p>
       <p class="m-4">
-        .m-4 { margin-top: 1rem; margin-bottom: 1rem; margin-left: 1rem; margin-right: 1rem; }
+        .m-4 { margin-top: 1rem; margin-bottom: 1rem; margin-left: 1rem;
+        margin-right: 1rem; }
       </p>
       <p class="m-5">
-        .m-5 { margin-top: 1.25rem; margin-bottom: 1.25rem; margin-left: 1.25rem; margin-right:
-        1.25rem; }
+        .m-5 { margin-top: 1.25rem; margin-bottom: 1.25rem; margin-left:
+        1.25rem; margin-right: 1.25rem; }
       </p>
       <p class="m-6">
-        .m-6 { margin-top: 1.5rem; margin-bottom: 1.5rem; margin-left: 1.5rem; margin-right: 1.5rem;
-        }
+        .m-6 { margin-top: 1.5rem; margin-bottom: 1.5rem; margin-left: 1.5rem;
+        margin-right: 1.5rem; }
       </p>
       <p class="m-7">
-        .m-7 { margin-top: 2rem; margin-bottom: 2rem; margin-left: 2rem; margin-right: 2rem; }
+        .m-7 { margin-top: 2rem; margin-bottom: 2rem; margin-left: 2rem;
+        margin-right: 2rem; }
       </p>
       <p class="m-8">
-        .m-8 { margin-top: 2.5rem; margin-bottom: 2.5rem; margin-left: 2.5rem; margin-right: 2.5rem;
-        }
+        .m-8 { margin-top: 2.5rem; margin-bottom: 2.5rem; margin-left: 2.5rem;
+        margin-right: 2.5rem; }
       </p>
       <p class="m-9">
-        .m-9 { margin-top: 3rem; margin-bottom: 3rem; margin-left: 3rem; margin-right: 3rem; }
+        .m-9 { margin-top: 3rem; margin-bottom: 3rem; margin-left: 3rem;
+        margin-right: 3rem; }
       </p>
       <p class="m-10">
-        .m-10 { margin-top: 4rem; margin-bottom: 4rem; margin-left: 4rem; margin-right: 4rem; }
+        .m-10 { margin-top: 4rem; margin-bottom: 4rem; margin-left: 4rem;
+        margin-right: 4rem; }
       </p>
       <p class="m-11">
-        .m-11 { margin-top: 5rem; margin-bottom: 5rem; margin-left: 5rem; margin-right: 5rem; }
+        .m-11 { margin-top: 5rem; margin-bottom: 5rem; margin-left: 5rem;
+        margin-right: 5rem; }
       </p>
       <p class="m-12">
-        .m-12 { margin-top: 6rem; margin-bottom: 6rem; margin-left: 6rem; margin-right: 6rem; }
+        .m-12 { margin-top: 6rem; margin-bottom: 6rem; margin-left: 6rem;
+        margin-right: 6rem; }
       </p>
 
       <p class="p-auto">
-        .p-auto { padding-top: auto; padding-bottom: auto; padding-left: auto; padding-right: auto;
-        }
+        .p-auto { padding-top: auto; padding-bottom: auto; padding-left: auto;
+        padding-right: auto; }
       </p>
       <p class="p-0">
-        .p-0 { padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; }
+        .p-0 { padding-top: 0; padding-bottom: 0; padding-left: 0;
+        padding-right: 0; }
       </p>
       <p class="p-1">
-        .p-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.25rem; padding-right:
-        0.25rem; }
+        .p-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left:
+        0.25rem; padding-right: 0.25rem; }
       </p>
       <p class="p-2">
-        .p-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; padding-left: 0.5rem; padding-right:
-        0.5rem; }
+        .p-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; padding-left:
+        0.5rem; padding-right: 0.5rem; }
       </p>
       <p class="p-3">
-        .p-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; padding-left: 0.75rem; padding-right:
-        0.75rem; }
+        .p-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; padding-left:
+        0.75rem; padding-right: 0.75rem; }
       </p>
       <p class="p-4">
-        .p-4 { padding-top: 1rem; padding-bottom: 1rem; padding-left: 1rem; padding-right: 1rem; }
+        .p-4 { padding-top: 1rem; padding-bottom: 1rem; padding-left: 1rem;
+        padding-right: 1rem; }
       </p>
       <p class="p-5">
-        .p-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; padding-left: 1.25rem; padding-right:
-        1.25rem; }
+        .p-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; padding-left:
+        1.25rem; padding-right: 1.25rem; }
       </p>
       <p class="p-6">
-        .p-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem; padding-right:
-        1.5rem; }
+        .p-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; padding-left:
+        1.5rem; padding-right: 1.5rem; }
       </p>
       <p class="p-7">
-        .p-7 { padding-top: 2rem; padding-bottom: 2rem; padding-left: 2rem; padding-right: 2rem; }
+        .p-7 { padding-top: 2rem; padding-bottom: 2rem; padding-left: 2rem;
+        padding-right: 2rem; }
       </p>
       <p class="p-8">
-        .p-8 { padding-top: 2.5rem; padding-bottom: 2.5rem; padding-left: 2.5rem; padding-right:
-        2.5rem; }
+        .p-8 { padding-top: 2.5rem; padding-bottom: 2.5rem; padding-left:
+        2.5rem; padding-right: 2.5rem; }
       </p>
       <p class="p-9">
-        .m-9 { padding-top: 3rem; padding-bottom: 3rem; padding-left: 3rem; padding-right: 3rem; }
+        .m-9 { padding-top: 3rem; padding-bottom: 3rem; padding-left: 3rem;
+        padding-right: 3rem; }
       </p>
       <p class="p-10">
-        .p-10 { padding-top: 4rem; padding-bottom: 4rem; padding-left: 4rem; padding-right: 4rem; }
+        .p-10 { padding-top: 4rem; padding-bottom: 4rem; padding-left: 4rem;
+        padding-right: 4rem; }
       </p>
       <p class="p-11">
-        .p-11 { padding-top: 5rem; padding-bottom: 5rem; padding-left: 5rem; padding-right: 5rem; }
+        .p-11 { padding-top: 5rem; padding-bottom: 5rem; padding-left: 5rem;
+        padding-right: 5rem; }
       </p>
       <p class="p-12">
-        .m-12 { padding-top: 6rem; padding-bottom: 6rem; padding-left: 6rem; padding-right: 6rem; }
+        .m-12 { padding-top: 6rem; padding-bottom: 6rem; padding-left: 6rem;
+        padding-right: 6rem; }
       </p>
     </section>
 
@@ -613,24 +634,25 @@
     <section>
       <h2>Font Family</h2>
       <p class="font-sans">
-        .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica
-        Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI
-        Symbol", "Noto Color Emoji"; }
+        .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color
+        Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
       </p>
       <p class="font-serif">
-        .font-serif { font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
+        .font-serif { font-family: Georgia, Cambria, "Times New Roman", Times,
+        serif; }
       </p>
       <p class="font-mono">
-        .font-mono { font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
-        monospace; }
+        .font-mono { font-family: Menlo, Monaco, Consolas, "Liberation Mono",
+        "Courier New", monospace; }
       </p>
     </section>
 
     <section>
       <h2>Font Size</h2>
       <p>
-        Sass variable: $fontSizes: 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.5rem, 3rem, 4rem
-        !default;
+        Sass variable: $fontSizes: 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem,
+        2rem, 2.5rem, 3rem, 4rem !default;
       </p>
       <p class="size-1">.size-1 { font-size: 0.75rem; }</p>
       <p class="size-2">.size-2 { font-size: 1rem; }</p>
@@ -647,8 +669,8 @@
     <section>
       <h2>Color</h2>
       <p>
-        Variable: $colors: ("red", 0), ("orange", 25), ("yellow", 55), ("green", 110), ("cyan",
-        170), ("blue", 210), ("purple", 270), ("pink", 300);
+        Variable: $colors: ("red", 0), ("orange", 25), ("yellow", 55), ("green",
+        110), ("cyan", 170), ("blue", 210), ("purple", 270), ("pink", 300);
       </p>
 
       <p class="color-white bg-black">.color-white { color: white; }</p>
@@ -827,7 +849,9 @@
 
       <p class="underline">.underline { text-decoration: underline; }</p>
       <p class="overline">.overline { text-decoration: overline; }</p>
-      <p class="line-through">.line-through { text-decoration: line-through; }</p>
+      <p class="line-through">
+        .line-through { text-decoration: line-through; }
+      </p>
       <p class="no-line">.no-line { text-decoration: none; }</p>
     </section>
 
@@ -1055,6 +1079,14 @@
     </section>
   </Layout>
 </template>
+
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
 
 <script>
 export default {
