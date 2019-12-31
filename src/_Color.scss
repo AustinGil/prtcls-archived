@@ -10,12 +10,14 @@
   }
 }
 
+$lums: 92%, 83%, 74%, 65%, 56%, 47%, 38%, 29%, 20%;
 @each $color in $colors {
-  @for $i from 1 through 9 {
+  @for $i from 1 through length($lums) {
     $name: nth($color, 1);
     $h: nth($color, 2);
     $s: 70%;
-    $l: 100 - ($i * 10) * 1%;
+    // $l: 100 - ($i * 10) * 1%;
+    $l: nth($lums, $i);
 
     @if length($color) > 2 {
       $s: nth($color, 3);
