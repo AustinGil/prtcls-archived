@@ -1,11 +1,16 @@
-@include withVariants("color-white") {
-  color: #fff;
-}
-@include withVariants("color-black") {
-  color: #000;
-}
-@include withVariants("color-transparent") {
-  color: transparent;
+@each $item in (color, color), (bg, background-color), (border, border-color) {
+  $prefix: nth($item, 1);
+  $rule: nth($item, 2);
+
+  @include withVariants("#{$prefix}-white") {
+    #{$rule}: $white;
+  }
+  @include withVariants("#{$prefix}-black") {
+    #{$rule}: $black;
+  }
+  @include withVariants("#{$prefix}-transparent") {
+    #{$rule}: transparent;
+  }
 }
 
 $lums: 92%, 83%, 74%, 65%, 56%, 47%, 38%, 29%, 20%;
