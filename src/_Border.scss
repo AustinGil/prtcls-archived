@@ -1,16 +1,87 @@
+.border-t,
+.border-y,
+.border {
+  border-top: 1px solid currentColor;
+}
+.border-b,
+.border-y,
+.border {
+  border-bottom: 1px solid currentColor;
+}
+.border-l,
+.border-x,
+.border {
+  border-left: 1px solid currentColor;
+}
+.border-r,
+.border-x,
+.border {
+  border-top: 1px solid currentColor;
+}
+.border-t-0,
+.border-y-0,
 .border-0 {
-  border-width: 0;
+  border-top-width: 0;
+}
+.border-b-0,
+.border-y-0,
+.border-0 {
+  border-bottom-width: 0;
+}
+.border-l-0,
+.border-x-0,
+.border-0 {
+  border-left-width: 0;
+}
+.border-r-0,
+.border-x-0,
+.border-0 {
+  border-top-width: 0;
 }
 @for $i from 1 through length($borderWidths) {
   $value: nth($borderWidths, $i);
+  .border-t-#{$i},
+  .border-y-#{$i},
   .border-#{$i} {
-    border-width: $value;
+    border-top-width: $value;
+  }
+  .border-b-#{$i},
+  .border-y-#{$i},
+  .border-#{$i} {
+    border-bottom-width: $value;
+  }
+  .border-l-#{$i},
+  .border-x-#{$i},
+  .border-#{$i} {
+    border-left-width: $value;
+  }
+  .border-r-#{$i},
+  .border-x-#{$i},
+  .border-#{$i} {
+    border-top-width: $value;
   }
 }
 
 @each $style in solid, dashed, dotted, double, none {
+  .border-t-#{$style},
+  .border-y-#{$style},
   .border-#{$style} {
-    border-style: $style;
+    border-top-style: $style;
+  }
+  .border-b-#{$style},
+  .border-y-#{$style},
+  .border-#{$style} {
+    border-bottom-style: $style;
+  }
+  .border-l-#{$style},
+  .border-x-#{$style},
+  .border-#{$style} {
+    border-left-style: $style;
+  }
+  .border-r-#{$style},
+  .border-x-#{$style},
+  .border-#{$style} {
+    border-top-style: $style;
   }
 }
 

@@ -1,4 +1,6 @@
-$breakpoints: 40rem, 48rem, 64rem, 80rem !default;
+$widths: 40rem, 48rem, 64rem, 80rem !default;
+
+$breakpoints: $widths !default;
 
 $pseudos: hover, focus, (within, focus-within), active, visited, disabled, (first, first-child),
   (last, last-child), (even, nth-child(even)), (odd, nth-child(odd)) !default;

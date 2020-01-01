@@ -3,6 +3,11 @@
     <h1>{{ $static.metadata.siteName }}</h1>
     <p>A customizable SCSS library for utility-first CSS</p>
 
+    <!-- <section>
+      <h2>Getting Started</h2>
+      <p><code>npm install prtcls</code></p>
+    </section> -->
+
     <section>
       <h2>Base Styles</h2>
       <p>There are very few styles affecting base HTML elements:</p>
@@ -17,20 +22,48 @@
     </section>
     <section>
       <h2>Display</h2>
-      <p class="inline">.inline { display: inline; }</p>
-      <p class="block">.block { display: block; }</p>
-      <p class="inline-block">.inline-block { display: inline-block; }</p>
-      <p class="flex">.flex { display: flex; }</p>
-      <p class="inline-flex">.inline-flex { display: inline-flex; }</p>
-      <p class="grid">.grid { display: grid; }</p>
-      <p class="inline-grid">.inline-grid { display: inline-grid; }</p>
-      <p class="table">.table { display: table; }</p>
-      <p class="table-row">.table-row { display: table-row; }</p>
-      <p class="table-cell">.table-cell { display: table-cell; }</p>
-      <p>
-        <span class="display-none">.display-none { display: none; }</span
-        >.display-none { display: none; }
-      </p>
+      <table class="w-full text-left table-collapse">
+        <thead>
+          <tr>
+            <th class="color-gray-7 p-2 bg-gray-1">
+              Class
+            </th>
+            <th class="color-gray-7 p-2 bg-gray-1">
+              Properties
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <template
+            v-for="(value, key) in {
+              inline: 'display: inline',
+              block: 'display: block',
+              'inline-block': 'display: inline-block',
+              grid: 'display: grid',
+              'inline-grid': 'display: inline-grid',
+              flex: 'display: flex',
+              'inline-flex': 'display: inline-flex',
+              table: 'display: table',
+              'table-row': 'display: table-row',
+              'table-cell': 'display: table-cell',
+              'display-none': 'display: none'
+            }"
+          >
+            <tr :key="key">
+              <td
+                class="p-2 border-t border-gray-2 font-mono color-purple-7 whitespace-no-wrap"
+              >
+                .{{ key }}
+              </td>
+              <td
+                class="p-2 border-t border-gray-2 font-mono color-blue-7 whitespace-pre"
+              >
+                {{ value }}
+              </td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
 
       <p class="opacity-0">.opacity-0 { opacity: 0; }</p>
       <p class="opacity-1">.opacity-1 { opacity: .1; }</p>

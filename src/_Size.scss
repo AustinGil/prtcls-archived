@@ -4,11 +4,17 @@
 .w-max-screen {
   max-width: 100vw;
 }
+.w-min-screen {
+  min-width: 100vw;
+}
 .h-screen {
   height: 100vh;
 }
 .h-max-screen {
   max-height: 100vh;
+}
+.h-min-screen {
+  min-height: 100vh;
 }
 @each $item in (0, 0), (auto, auto), (full, 100%) {
   $name: nth($item, 1);
@@ -20,11 +26,17 @@
   .max-w-#{$name} {
     max-width: $value;
   }
+  .min-w-#{$name} {
+    min-width: $value;
+  }
   .h-#{$name} {
     height: $value;
   }
   .max-h-#{$name} {
     max-height: $value;
+  }
+  .min-h-#{$name} {
+    min-height: $value;
   }
 }
 @for $denominator from 2 through 12 {
@@ -32,8 +44,20 @@
     .w-#{$numerator}\/#{$denominator} {
       width: $numerator / $denominator * 100%;
     }
+    .max-w-#{$numerator}\/#{$denominator} {
+      max-width: $numerator / $denominator * 100%;
+    }
+    .min-w-#{$numerator}\/#{$denominator} {
+      min-width: $numerator / $denominator * 100%;
+    }
     .h-#{$numerator}\/#{$denominator} {
       height: $numerator / $denominator * 100%;
+    }
+    .max-h-#{$numerator}\/#{$denominator} {
+      max-height: $numerator / $denominator * 100%;
+    }
+    .min-h-#{$numerator}\/#{$denominator} {
+      min-height: $numerator / $denominator * 100%;
     }
   }
 }
