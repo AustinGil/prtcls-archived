@@ -22,83 +22,75 @@
     </section>
     <section>
       <h2>Display</h2>
-      <table class="w-full text-left table-collapse">
-        <thead>
-          <tr>
-            <th class="color-gray-7 p-2 bg-gray-1">
-              Class
-            </th>
-            <th class="color-gray-7 p-2 bg-gray-1">
-              Properties
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <template
-            v-for="(value, key) in {
-              inline: 'display: inline',
-              block: 'display: block',
-              'inline-block': 'display: inline-block',
-              grid: 'display: grid',
-              'inline-grid': 'display: inline-grid',
-              flex: 'display: flex',
-              'inline-flex': 'display: inline-flex',
-              table: 'display: table',
-              'table-row': 'display: table-row',
-              'table-cell': 'display: table-cell',
-              'display-none': 'display: none'
-            }"
-          >
-            <tr :key="key">
-              <td
-                class="p-2 border-t border-gray-2 font-mono color-purple-7 whitespace-no-wrap"
-              >
-                .{{ key }}
-              </td>
-              <td
-                class="p-2 border-t border-gray-2 font-mono color-blue-7 whitespace-pre"
-              >
-                {{ value }}
-              </td>
-            </tr>
-          </template>
-        </tbody>
-      </table>
+      <PTable
+        :headers="['Class', 'Properties']"
+        :values="{
+          '.inline': 'display: inline',
+          '.block': 'display: block',
+          '.inline-block': 'display: inline-block',
+          '.grid': 'display: grid',
+          '.inline-grid': 'display: inline-grid',
+          '.flex': 'display: flex',
+          '.inline-flex': 'display: inline-flex',
+          '.table': 'display: table',
+          '.table-row': 'display: table-row',
+          '.table-cell': 'display: table-cell',
+          '.display-none': 'display: none'
+        }"
+        class="mb-12"
+      />
 
-      <p class="opacity-0">.opacity-0 { opacity: 0; }</p>
-      <p class="opacity-1">.opacity-1 { opacity: .1; }</p>
-      <p class="opacity-2">.opacity-2 { opacity: .2; }</p>
-      <p class="opacity-3">.opacity-3 { opacity: .3; }</p>
-      <p class="opacity-4">.opacity-4 { opacity: .4; }</p>
-      <p class="opacity-5">.opacity-5 { opacity: .5; }</p>
-      <p class="opacity-6">.opacity-6 { opacity: .6; }</p>
-      <p class="opacity-7">.opacity-7 { opacity: .7; }</p>
-      <p class="opacity-8">.opacity-8 { opacity: .8; }</p>
-      <p class="opacity-9">.opacity-9 { opacity: .9; }</p>
-      <p class="opacity-10">.opacity-10 { opacity: 1; }</p>
+      <h2>Opacity</h2>
+      <PTable
+        :headers="['Class', 'Properties']"
+        :values="{
+          '.opacity-0': 'opacity: 0',
+          '.opacity-1': 'opacity: .1',
+          '.opacity-2': 'opacity: .2',
+          '.opacity-3': 'opacity: .3',
+          '.opacity-4': 'opacity: .4',
+          '.opacity-5': 'opacity: .5',
+          '.opacity-6': 'opacity: .6',
+          '.opacity-7': 'opacity: .7',
+          '.opacity-8': 'opacity: .8',
+          '.opacity-9': 'opacity: .9',
+          '.opacity-10': 'opacity: 1'
+        }"
+        class="mb-12"
+      />
 
-      <p class="visible">.visible { visibility: visible; }</p>
-      <p>
-        <span class="hidden">.hidden { visibility: hidden; }</span><-- .hidden {
-        visibility: hidden; }
-      </p>
-      <p>
-        <span class="visually-hidden">
-          .visually-hidden { visibility: hidden; }
-        </span>
-        &lt;-- .visually-hidden { border: 0; clip: rect(0 0 0 0); height: 1px;
-        margin: -1px; overflow: hidden; padding: 0; position: absolute; width:
-        1px; }
-      </p>
+      <h2>Visibility</h2>
+      <PTable
+        :headers="['Class', 'Properties']"
+        :values="{
+          '.visible': 'visibility: visible',
+          '.hidden': 'visibility: hidden',
+          '.visually-hidden': `border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;`
+        }"
+        class="mb-12"
+      />
     </section>
 
     <section>
       <h2>Position</h2>
-      <p class="static">.static { position: static; }</p>
-      <p class="fixed">.fixed { position: fixed; }</p>
-      <p class="absolute">.absolute { position: absolute; }</p>
-      <p class="relative">.relative { position: relative; }</p>
-      <p class="sticky">.sticky { position: sticky; }</p>
+      <PTable
+        :headers="['Class', 'Properties']"
+        :values="{
+          '.static': 'position: static',
+          '.fixed': 'position: fixed',
+          '.absolute': 'position: absolute',
+          '.relative': 'position: relative',
+          '.sticky': 'position: sticky'
+        }"
+        class="mb-12"
+      />
     </section>
 
     <section>
