@@ -16,7 +16,7 @@
 .border-r,
 .border-x,
 .border {
-  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
 }
 .border-t-0,
 .border-y-0,
@@ -36,7 +36,7 @@
 .border-r-0,
 .border-x-0,
 .border-0 {
-  border-top-width: 0;
+  border-right-width: 0;
 }
 @for $i from 1 through length($borderWidths) {
   $value: nth($borderWidths, $i);

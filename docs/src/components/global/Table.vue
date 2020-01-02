@@ -15,12 +15,12 @@
       <template v-for="(value, key) in values">
         <tr :key="key">
           <td
-            class="p-2 border-t border-gray-2 font-mono color-purple-7 whitespace-no-wrap"
+            class="p-2 border-b border-gray-2 font-mono color-purple-7 whitespace-no-wrap"
           >
             {{ key }}
           </td>
           <td
-            class="p-2 border-t border-gray-2 font-mono color-blue-7 whitespace-pre"
+            class="p-2 border-b border-gray-2 font-mono color-blue-7 whitespace-pre"
           >
             {{ value }}
           </td>

@@ -3,12 +3,12 @@
     <h1>{{ $static.metadata.siteName }}</h1>
     <p>A customizable SCSS library for utility-first CSS</p>
 
-    <!-- <section>
+    <!-- <section class="mb-12">
       <h2>Getting Started</h2>
       <p><code>npm install prtcls</code></p>
     </section> -->
 
-    <section>
+    <section class="mb-12">
       <h2>Base Styles</h2>
       <p>There are very few styles affecting base HTML elements:</p>
       <ul>
@@ -20,7 +20,7 @@
         </li>
       </ul>
     </section>
-    <section>
+    <section class="mb-12">
       <h2>Display</h2>
       <PTable
         :headers="['Class', 'Properties']"
@@ -37,9 +37,10 @@
           '.table-cell': 'display: table-cell',
           '.display-none': 'display: none'
         }"
-        class="mb-12"
       />
+    </section>
 
+    <section class="mb-12">
       <h2>Opacity</h2>
       <PTable
         :headers="['Class', 'Properties']"
@@ -56,9 +57,10 @@
           '.opacity-9': 'opacity: .9',
           '.opacity-10': 'opacity: 1'
         }"
-        class="mb-12"
       />
+    </section>
 
+    <section class="mb-12">
       <h2>Visibility</h2>
       <PTable
         :headers="['Class', 'Properties']"
@@ -74,11 +76,10 @@
             position: absolute;
             width: 1px;`
         }"
-        class="mb-12"
       />
     </section>
 
-    <section>
+    <section class="mb-12">
       <h2>Position</h2>
       <PTable
         :headers="['Class', 'Properties']"
@@ -89,18 +90,26 @@
           '.relative': 'position: relative',
           '.sticky': 'position: sticky'
         }"
-        class="mb-12"
       />
     </section>
 
-    <section>
+    <section class="mb-12">
       <h2>Grid Columns & Rows</h2>
-      <p>.grid</p>
-      <div class="grid">
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-      </div>
+      <PTable
+        :headers="['Class', 'Properties']"
+        :values="{
+          '.grid': 'display: grid',
+          '.columns-{1-8}': 'grid-template-columns: {1-8}',
+          '.rows-{1-8}': 'grid-template-rows: {1-8}'
+        }"
+      />
+      <PExample>
+        <div class="grid">
+          <div class="border border-gray-3 p-4 bg-gray-1"></div>
+          <div class="border border-gray-3 p-4 bg-gray-1"></div>
+          <div class="border border-gray-3 p-4 bg-gray-1"></div>
+        </div>
+      </PExample>
       <hr />
       <p>.grid.columns-2</p>
       <div class="grid columns-2">
@@ -168,7 +177,7 @@
       <hr />
     </section>
 
-    <section>
+    <section class="mb-12">
       <h2>Grid Gaps</h2>
       <p>.grid.columns-2.gap-0</p>
       <div class="grid columns-2 gap-0">
@@ -238,7 +247,7 @@
       </p>
     </section>
 
-    <section>
+    <section class="mb-12">
       <h2>Grid Spans</h2>
 
       <p>.grid.columns-4.gap-2</p>
@@ -260,7 +269,7 @@
       <hr />
     </section>
 
-    <section>
+    <section class="mb-12">
       <h2>Flex Direction</h2>
       <p>.flex.flex-row</p>
       <div class="flex flex-row">
@@ -303,7 +312,7 @@
       <hr />
     </section>
 
-    <section>
+    <section class="mb-12">
       <h2>Flex Wrap</h2>
 
       <p>.flex.flex-wrap</p>
@@ -334,7 +343,7 @@
       <hr />
     </section>
 
-    <section>
+    <section class="mb-12">
       <h2>Align</h2>
 
       <p>.flex.align-start { align-items: start; align-content: start; }</p>
@@ -387,7 +396,7 @@
       <hr />
     </section>
 
-    <section>
+    <section class="mb-12">
       <h2>Justify</h2>
 
       <p>
@@ -458,7 +467,7 @@
       <hr />
     </section>
 
-    <section>
+    <section class="mb-12">
       <h2>Width & Height</h2>
       <p class="w-screen bg-gray-3">.w-screen { width: 100vw; }</p>
       <p class="w-full bg-gray-3">.w-full { width: 100%; }</p>
@@ -481,7 +490,7 @@
       </p>
     </section>
 
-    <section>
+    <section class="mb-12">
       <h2>Margin & Padding</h2>
       <p>
         Variables: $spacers: .25rem, .5rem, .75rem, 1rem, 1.25rem, 1.5rem, 2rem,
@@ -602,7 +611,7 @@
       </p>
     </section>
 
-    <section>
+    <section class="mb-12">
       <h2>Border</h2>
       <p class="border-0 border-solid">.border-0 { border-width: 0 }</p>
       <p class="border-1 border-solid">.border-1 { border-width: 1px }</p>
@@ -644,7 +653,7 @@
       </p>
     </section>
 
-    <section>
+    <section class="mb-12">
       <h2>Border Radius</h2>
       <p class="radius-0 bg-gray-2 p-6">.radius-0 { border-radius: 0; }</p>
       <p class="radius-1 bg-gray-2 p-6">.radius-1 { border-radius: .25rem; }</p>
@@ -656,7 +665,7 @@
       </p>
     </section>
 
-    <section>
+    <section class="mb-12">
       <h2>Font Family</h2>
       <p class="font-sans">
         .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -673,7 +682,7 @@
       </p>
     </section>
 
-    <section>
+    <section class="mb-12">
       <h2>Font Size</h2>
       <p>
         Sass variable: $fontSizes: 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem,
@@ -691,7 +700,7 @@
       <p class="size-10">.size-10 { font-size: 6rem; }</p>
     </section>
 
-    <section>
+    <section class="mb-12">
       <h2>Color</h2>
       <p>
         Variable: $colors: ("red", 0), ("orange", 25), ("yellow", 55), ("green",
@@ -847,7 +856,7 @@
       <p class="color-gray-9">.color-gray-9 { color: hsl(0, 0, 10%); }</p>
     </section>
 
-    <section>
+    <section class="mb-12">
       <h2>Font Weight</h2>
       <p class="weight-1">.weight-1 { font-weight: 100; }</p>
       <p class="weight-2">.weight-2 { font-weight: 200; }</p>
@@ -860,7 +869,7 @@
       <p class="weight-9">.weight-9 { font-weight: 900; }</p>
     </section>
 
-    <section>
+    <section class="mb-12">
       <h2>Text Styling</h2>
       <p class="text-left">.text-left { text-align: left; }</p>
       <p class="text-right">.text-right { text-align: right; }</p>
@@ -880,7 +889,7 @@
       <p class="no-line">.no-line { text-decoration: none; }</p>
     </section>
 
-    <section>
+    <section class="mb-12">
       <h2>Background Color</h2>
       <p class="bg-white">.bg-white { background-color: white; }</p>
       <p class="bg-black color-white">.bg-black { background-color: black; }</p>

@@ -1,19 +1,19 @@
 .w-screen {
   width: 100vw;
 }
-.w-max-screen {
+.max-w-screen {
   max-width: 100vw;
 }
-.w-min-screen {
+.min-w-screen {
   min-width: 100vw;
 }
 .h-screen {
   height: 100vh;
 }
-.h-max-screen {
+.max-h-screen {
   max-height: 100vh;
 }
-.h-min-screen {
+.min-h-screen {
   min-height: 100vh;
 }
 @each $item in (0, 0), (auto, auto), (full, 100%) {
@@ -40,6 +40,19 @@
   }
 }
 @for $denominator from 2 through 12 {
+  @for $i from 1 through length($widths) {
+    $value: nth($widths, $i);
+    .w-#{$i} {
+      width: $value;
+    }
+    .max-w-#{$i} {
+      max-width: $value;
+    }
+    .min-w-#{$i} {
+      min-width: $value;
+    }
+  }
+
   @for $numerator from 1 through ($denominator - 1) {
     .w-#{$numerator}\/#{$denominator} {
       width: $numerator / $denominator * 100%;

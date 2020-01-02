@@ -1,5 +1,5 @@
 <template>
-  <div class="font-sans mx-12">
+  <div class="font-sans max-w-4 mx-auto px-4">
     <!-- <header class="flex justify-between align-center mb-5 py-7">
       <strong>
         <g-link to="/">{{ $static.metadata.siteName }}</g-link>
