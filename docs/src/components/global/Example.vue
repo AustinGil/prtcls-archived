@@ -14,6 +14,7 @@
 
 import * as CodeMirror from "codemirror";
 import "codemirror/lib/codemirror.css";
+import "codemirror/mode/htmlmixed/htmlmixed.js";
 import "codemirror/theme/monokai.css";
 
 export default {
@@ -34,7 +35,7 @@ export default {
 
     const editor = CodeMirror(this.$refs.editor, {
       lineNumbers: true,
-      mode: "html",
+      mode: "htmlmixed",
       value: this.content,
       theme: "monokai"
     });
