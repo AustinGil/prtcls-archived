@@ -11,10 +11,12 @@
 <script>
 // import * as Monaco from "monaco-editor";
 // import "monaco-editor/min/vs/editor/editor.main.css";
-
-import * as CodeMirror from "codemirror";
+let CodeMirror;
+if (typeof window !== "undefined") {
+  CodeMirror = require("codemirror");
+  require("codemirror/mode/htmlmixed/htmlmixed.js");
+}
 import "codemirror/lib/codemirror.css";
-import "codemirror/mode/htmlmixed/htmlmixed.js";
 import "codemirror/theme/monokai.css";
 
 export default {
