@@ -1,4 +1,5 @@
-$flexDirections: (row, row), (row-r, row-reverse), (column, column), (column-r, column-reverse);
+$flexDirections: (row, row), (row-reverse, row-reverse), (column, column),
+  (column-reverse, column-reverse);
 @each $pair in $flexDirections {
   $name: nth($pair, 1);
   $value: nth($pair, 2);
@@ -8,7 +9,7 @@ $flexDirections: (row, row), (row-r, row-reverse), (column, column), (column-r, 
   }
 }
 
-$flexWraps: (nowrap, nowrap), (wrap, wrap), (wrap-r, wrap-reverse);
+$flexWraps: (nowrap, nowrap), (wrap, wrap), (wrap-reverse, wrap-reverse);
 @each $pair in $flexWraps {
   $name: nth($pair, 1);
   $value: nth($pair, 2);

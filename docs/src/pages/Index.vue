@@ -25,17 +25,17 @@
       <PTable
         :headers="['Class', 'Properties']"
         :values="{
-          '.inline': 'display: inline',
-          '.block': 'display: block',
-          '.inline-block': 'display: inline-block',
-          '.grid': 'display: grid',
-          '.inline-grid': 'display: inline-grid',
-          '.flex': 'display: flex',
-          '.inline-flex': 'display: inline-flex',
-          '.table': 'display: table',
-          '.table-row': 'display: table-row',
-          '.table-cell': 'display: table-cell',
-          '.display-none': 'display: none'
+          '.inline': 'display: inline;',
+          '.block': 'display: block;',
+          '.inline-block': 'display: inline-block;',
+          '.grid': 'display: grid;',
+          '.inline-grid': 'display: inline-grid;',
+          '.flex': 'display: flex;',
+          '.inline-flex': 'display: inline-flex;',
+          '.table': 'display: table;',
+          '.table-row': 'display: table-row;',
+          '.table-cell': 'display: table-cell;',
+          '.display-none': 'display: none;'
         }"
       />
     </section>
@@ -45,18 +45,26 @@
       <PTable
         :headers="['Class', 'Properties']"
         :values="{
-          '.opacity-0': 'opacity: 0',
-          '.opacity-1': 'opacity: .1',
-          '.opacity-2': 'opacity: .2',
-          '.opacity-3': 'opacity: .3',
-          '.opacity-4': 'opacity: .4',
-          '.opacity-5': 'opacity: .5',
-          '.opacity-6': 'opacity: .6',
-          '.opacity-7': 'opacity: .7',
-          '.opacity-8': 'opacity: .8',
-          '.opacity-9': 'opacity: .9',
-          '.opacity-10': 'opacity: 1'
+          '.opacity-0': 'opacity: 0;',
+          '.opacity-{1-9}': 'opacity: {.1-.9};',
+          '.opacity-10': 'opacity: 1;'
         }"
+      />
+      <h3>Examples</h3>
+      <PExample
+        :html="
+          `<div class=&quot;opacity-0 p-4 bg-gray-9&quot;></div>
+<div class=&quot;opacity-1 p-4 bg-gray-9&quot;></div>
+<div class=&quot;opacity-2 p-4 bg-gray-9&quot;></div>
+<div class=&quot;opacity-3 p-4 bg-gray-9&quot;></div>
+<div class=&quot;opacity-4 p-4 bg-gray-9&quot;></div>
+<div class=&quot;opacity-5 p-4 bg-gray-9&quot;></div>
+<div class=&quot;opacity-6 p-4 bg-gray-9&quot;></div>
+<div class=&quot;opacity-7 p-4 bg-gray-9&quot;></div>
+<div class=&quot;opacity-8 p-4 bg-gray-9&quot;></div>
+<div class=&quot;opacity-9 p-4 bg-gray-9&quot;></div>
+<div class=&quot;opacity-10 p-4 bg-gray-9&quot;></div>`
+        "
       />
     </section>
 
@@ -65,16 +73,9 @@
       <PTable
         :headers="['Class', 'Properties']"
         :values="{
-          '.visible': 'visibility: visible',
-          '.hidden': 'visibility: hidden',
-          '.visually-hidden': `border: 0;
-            clip: rect(0 0 0 0);
-            height: 1px;
-            margin: -1px;
-            overflow: hidden;
-            padding: 0;
-            position: absolute;
-            width: 1px;`
+          '.visible': 'visibility: visible;',
+          '.hidden': 'visibility: hidden;',
+          '.visually-hidden': `border: 0;\nclip: rect(0 0 0 0);\nheight: 1px;\nmargin: -1px;\noverflow: hidden;\npadding: 0;\nposition: absolute;\nwidth: 1px;`
         }"
       />
     </section>
@@ -84,11 +85,11 @@
       <PTable
         :headers="['Class', 'Properties']"
         :values="{
-          '.static': 'position: static',
-          '.fixed': 'position: fixed',
-          '.absolute': 'position: absolute',
-          '.relative': 'position: relative',
-          '.sticky': 'position: sticky'
+          '.static': 'position: static;',
+          '.fixed': 'position: fixed;',
+          '.absolute': 'position: absolute;',
+          '.relative': 'position: relative;',
+          '.sticky': 'position: sticky;'
         }"
       />
     </section>
@@ -98,9 +99,9 @@
       <PTable
         :headers="['Class', 'Properties']"
         :values="{
-          '.grid': 'display: grid',
-          '.columns-{1-8}': 'grid-template-columns: {1-8}',
-          '.rows-{1-8}': 'grid-template-rows: {1-8}'
+          '.grid': 'display: grid;',
+          '.columns-{1-8}': 'grid-template-columns: {1-8};',
+          '.rows-{1-8}': 'grid-template-rows: {1-8};'
         }"
         class="mb-5"
       />
@@ -108,10 +109,10 @@
       <p>A grid with auto sized columns</p>
       <PExample
         :html="
-          `<div class='grid columns-auto'>
-  <div class='border border-gray-3 p-4 bg-gray-1'></div>
-  <div class='border border-gray-3 p-4 bg-gray-1'></div>
-  <div class='border border-gray-3 p-4 bg-gray-1'></div>
+          `<div class=&quot;grid columns-auto&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
 </div>`
         "
       />
@@ -119,13 +120,13 @@
       <p>Grid with strictly defined columns (supports 1-8 columns)</p>
       <PExample
         :html="
-          `<div class='grid columns-4'>
-  <div class='border border-gray-3 p-4 bg-gray-1'></div>
-  <div class='border border-gray-3 p-4 bg-gray-1'></div>
-  <div class='border border-gray-3 p-4 bg-gray-1'></div>
-  <div class='border border-gray-3 p-4 bg-gray-1'></div>
-  <div class='border border-gray-3 p-4 bg-gray-1'></div>
-  <div class='border border-gray-3 p-4 bg-gray-1'></div>
+          `<div class=&quot;grid columns-4&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
 </div>`
         "
       />
@@ -133,13 +134,13 @@
       <p>Grid with strictly defined rows (supports 1-8 rows)</p>
       <PExample
         :html="
-          `<div class='grid rows-4'>
-  <div class='border border-gray-3 p-4 bg-gray-1'></div>
-  <div class='border border-gray-3 p-4 bg-gray-1'></div>
-  <div class='border border-gray-3 p-4 bg-gray-1'></div>
-  <div class='border border-gray-3 p-4 bg-gray-1'></div>
-  <div class='border border-gray-3 p-4 bg-gray-1'></div>
-  <div class='border border-gray-3 p-4 bg-gray-1'></div>
+          `<div class=&quot;grid rows-4&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
 </div>`
         "
       />
@@ -147,137 +148,177 @@
 
     <section class="mb-12">
       <h2>Grid Gaps</h2>
-      <p>.grid.columns-2.gap-0</p>
-      <div class="grid columns-2 gap-0">
-        <div class="p-3 bg-gray-2"></div>
-        <div class="p-3 bg-gray-2"></div>
-      </div>
-      <hr />
-
-      <p>.grid.columns-2.gap-1</p>
-      <div class="grid columns-2 gap-1">
-        <div class="p-3 bg-gray-2"></div>
-        <div class="p-3 bg-gray-2"></div>
-      </div>
-      <hr />
-
-      <p>.grid.columns-2.gap-2</p>
-      <div class="grid columns-2 gap-2">
-        <div class="p-3 bg-gray-2"></div>
-        <div class="p-3 bg-gray-2"></div>
-      </div>
-      <hr />
-
-      <p>.grid.columns-2.gap-3</p>
-      <div class="grid columns-2 gap-3">
-        <div class="p-3 bg-gray-2"></div>
-        <div class="p-3 bg-gray-2"></div>
-      </div>
-      <hr />
-
-      <p>.grid.columns-2.gap-4</p>
-      <div class="grid columns-2 gap-4">
-        <div class="p-3 bg-gray-2"></div>
-        <div class="p-3 bg-gray-2"></div>
-      </div>
-      <hr />
-
-      <p>.grid.columns-2.gap-5</p>
-      <div class="grid columns-2 gap-5">
-        <div class="p-3 bg-gray-2"></div>
-        <div class="p-3 bg-gray-2"></div>
-      </div>
-      <hr />
-
-      <p>.grid.columns-2.gap-6</p>
-      <div class="grid columns-2 gap-6">
-        <div class="p-3 bg-gray-2"></div>
-        <div class="p-3 bg-gray-2"></div>
-      </div>
-      <hr />
-
-      <p>.grid.columns-2.gap-7</p>
-      <div class="grid columns-2 gap-7">
-        <div class="p-3 bg-gray-2"></div>
-        <div class="p-3 bg-gray-2"></div>
-      </div>
-      <hr />
-
-      <p>.grid.columns-2.gap-8</p>
-      <div class="grid columns-2 gap-8">
-        <div class="p-3 bg-gray-2"></div>
-        <div class="p-3 bg-gray-2"></div>
-      </div>
-
+      <PTable
+        :headers="['Class', 'Properties']"
+        :values="{
+          '.gap-{0-8}': 'grid-column-gap: {1-8};\ngrid-row-gap: {1-8};',
+          '.column-gap-{0-8}': 'grid-column-gap: {1-8};',
+          '.row-gap-{0-8}': 'grid-row-gap: {1-8};'
+        }"
+        class="mb-5"
+      />
       <p>
-        You can also specify <code>.column-gap-{size}</code> and
-        <code>.row-gap{size}</code>
+        Default sizes: 0.25rem, 0.5rem, 1rem, 1.5rem, 2rem, 3rem, 4rem, 6rem.
+      </p>
+      <h3>Exxamples:</h3>
+      <p>Even space all around</p>
+      <PExample
+        :html="
+          `<div class=&quot;grid columns-2 gap-2&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+        "
+      />
+
+      <p>Only column gap</p>
+      <PExample
+        :html="
+          `<div class=&quot;grid columns-2 column-gap-2&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+        "
+      />
+
+      <p>Only row gap</p>
+      <PExample
+        :html="
+          `<div class=&quot;grid columns-2 row-gap-2&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+        "
+      />
+
+      <h3>Customization</h3>
+      <p>
+        You can provide your own list of gap values by customizing the
+        <code>$gaps</code> variable.
       </p>
     </section>
 
     <section class="mb-12">
       <h2>Grid Spans</h2>
 
-      <p>.grid.columns-4.gap-2</p>
-      <div class="grid columns-4 gap-2">
-        <div class="p-3 bg-gray-2"></div>
-        <div class="column-span-2 p-3 bg-gray-2">.column-span-2</div>
-        <div class="p-3 bg-gray-2"></div>
-      </div>
-      <hr />
+      <PTable
+        :headers="['Class', 'Properties']"
+        :values="{
+          '.span-{0-8}': 'grid-column: {1-8};\ngrid-row: {1-8};',
+          '.column-span-{0-8}': 'grid-column: {1-8};',
+          '.row-span-{0-8}': 'grid-row: {1-8};'
+        }"
+        class="mb-5"
+      />
 
-      <p>.grid.columns-3.gap-2</p>
-      <div class="grid columns-3 gap-2">
-        <div class="row-span-2 p-3 bg-gray-2">.row-span-2</div>
-        <div class="p-3 bg-gray-2"></div>
-        <div class="p-3 bg-gray-2"></div>
-        <div class="p-3 bg-gray-2"></div>
-        <div class="p-3 bg-gray-2"></div>
-      </div>
-      <hr />
+      <h3>Examples:</h3>
+      <p>Column span</p>
+      <PExample
+        :html="
+          `<div class=&quot;grid columns-4 gap-2&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;column-span-2 border border-gray-3 p-4 bg-purple-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+        "
+      />
+
+      <p>Row span</p>
+      <PExample
+        :html="
+          `<div class=&quot;grid columns-3 gap-2&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;row-span-2 border border-gray-3 p-4 bg-purple-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+        "
+      />
+
+      <p>Row & Column span</p>
+      <PExample
+        :html="
+          `<div class=&quot;grid columns-4 gap-2&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;column-span-2 row-span-2 border border-gray-3 p-4 bg-purple-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+        "
+      />
     </section>
 
     <section class="mb-12">
       <h2>Flex Direction</h2>
-      <p>.flex.flex-row</p>
-      <div class="flex flex-row">
-        <div class="m-2 p-5 bg-gray-2">1</div>
-        <div class="m-2 p-5 bg-gray-2">2</div>
-        <div class="m-2 p-5 bg-gray-2">3</div>
-        <div class="m-2 p-5 bg-gray-2">4</div>
-        <div class="m-2 p-5 bg-gray-2">5</div>
-      </div>
-      <hr />
 
-      <p>.flex.flex-row-r</p>
-      <div class="flex flex-row-r">
-        <div class="m-2 p-5 bg-gray-2">1</div>
-        <div class="m-2 p-5 bg-gray-2">2</div>
-        <div class="m-2 p-5 bg-gray-2">3</div>
-        <div class="m-2 p-5 bg-gray-2">4</div>
-        <div class="m-2 p-5 bg-gray-2">5</div>
-      </div>
-      <hr />
+      <PTable
+        :headers="['Class', 'Properties']"
+        :values="{
+          '.flex-row': 'flex-direction: row',
+          '.flex-row-reverse': 'flex-direction: row-reverse',
+          '.flex-column': 'flex-direction: column',
+          '.flex-column-reverse': 'flex-direction: column-reverse'
+        }"
+        class="mb-5"
+      />
 
-      <p>.flex.flex-column</p>
-      <div class="flex flex-column">
-        <div class="m-2 p-5 bg-gray-2">1</div>
-        <div class="m-2 p-5 bg-gray-2">2</div>
-        <div class="m-2 p-5 bg-gray-2">3</div>
-        <div class="m-2 p-5 bg-gray-2">4</div>
-        <div class="m-2 p-5 bg-gray-2">5</div>
-      </div>
-      <hr />
+      <h3>Examples:</h3>
+      <p>Flex row</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex flex-row&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;>1</div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;>2</div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;>3</div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;>4</div>
+</div>`
+        "
+      />
 
-      <p>.flex.flex-column-r</p>
-      <div class="flex flex-column-r">
-        <div class="m-2 p-5 bg-gray-2">1</div>
-        <div class="m-2 p-5 bg-gray-2">2</div>
-        <div class="m-2 p-5 bg-gray-2">3</div>
-        <div class="m-2 p-5 bg-gray-2">4</div>
-        <div class="m-2 p-5 bg-gray-2">5</div>
-      </div>
-      <hr />
+      <p>Flex row reverse</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex flex-row-reverse&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;>1</div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;>2</div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;>3</div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;>4</div>
+</div>`
+        "
+      />
+
+      <p>Flex column</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex flex-column&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;>1</div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;>2</div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;>3</div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;>4</div>
+</div>`
+        "
+        class="mb-4"
+      />
+
+      <p>Flex column reverse</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex flex-column-reverse&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;>1</div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;>2</div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;>3</div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;>4</div>
+</div>`
+        "
+      />
     </section>
 
     <section class="mb-12">
@@ -319,7 +360,7 @@
         <div class="m-2 p-4 bg-gray-2"></div>
         <div class="m-2 p-8 bg-gray-2"></div>
         <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 p-3 bg-gray-2"></div>
+        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
       </div>
       <hr />
 
@@ -328,7 +369,7 @@
         <div class="m-2 p-4 bg-gray-2"></div>
         <div class="m-2 p-8 bg-gray-2"></div>
         <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 p-3 bg-gray-2"></div>
+        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
       </div>
       <hr />
 
@@ -337,7 +378,7 @@
         <div class="m-2 p-4 bg-gray-2"></div>
         <div class="m-2 p-8 bg-gray-2"></div>
         <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 p-3 bg-gray-2"></div>
+        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
       </div>
       <hr />
 
@@ -348,7 +389,7 @@
         <div class="m-2 p-4 bg-gray-2"></div>
         <div class="m-2 p-8 bg-gray-2"></div>
         <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 p-3 bg-gray-2"></div>
+        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
       </div>
       <hr />
 
@@ -359,7 +400,7 @@
         <div class="m-2 p-4 bg-gray-2"></div>
         <div class="m-2 p-8 bg-gray-2"></div>
         <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 p-3 bg-gray-2"></div>
+        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
       </div>
       <hr />
     </section>
@@ -374,7 +415,7 @@
         <div class="m-2 p-4 bg-gray-2"></div>
         <div class="m-2 p-8 bg-gray-2"></div>
         <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 p-3 bg-gray-2"></div>
+        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
       </div>
       <hr />
 
@@ -385,7 +426,7 @@
         <div class="m-2 p-4 bg-gray-2"></div>
         <div class="m-2 p-8 bg-gray-2"></div>
         <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 p-3 bg-gray-2"></div>
+        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
       </div>
       <hr />
 
@@ -396,7 +437,7 @@
         <div class="m-2 p-4 bg-gray-2"></div>
         <div class="m-2 p-8 bg-gray-2"></div>
         <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 p-3 bg-gray-2"></div>
+        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
       </div>
       <hr />
 
@@ -408,7 +449,7 @@
         <div class="m-2 p-4 bg-gray-2"></div>
         <div class="m-2 p-8 bg-gray-2"></div>
         <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 p-3 bg-gray-2"></div>
+        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
       </div>
       <hr />
 
@@ -419,7 +460,7 @@
         <div class="m-2 p-4 bg-gray-2"></div>
         <div class="m-2 p-8 bg-gray-2"></div>
         <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 p-3 bg-gray-2"></div>
+        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
       </div>
       <hr />
 
@@ -430,7 +471,7 @@
         <div class="m-2 p-4 bg-gray-2"></div>
         <div class="m-2 p-8 bg-gray-2"></div>
         <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 p-3 bg-gray-2"></div>
+        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
       </div>
       <hr />
     </section>

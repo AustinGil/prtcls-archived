@@ -9,6 +9,9 @@
 </template>
 
 <script>
+// import * as Monaco from "monaco-editor";
+// import "monaco-editor/min/vs/editor/editor.main.css";
+
 import * as CodeMirror from "codemirror";
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/monokai.css";
@@ -25,6 +28,10 @@ export default {
   },
 
   mounted() {
+    // const editor = Monaco.editor.create(this.$refs.editor, {
+    //   value: "const i = 2;"
+    // });
+
     const editor = CodeMirror(this.$refs.editor, {
       lineNumbers: true,
       mode: "html",

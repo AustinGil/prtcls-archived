@@ -13,7 +13,7 @@
   }
 }
 
-$lums: 92%, 83%, 74%, 65%, 56%, 47%, 38%, 29%, 20%;
+$lums: 95%, 83%, 74%, 65%, 56%, 47%, 38%, 29%, 20%;
 @each $color in $colors {
   @for $i from 1 through length($lums) {
     $name: nth($color, 1);
