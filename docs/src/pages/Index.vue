@@ -108,7 +108,7 @@
       <p>A grid with auto sized columns</p>
       <PExample
         :html="
-          `<div class='grid'>
+          `<div class='grid columns-auto'>
   <div class='border border-gray-3 p-4 bg-gray-1'></div>
   <div class='border border-gray-3 p-4 bg-gray-1'></div>
   <div class='border border-gray-3 p-4 bg-gray-1'></div>
@@ -116,7 +116,7 @@
         "
       />
 
-      <p>Grid with strictly define folumns (supports 1-8 columns)</p>
+      <p>Grid with strictly defined columns (supports 1-8 columns)</p>
       <PExample
         :html="
           `<div class='grid columns-4'>
@@ -130,64 +130,19 @@
         "
       />
 
-      <hr />
-      <p>.grid.columns-3</p>
-      <div class="grid columns-3">
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-      </div>
-      <hr />
-      <p>.grid.columns-4</p>
-      <div class="grid columns-4">
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-      </div>
-      <hr />
-      <p>.grid.columns-5</p>
-      <div class="grid columns-5">
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-      </div>
-      <hr />
-      <p>.grid.columns-6</p>
-      <div class="grid columns-6">
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-      </div>
-      <hr />
-      <p>.grid.columns-7</p>
-      <div class="grid columns-7">
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-      </div>
-      <hr />
-      <p>.grid.columns-8</p>
-      <div class="grid columns-8">
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-      </div>
-      <hr />
+      <p>Grid with strictly defined rows (supports 1-8 rows)</p>
+      <PExample
+        :html="
+          `<div class='grid rows-4'>
+  <div class='border border-gray-3 p-4 bg-gray-1'></div>
+  <div class='border border-gray-3 p-4 bg-gray-1'></div>
+  <div class='border border-gray-3 p-4 bg-gray-1'></div>
+  <div class='border border-gray-3 p-4 bg-gray-1'></div>
+  <div class='border border-gray-3 p-4 bg-gray-1'></div>
+  <div class='border border-gray-3 p-4 bg-gray-1'></div>
+</div>`
+        "
+      />
     </section>
 
     <section class="mb-12">

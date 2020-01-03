@@ -3,7 +3,7 @@
  * NOTE: Algin and Justify are defined in Flex.scss
  */
 
-.grid {
+.columns-auto {
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 }
 @for $i from 1 through $gridMax {
