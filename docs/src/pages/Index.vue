@@ -102,21 +102,34 @@
           '.columns-{1-8}': 'grid-template-columns: {1-8}',
           '.rows-{1-8}': 'grid-template-rows: {1-8}'
         }"
+        class="mb-5"
       />
-      <PExample>
-        <div class="grid">
-          <div class="border border-gray-3 p-4 bg-gray-1"></div>
-          <div class="border border-gray-3 p-4 bg-gray-1"></div>
-          <div class="border border-gray-3 p-4 bg-gray-1"></div>
-        </div>
-      </PExample>
-      <hr />
-      <p>.grid.columns-2</p>
-      <div class="grid columns-2">
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-      </div>
+      <h3>Examples:</h3>
+      <p>A grid with auto sized columns</p>
+      <PExample
+        :html="
+          `<div class='grid'>
+  <div class='border border-gray-3 p-4 bg-gray-1'></div>
+  <div class='border border-gray-3 p-4 bg-gray-1'></div>
+  <div class='border border-gray-3 p-4 bg-gray-1'></div>
+</div>`
+        "
+      />
+
+      <p>Grid with strictly define folumns (supports 1-8 columns)</p>
+      <PExample
+        :html="
+          `<div class='grid columns-4'>
+  <div class='border border-gray-3 p-4 bg-gray-1'></div>
+  <div class='border border-gray-3 p-4 bg-gray-1'></div>
+  <div class='border border-gray-3 p-4 bg-gray-1'></div>
+  <div class='border border-gray-3 p-4 bg-gray-1'></div>
+  <div class='border border-gray-3 p-4 bg-gray-1'></div>
+  <div class='border border-gray-3 p-4 bg-gray-1'></div>
+</div>`
+        "
+      />
+
       <hr />
       <p>.grid.columns-3</p>
       <div class="grid columns-3">
