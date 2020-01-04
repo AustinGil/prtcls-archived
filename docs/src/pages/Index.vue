@@ -537,24 +537,30 @@
 
     <section class="mb-12">
       <h2>Width & Height</h2>
-      <p class="w-screen bg-gray-3">.w-screen { width: 100vw; }</p>
-      <p class="w-full bg-gray-3">.w-full { width: 100%; }</p>
-      <p class="w-auto bg-gray-3">.w-auto { width: auto; }</p>
-      <p>Fractional values from 1/2 to 1/12 and all the values in between</p>
-      <p class="w-1/2 bg-gray-3">.w-1/2 { width: 50%; }</p>
-      <p class="w-1/3 bg-gray-3">.w-1/3 { width: 33.3333333%; }</p>
-      <p class="w-2/3 bg-gray-3">.w-2/3 { width: 66.6666667%; }</p>
-      <p>...(and so on)...</p>
-      <p class="w-10/12 bg-gray-3">.w-10/12 { width: 83.3333333%; }</p>
-      <p class="w-11/12 bg-gray-3">.w-11/12 { width: 91.6666667%; }</p>
+
+      <PTable
+        :headers="['Class', 'Properties']"
+        :values="{
+          '.w-screen': 'width: 100vw;',
+          '.w-full': 'width: 100%;',
+          '.w-auto': 'width: auto;',
+          '.w-{1/2...11/12}': 'width: {1/2...11/12}%;',
+          '.w-{1|2|3|4}': 'width: {40rem|48rem|64rem|80rem}%;',
+          '.h-screen': 'height: 100vh;',
+          '.h-full': 'height: 100%;',
+          '.h-auto': 'height: auto;',
+          '.h-{1/2...11/12}': 'height: {1/2...11/12}%;',
+          '': ''
+        }"
+        class="mb-5"
+      />
+
       <p>
-        The same values can be applied for height by changing <code>w-</code> to
-        <code>h-</code> in the class name.
-      </p>
-      <p>
-        Max width and max height can be applies by prefixing the respective
-        class names with
-        <code>max-</code>.
+        You can also prefix any class name with <code>min-</code> or
+        <code>max-</code> to achieve the same value applied for
+        <code>min-{width|height}</code> or
+        <code>max-{width|height}</code> respectively. For example:
+        <code>.min-w-1/2</code> would render <code>min-width: 50%;</code>
       </p>
     </section>
 
