@@ -262,16 +262,16 @@
       <PTable
         :headers="['Class', 'Properties']"
         :values="{
-          '.flex-row': 'flex-direction: row',
-          '.flex-row-reverse': 'flex-direction: row-reverse',
-          '.flex-column': 'flex-direction: column',
-          '.flex-column-reverse': 'flex-direction: column-reverse'
+          '.flex-row': 'flex-direction: row;',
+          '.flex-row-reverse': 'flex-direction: row-reverse;',
+          '.flex-column': 'flex-direction: column;',
+          '.flex-column-reverse': 'flex-direction: column-reverse;'
         }"
         class="mb-5"
       />
 
       <h3>Examples:</h3>
-      <p>Flex row</p>
+      <p>Row</p>
       <PExample
         :html="
           `<div class=&quot;flex flex-row&quot;>
@@ -283,7 +283,7 @@
         "
       />
 
-      <p>Flex row reverse</p>
+      <p>Row reverse</p>
       <PExample
         :html="
           `<div class=&quot;flex flex-row-reverse&quot;>
@@ -295,7 +295,7 @@
         "
       />
 
-      <p>Flex column</p>
+      <p>Column</p>
       <PExample
         :html="
           `<div class=&quot;flex flex-column&quot;>
@@ -308,7 +308,7 @@
         class="mb-4"
       />
 
-      <p>Flex column reverse</p>
+      <p>Column reverse</p>
       <PExample
         :html="
           `<div class=&quot;flex flex-column-reverse&quot;>
@@ -324,156 +324,215 @@
     <section class="mb-12">
       <h2>Flex Wrap</h2>
 
-      <p>.flex.flex-wrap</p>
-      <div class="flex flex-wrap">
-        <div class="m-2 p-5 bg-gray-2" style="min-width: 30%">1</div>
-        <div class="m-2 p-5 bg-gray-2" style="min-width: 30%">2</div>
-        <div class="m-2 p-5 bg-gray-2" style="min-width: 30%">3</div>
-        <div class="m-2 p-5 bg-gray-2" style="min-width: 30%">4</div>
-      </div>
-      <hr />
+      <PTable
+        :headers="['Class', 'Properties']"
+        :values="{
+          '.flex-{wrap|nowrap|wrap-reverse}':
+            'flex-wrap: {wrap|nowrap|wrap-reverse};'
+        }"
+        class="mb-5"
+      />
 
-      <p>.flex.flex-nowrap</p>
-      <div class="flex flex-nowrap">
-        <div class="m-2 p-5 bg-gray-2" style="min-width: 30%">1</div>
-        <div class="m-2 p-5 bg-gray-2" style="min-width: 30%">2</div>
-        <div class="m-2 p-5 bg-gray-2" style="min-width: 30%">3</div>
-        <div class="m-2 p-5 bg-gray-2" style="min-width: 30%">4</div>
-      </div>
-      <hr />
+      <p>Wrap</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex flex-wrap&quot;>
+  <div class=&quot;min-w-2/3 border border-gray-3 p-4 bg-gray-1&quot;>1</div>
+  <div class=&quot;min-w-2/3 border border-gray-3 p-4 bg-gray-1&quot;>2</div>
+</div>`
+        "
+      />
 
-      <p>.flex.flex-wrap-r</p>
-      <div class="flex flex-wrap-r">
-        <div class="m-2 p-5 bg-gray-2" style="min-width: 30%">1</div>
-        <div class="m-2 p-5 bg-gray-2" style="min-width: 30%">2</div>
-        <div class="m-2 p-5 bg-gray-2" style="min-width: 30%">3</div>
-        <div class="m-2 p-5 bg-gray-2" style="min-width: 30%">4</div>
-      </div>
-      <hr />
+      <p>Nowrap</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex flex-nowrap&quot;>
+  <div class=&quot;min-w-2/3 border border-gray-3 p-4 bg-gray-1&quot;>1</div>
+  <div class=&quot;min-w-2/3 border border-gray-3 p-4 bg-gray-1&quot;>2</div>
+</div>`
+        "
+      />
+
+      <p>Wrap-reverse</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex flex-wrap-reverse&quot;>
+  <div class=&quot;min-w-2/3 border border-gray-3 p-4 bg-gray-1&quot;>1</div>
+  <div class=&quot;min-w-2/3 border border-gray-3 p-4 bg-gray-1&quot;>2</div>
+</div>`
+        "
+      />
     </section>
 
     <section class="mb-12">
-      <h2>Align</h2>
+      <h2>Align & Justify</h2>
 
-      <p>.flex.align-start { align-items: start; align-content: start; }</p>
-      <div class="flex align-start">
-        <div class="m-2 p-4 bg-gray-2"></div>
-        <div class="m-2 p-8 bg-gray-2"></div>
-        <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
-      </div>
-      <hr />
+      <PTable
+        :headers="['Class', 'Properties']"
+        :values="{
+          '.align-{start|center|end|baseline|stretch}':
+            'align-items: {start|center|end|baseline|stretch};\nalign-content: {start|center|end|baseline|stretch};',
+          '.align-items-{start|center|end|baseline|stretch}':
+            'align-items: {start|center|end|baseline|stretch};',
+          '.align-content-{start|center|end|baseline|stretch}':
+            'align-content: {start|center|end|baseline|stretch};',
+          '.justify-{start|center|end|around|between|evenly|normal}':
+            'justify-items: {start|center|end|around|between|evenly|normal};\njustify-content: {start|center|end|space-around|space-between|space-evenly|normal};',
+          '.justify-items-{start|center|end|around|between|evenly|normal}':
+            'justify-items: {start|center|end|space-around|space-between|space-evenly|normal};',
+          '.justify-content-{start|center|end|around|between|evenly|normal}':
+            'justify-content: {start|center|end|space-around|space-between|space-evenly|normal};'
+        }"
+        class="mb-5"
+      />
 
-      <p>.flex.align-center { align-items: center; align-content: center; }</p>
-      <div class="flex align-center">
-        <div class="m-2 p-4 bg-gray-2"></div>
-        <div class="m-2 p-8 bg-gray-2"></div>
-        <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
-      </div>
-      <hr />
+      <p>Align start</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex align-start&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-8 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-6 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+        "
+      />
 
-      <p>.flex.align-end { align-items: end; align-content: end; }</p>
-      <div class="flex align-end">
-        <div class="m-2 p-4 bg-gray-2"></div>
-        <div class="m-2 p-8 bg-gray-2"></div>
-        <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
-      </div>
-      <hr />
+      <p>Align center</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex align-center&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-8 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-6 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+        "
+      />
 
-      <p>
-        .flex.align-baseline { align-items: baseline; align-content: baseline; }
-      </p>
-      <div class="flex align-baseline">
-        <div class="m-2 p-4 bg-gray-2"></div>
-        <div class="m-2 p-8 bg-gray-2"></div>
-        <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
-      </div>
-      <hr />
+      <p>Align end</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex align-end&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-8 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-6 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+        "
+      />
 
-      <p>
-        .flex.align-stretch { align-items: stretch; align-content: stretch; }
-      </p>
-      <div class="flex align-stretch">
-        <div class="m-2 p-4 bg-gray-2"></div>
-        <div class="m-2 p-8 bg-gray-2"></div>
-        <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
-      </div>
-      <hr />
+      <p>Align baselinee</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex align-baseline&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-8 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-6 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+        "
+      />
+
+      <p>Align stretch</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex align-stretch&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-8 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-6 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+        "
+      />
     </section>
 
     <section class="mb-12">
       <h2>Justify</h2>
 
-      <p>
-        .flex.justify-start { justify-items: start; justify-content: start; }
-      </p>
-      <div class="flex justify-start">
-        <div class="m-2 p-4 bg-gray-2"></div>
-        <div class="m-2 p-8 bg-gray-2"></div>
-        <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
-      </div>
-      <hr />
+      <p>Justify start</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex justify-start&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-8 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-6 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+        "
+      />
 
-      <p>
-        .flex.justify-end { justify-items: end; justify-content: end; }
-      </p>
-      <div class="flex justify-end">
-        <div class="m-2 p-4 bg-gray-2"></div>
-        <div class="m-2 p-8 bg-gray-2"></div>
-        <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
-      </div>
-      <hr />
+      <p>Justify center</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex justify-center&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-8 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-6 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+        "
+      />
 
-      <p>
-        .flex.justify-around { justify-items: around; justify-content: around; }
-      </p>
-      <div class="flex justify-around">
-        <div class="m-2 p-4 bg-gray-2"></div>
-        <div class="m-2 p-8 bg-gray-2"></div>
-        <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
-      </div>
-      <hr />
+      <p>Justify end</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex justify-end&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-8 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-6 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+        "
+      />
 
-      <p>
-        .flex.justify-between { justify-items: between; justify-content:
-        between; }
-      </p>
-      <div class="flex justify-between">
-        <div class="m-2 p-4 bg-gray-2"></div>
-        <div class="m-2 p-8 bg-gray-2"></div>
-        <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
-      </div>
-      <hr />
+      <p>Justify around</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex justify-around&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-8 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-6 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+        "
+      />
 
-      <p>
-        .flex.justify-evenly { justify-items: evenly; justify-content: evenly; }
-      </p>
-      <div class="flex justify-evenly">
-        <div class="m-2 p-4 bg-gray-2"></div>
-        <div class="m-2 p-8 bg-gray-2"></div>
-        <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
-      </div>
-      <hr />
+      <p>Justify between</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex justify-between&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-8 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-6 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+        "
+      />
 
-      <p>
-        .flex.justify-normal { justify-items: normal; justify-content: normal; }
-      </p>
-      <div class="flex justify-normal">
-        <div class="m-2 p-4 bg-gray-2"></div>
-        <div class="m-2 p-8 bg-gray-2"></div>
-        <div class="m-2 p-6 bg-gray-2"></div>
-        <div class="m-2 border border-gray-3 p-4 bg-gray-1"></div>
-      </div>
-      <hr />
+      <p>Justify evenly</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex justify-evenly&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-8 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-6 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+        "
+      />
+
+      <p>Justify normal</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex justify-normal&quot;>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-8 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-6 bg-gray-1&quot;></div>
+  <div class=&quot;border border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+        "
+      />
     </section>
 
     <section class="mb-12">
@@ -664,12 +723,12 @@
 
     <section class="mb-12">
       <h2>Border Radius</h2>
-      <p class="radius-0 bg-gray-2 p-6">.radius-0 { border-radius: 0; }</p>
-      <p class="radius-1 bg-gray-2 p-6">.radius-1 { border-radius: .25rem; }</p>
-      <p class="radius-2 bg-gray-2 p-6">.radius-2 { border-radius: .5rem; }</p>
-      <p class="radius-3 bg-gray-2 p-6">.radius-3 { border-radius: .75rem; }</p>
-      <p class="radius-4 bg-gray-2 p-6">.radius-4 { border-radius: 1rem; }</p>
-      <p class="radius-full bg-gray-2 p-6">
+      <p class="radius-0 bg-gray-1 p-6">.radius-0 { border-radius: 0; }</p>
+      <p class="radius-1 bg-gray-1 p-6">.radius-1 { border-radius: .25rem; }</p>
+      <p class="radius-2 bg-gray-1 p-6">.radius-2 { border-radius: .5rem; }</p>
+      <p class="radius-3 bg-gray-1 p-6">.radius-3 { border-radius: .75rem; }</p>
+      <p class="radius-4 bg-gray-1 p-6">.radius-4 { border-radius: 1rem; }</p>
+      <p class="radius-full bg-gray-1 p-6">
         .radius-full { border-radius: 9999px; }
       </p>
     </section>
@@ -1111,7 +1170,7 @@
       </p>
 
       <p class="bg-gray-1">.bg-gray-1 { background-color: hsl(0, 0, 90%); }</p>
-      <p class="bg-gray-2">.bg-gray-2 { background-color: hsl(0, 0, 80%); }</p>
+      <p class="bg-gray-1">.bg-gray-1 { background-color: hsl(0, 0, 80%); }</p>
       <p class="bg-gray-3">.bg-gray-3 { background-color: hsl(0, 0, 70%); }</p>
       <p class="bg-gray-4">.bg-gray-4 { background-color: hsl(0, 0, 60%); }</p>
       <p class="bg-gray-5">.bg-gray-5 { background-color: hsl(0, 0, 50%); }</p>

@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <div class="border radius-t-2 p-4 border-gray-2">
+  <div class="grid columns-2 gap-3 shadow-1 border border-gray-1 radius-2 p-3">
+    <div ref="editor"></div>
+
+    <div class="grid align-center overflow-auto">
       <div v-html="content"></div>
     </div>
-
-    <div ref="editor" class="border border-t-0 radius-b-2 color-gray-2"></div>
   </div>
 </template>
 
@@ -51,6 +51,6 @@ export default {
 
 <style lang="scss">
 .CodeMirror {
-  height: auto;
+  height: 100%;
 }
 </style>
