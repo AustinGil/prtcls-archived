@@ -1,64 +1,44 @@
-.border-t,
-.border-y,
-.border {
-  border-top: 1px solid currentColor;
-}
-.border-b,
-.border-y,
-.border {
-  border-bottom: 1px solid currentColor;
-}
-.border-l,
-.border-x,
-.border {
-  border-left: 1px solid currentColor;
-}
-.border-r,
-.border-x,
-.border {
-  border-right: 1px solid currentColor;
-}
 .border-t-0,
 .border-y-0,
 .border-0 {
-  border-top-width: 0;
+  border-top: 0;
 }
 .border-b-0,
 .border-y-0,
 .border-0 {
-  border-bottom-width: 0;
+  border-bottom: 0;
 }
 .border-l-0,
 .border-x-0,
 .border-0 {
-  border-left-width: 0;
+  border-left: 0;
 }
 .border-r-0,
 .border-x-0,
 .border-0 {
-  border-right-width: 0;
+  border-right: 0;
 }
 @for $i from 1 through length($borderWidths) {
   $value: nth($borderWidths, $i);
   .border-t-#{$i},
   .border-y-#{$i},
   .border-#{$i} {
-    border-top-width: $value;
+    border-top: $value solid;
   }
   .border-b-#{$i},
   .border-y-#{$i},
   .border-#{$i} {
-    border-bottom-width: $value;
+    border-bottom: $value solid;
   }
   .border-l-#{$i},
   .border-x-#{$i},
   .border-#{$i} {
-    border-left-width: $value;
+    border-left: $value solid;
   }
   .border-r-#{$i},
   .border-x-#{$i},
   .border-#{$i} {
-    border-top-width: $value;
+    border-right: $value solid;
   }
 }
 
@@ -81,7 +61,7 @@
   .border-r-#{$style},
   .border-x-#{$style},
   .border-#{$style} {
-    border-top-style: $style;
+    border-right-style: $style;
   }
 }
 
@@ -133,7 +113,6 @@
 .radius-full {
   border-bottom-left-radius: 9999px;
 }
-$radii: 0.25rem, 0.5rem, 0.75rem, 1rem;
 @for $i from 1 through length($radii) {
   $value: nth($radii, $i);
   .radius-tl-#{$i},

@@ -1,5 +1,5 @@
 <template>
-  <table class="ptable w-full text-left">
+  <table class="whitespace-pre-line w-full text-left">
     <thead v-if="headers.length">
       <tr>
         <th
@@ -7,22 +7,18 @@
           :key="i"
           class="color-gray-7 p-2 bg-gray-1"
         >
-          {{ header }}
+          <span>{{ header }}</span>
         </th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="font-mono">
       <template v-for="(value, key) in values">
         <tr :key="key">
-          <td
-            class="p-2 border-b border-gray-2 font-mono color-purple-7 whitespace-no-wrap"
-          >
-            {{ key }}
+          <td class="p-2 border-b-1 border-gray-2 color-purple-7">
+            <span>{{ key }}</span>
           </td>
-          <td
-            class="p-2 border-b border-gray-2 font-mono color-blue-7 whitespace-pre"
-          >
-            {{ value }}
+          <td class="p-2 border-b-1 border-gray-2 color-blue-7">
+            <span>{{ value }}</span>
           </td>
         </tr>
       </template>
@@ -47,9 +43,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-.ptable {
-  white-space: pre-line;
-}
-</style>

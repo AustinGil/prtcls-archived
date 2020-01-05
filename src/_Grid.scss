@@ -35,11 +35,13 @@
   }
 }
 
-.column-span-full {
-  grid-column: span -1/1;
+.column-span-full,
+.span-full {
+  grid-column: 1/-1;
 }
-.row-span-full {
-  grid-row: span -1/1;
+.row-span-full,
+.span-full {
+  grid-row: 1/-1;
 }
 @for $i from 1 through $gridMax {
   .column-span-#{$i} {
