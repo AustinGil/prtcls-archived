@@ -3,7 +3,7 @@
 
 import DefaultLayout from "~/layouts/Default.vue";
 
-import "../../src/main.scss";
+import "./main.scss";
 
 export default function(Vue, { router, head, isClient }) {
   // Components

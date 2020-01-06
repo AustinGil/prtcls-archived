@@ -1,0 +1,6 @@
+@import "../../src/main";
+
+code,
+pre {
+  @extend .py-1, .px-2, .radius-2, .color-gray-1, .bg-gray-8;
+}

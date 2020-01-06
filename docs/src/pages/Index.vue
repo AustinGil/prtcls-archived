@@ -5,10 +5,36 @@
       <p>A customizable SCSS library for utility-first CSS</p>
     </section>
 
-    <!-- <section class="mb-12">
+    <section class="mb-12">
       <h2>Getting Started</h2>
-      <p><code>npm install prtcls</code></p>
-    </section> -->
+      <p>Install the project with <code>npm install prtcls</code>.</p>
+      <p>Create a SCSS file. For example, <code>main.scss</code>.</p>
+      <p>In that SCSS file, import the library:</p>
+      <pre>
+// main.scss
+
+// Customize options here
+
+@import "~prtcls";
+
+// Add more styles here
+      </pre>
+      <p>You can customize Particles' SCSS variables above the import.</p>
+      <p>
+        If you want to use Particles to extend your own styles, you can use
+        SCSS's
+        <a href="https://sass-lang.com/documentation/at-rules/extend"
+          >@extend</a
+        >
+        feature:
+      </p>
+      <pre>
+code,
+pre {
+  @extend .py-1, .px-2, .radius-2, .color-gray-1, .bg-gray-8;
+}
+      </pre>
+    </section>
 
     <section class="mb-12">
       <h2>Base Styles</h2>
@@ -159,10 +185,8 @@
         }"
         class="mb-5"
       />
-      <p>
-        Default sizes: 0.25rem, 0.5rem, 1rem, 1.5rem, 2rem, 3rem, 4rem, 6rem.
-      </p>
-      <h3>Exxamples:</h3>
+
+      <h3>Examples:</h3>
       <p>Even space all around</p>
       <PExample
         :html="
@@ -200,10 +224,13 @@
       />
 
       <h3>Customization</h3>
-      <p>
-        You can provide your own list of gap values by customizing the
-        <code>$gaps</code> variable.
-      </p>
+      <PTable
+        :headers="['Variable', 'Default Value']"
+        :values="{
+          $gaps: '0.25rem, 0.5rem, 1rem, 1.5rem, 2rem, 3rem, 4rem, 6rem'
+        }"
+        class="mb-5"
+      />
     </section>
 
     <section class="mb-12">
@@ -946,7 +973,8 @@
           'cyan',
           'blue',
           'purple',
-          'pink'
+          'pink',
+          'gray'
         ]"
         :key="color"
         class="grid columns-3 gap-4 mb-8"

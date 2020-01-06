@@ -1,14 +1,23 @@
 {
-  "name": "lmnl",
-  "version": "0.0.1",
+  "name": "prtcls",
+  "version": "0.0.2",
   "main": "src/main.scss",
+  "files": [
+    "src",
+    "dist"
+  ],
   "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Stegosource/prtcls.git"
+  },
   "scripts": {
-    "dev": "parcel serve src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "rm -rf dist && parcel build src/main.scss --no-content-hash",
+    "publish": "release-it"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
+    "release-it": "^12.4.3",
     "sass": "^1.24.0"
   }
 }
