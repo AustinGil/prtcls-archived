@@ -17,9 +17,9 @@
 
 @import "~prtcls";
 
-// Add more styles here
-      </pre>
-      <p>You can customize Particles' SCSS variables above the import.</p>
+// Add more styles here</pre
+      >
+      <p>(You can customize Particles' SCSS variables above the import.)</p>
       <p>
         If you want to use Particles to extend your own styles, you can use
         SCSS's
@@ -32,8 +32,29 @@
 code,
 pre {
   @extend .py-1, .px-2, .radius-2, .color-gray-1, .bg-gray-8;
-}
-      </pre>
+}</pre
+      >
+      <p>
+        Finally, you will most likely want to implement something like
+        <a href="https://www.purgecss.com/">PurgeCSS</a> to remove unused CSS.
+        If you're using Webpack, it might look like this:
+      </p>
+      <pre>
+// webpack.config.js
+const glob = require("glob");
+const PurgecssPlugin = require("purgecss-webpack-plugin");
+
+const purgecss = new PurgecssPlugin({
+  paths: glob.sync(`./src/**/*.html`)
+});
+
+module.exports = {
+  plugins: [
+    ...(process.env.NODE_ENV === "production" ? [purgecss] : [])
+  ]
+};</pre
+      >
+      <p>Be sure to <code>npm install purgecss-webpack-plugin</code> first.</p>
     </section>
 
     <section class="mb-12">
@@ -809,6 +830,70 @@ pre {
         :values="{
           $fontSizes:
             '0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.5rem, 3rem, 4rem, 6rem'
+        }"
+      />
+    </section>
+
+    <section class="mb-12">
+      <h2>Line Height</h2>
+      <PTable
+        :headers="['Class', 'Properties']"
+        :values="{
+          '.line-h-{1-6}':
+            'line-height: {1|1.25|1.375|1.5|1.625|2};'
+        }"
+      />
+
+      <h3>Examples:</h3>
+      <PExample
+        :html="
+          `<div class=&quot;line-h-1&quot;>The spectacle before us was indeed sublime.</div>
+<div class=&quot;line-h-2&quot;>The spectacle before us was indeed sublime.</div>
+<div class=&quot;line-h-3&quot;>The spectacle before us was indeed sublime.</div>
+<div class=&quot;line-h-4&quot;>The spectacle before us was indeed sublime.</div>
+<div class=&quot;line-h-5&quot;>The spectacle before us was indeed sublime.</div>
+<div class=&quot;line-h-6&quot;>The spectacle before us was indeed sublime.</div>`
+        "
+      />
+
+      <h3>Customization:</h3>
+      <PTable
+        :headers="['Variable', 'Default Value']"
+        :values="{
+          $lineHeights:
+            '1, 1.25, 1.375, 1.5, 1.625, 2'
+        }"
+      />
+    </section>
+
+    <section class="mb-12">
+      <h2>Letter Spacing</h2>
+      <PTable
+        :headers="['Class', 'Properties']"
+        :values="{
+          '.spacing-{1-6}':
+            'letter-spacing: {-0.05em|-0.025em|0|0.025em|0.05em|0.1em};'
+        }"
+      />
+
+      <h3>Examples:</h3>
+      <PExample
+        :html="
+          `<div class=&quot;spacing-1&quot;>The spectacle before us was indeed sublime.</div>
+<div class=&quot;spacing-2&quot;>The spectacle before us was indeed sublime.</div>
+<div class=&quot;spacing-3&quot;>The spectacle before us was indeed sublime.</div>
+<div class=&quot;spacing-4&quot;>The spectacle before us was indeed sublime.</div>
+<div class=&quot;spacing-5&quot;>The spectacle before us was indeed sublime.</div>
+<div class=&quot;spacing-6&quot;>The spectacle before us was indeed sublime.</div>`
+        "
+      />
+
+      <h3>Customization:</h3>
+      <PTable
+        :headers="['Variable', 'Default Value']"
+        :values="{
+          $letterSpacers:
+            '-0.05em, -0.025em, 0, 0.025em, 0.05em, 0.1em'
         }"
       />
     </section>

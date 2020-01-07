@@ -11,7 +11,9 @@
     "gridsome": "^0.7.0"
   },
   "devDependencies": {
+    "extract-text-webpack-plugin": "^3.0.2",
     "node-sass": "^4.13.0",
+    "purgecss-webpack-plugin": "^1.6.0",
     "sass-loader": "^8.0.0"
   }
 }

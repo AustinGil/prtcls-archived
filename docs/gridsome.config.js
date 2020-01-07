@@ -1,10 +1,14 @@
-// This is where project configuration and plugin options are located.
-// Learn more: https://gridsome.org/docs/config
+const glob = require("glob");
+const PurgecssPlugin = require("purgecss-webpack-plugin");
 
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
+const purgecss = new PurgecssPlugin({
+  paths: glob.sync(`./src/**/*.vue`)
+});
 
 module.exports = {
   siteName: "Particles CSS",
-  plugins: []
+  plugins: [],
+  configureWebpack: {
+    plugins: [...(process.env.NODE_ENV === "production" ? [purgecss] : [])]
+  }
 };

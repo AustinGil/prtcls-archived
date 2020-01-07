@@ -1,0 +1,13 @@
+@for $i from 1 through length($lineHeights) {
+  $value: nth($lineHeights, $i);
+  .line-h-#{$i} {
+    line-height: $value;
+  }
+}
+
+@for $i from 1 through length($letterSpacers) {
+  $value: nth($letterSpacers, $i);
+  .spacing-#{$i} {
+    letter-spacing: $value;
+  }
+}
