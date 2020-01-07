@@ -1,6 +1,15 @@
 .display-none {
   display: none;
 }
+$classMap: map-merge(
+  $classMap,
+  (
+    display-none: (
+      display,
+      none
+    )
+  )
+);
 
 $displays: inline, block, inline-block, flex, inline-flex, grid, inline-grid, table, table-row,
   table-cell;
@@ -9,6 +18,15 @@ $displays: inline, block, inline-block, flex, inline-flex, grid, inline-grid, ta
   .#{$value} {
     display: $value;
   }
+  $classMap: map-merge(
+    $classMap,
+    (
+      $value: (
+        display,
+        $value
+      )
+    )
+  );
 }
 
 @for $i from 0 through 10 {

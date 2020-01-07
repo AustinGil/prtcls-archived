@@ -2,13 +2,13 @@
   $prefix: nth($item, 1);
   $rule: nth($item, 2);
 
-  @include withVariants("#{$prefix}-white") {
+  .#{$prefix}-white {
     #{$rule}: $white;
   }
-  @include withVariants("#{$prefix}-black") {
+  .#{$prefix}-black {
     #{$rule}: $black;
   }
-  @include withVariants("#{$prefix}-transparent") {
+  .#{$prefix}-transparent {
     #{$rule}: transparent;
   }
 }
@@ -28,31 +28,31 @@ $lums: 95%, 86%, 76%, 66%, 57%, 48%, 38%, 29%, 20%;
       $s: 0;
     }
 
-    @include withVariants("color-#{$name}-#{$i}") {
+    .color-#{$name}-#{$i} {
       color: hsl($h, $s, $l);
     }
 
-    @include withVariants("bg-#{$name}-#{$i}") {
+    .bg-#{$name}-#{$i} {
       background-color: hsl($h, $s, $l);
     }
 
-    @include withVariants("border-#{$name}-#{$i} ") {
+    .border-#{$name}-#{$i} {
       border-color: hsl($h, $s, $l);
     }
 
-    @include withVariants("border-t-#{$name}-#{$i} ") {
+    .border-t-#{$name}-#{$i} {
       border-top-color: hsl($h, $s, $l);
     }
 
-    @include withVariants("border-b-#{$name}-#{$i} ") {
+    .border-b-#{$name}-#{$i} {
       border-bottom-color: hsl($h, $s, $l);
     }
 
-    @include withVariants("border-l-#{$name}-#{$i} ") {
+    .border-l-#{$name}-#{$i} {
       border-left-color: hsl($h, $s, $l);
     }
 
-    @include withVariants("border-r-#{$name}-#{$i} ") {
+    .border-r-#{$name}-#{$i} {
       border-right-color: hsl($h, $s, $l);
     }
   }

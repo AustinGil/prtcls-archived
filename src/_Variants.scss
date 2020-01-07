@@ -1,0 +1,25 @@
+@debug $classMap;
+@each $class, $definition in $classMap {
+  $rule: nth($definition, 1);
+  $value: nth($definition, 2);
+
+  @for $i from 1 through length($breakpoints) {
+    $item: nth($breakpoints, $i);
+
+    $prefix: mq#{$i};
+    $mq: $item;
+
+    @if type-of($item) == list {
+      @if length($item) > 1 {
+        $prefix: nth($item, 2);
+        $mq: nth($item, 1);
+      }
+    }
+
+    @media (min-width: $mq) {
+      .#{$prefix}\:#{$class} {
+        #{$rule}: $value;
+      }
+    }
+  }
+}
