@@ -3,3 +3,12 @@
     white-space: $value;
   }
 }
+
+@each $pair in (all, break-all), (word, break-word), (normal, normal) {
+  $class: nth($pair, 1);
+  $value: nth($pair, 2);
+
+  .word-break-#{$class} {
+    word-break: $value;
+  }
+}

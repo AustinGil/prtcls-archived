@@ -1,5 +1,5 @@
 <template>
-  <Layout class="my-10">
+  <Layout>
     <section class="mb-12">
       <h1 class="size-8">{{ $static.metadata.siteName }}</h1>
       <p>A customizable SCSS library for utility-first CSS</p>
@@ -839,8 +839,7 @@ module.exports = {
       <PTable
         :headers="['Class', 'Properties']"
         :values="{
-          '.line-h-{1-6}':
-            'line-height: {1|1.25|1.375|1.5|1.625|2};'
+          '.line-h-{1-6}': 'line-height: {1|1.25|1.375|1.5|1.625|2};'
         }"
       />
 
@@ -860,189 +859,8 @@ module.exports = {
       <PTable
         :headers="['Variable', 'Default Value']"
         :values="{
-          $lineHeights:
-            '1, 1.25, 1.375, 1.5, 1.625, 2'
+          $lineHeights: '1, 1.25, 1.375, 1.5, 1.625, 2'
         }"
-      />
-    </section>
-
-    <section class="mb-12">
-      <h2>Letter Spacing</h2>
-      <PTable
-        :headers="['Class', 'Properties']"
-        :values="{
-          '.spacing-{1-6}':
-            'letter-spacing: {-0.05em|-0.025em|0|0.025em|0.05em|0.1em};'
-        }"
-      />
-
-      <h3>Examples:</h3>
-      <PExample
-        :html="
-          `<div class=&quot;spacing-1&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;spacing-2&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;spacing-3&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;spacing-4&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;spacing-5&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;spacing-6&quot;>The spectacle before us was indeed sublime.</div>`
-        "
-      />
-
-      <h3>Customization:</h3>
-      <PTable
-        :headers="['Variable', 'Default Value']"
-        :values="{
-          $letterSpacers:
-            '-0.05em, -0.025em, 0, 0.025em, 0.05em, 0.1em'
-        }"
-      />
-    </section>
-
-    <section class="mb-12">
-      <h2>Color</h2>
-      <PTable
-        :headers="['Class', 'Properties']"
-        :values="{
-          '.color-white': 'color: #fff;',
-          '.color-black': 'color: #000;',
-          '.color-transparent': 'color: transparent;',
-          '.color-gray-{1-9}': 'color: {hsl value};',
-          '.color-{name}-{1-9}': 'color: {hsl value};'
-        }"
-      />
-      <p>
-        Default color names: red, orange, yellow, green, cyan, blue, purple,
-        pink
-      </p>
-
-      <h3>Examples:</h3>
-      <p>Different colors</p>
-      <PExample
-        :html="
-          `<div class=&quot;color-white bg-black&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-black&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-transparent&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-gray-5&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-red-5&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-orange-5&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-yellow-5&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-green-5&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-cyan-5&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-blue-5&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-purple-5&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-pink-5&quot;>The spectacle before us was indeed sublime.</div>`
-        "
-      />
-
-      <p>Different lightness</p>
-      <PExample
-        :html="
-          `<div class=&quot;color-purple-1&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-purple-2&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-purple-3&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-purple-4&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-purple-5&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-purple-6&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-purple-7&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-purple-8&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;color-purple-9&quot;>The spectacle before us was indeed sublime.</div>`
-        "
-      />
-    </section>
-
-    <section class="mb-12">
-      <h2>Font Weight</h2>
-      <PTable
-        :headers="['Class', 'Properties']"
-        :values="{
-          '.weight-{1-9}': 'font-weight: {100-900};'
-        }"
-      />
-
-      <h3>Examples:</h3>
-      <PExample
-        :html="
-          `<div class=&quot;weight-1&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;weight-2&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;weight-3&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;weight-4&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;weight-5&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;weight-6&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;weight-7&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;weight-8&quot;>The spectacle before us was indeed sublime.</div>
-<div class=&quot;weight-9&quot;>The spectacle before us was indeed sublime.</div>`
-        "
-      />
-    </section>
-
-    <section class="mb-12">
-      <h2>Text Styling</h2>
-      <PTable
-        :headers="['Class', 'Properties']"
-        :values="{
-          '.text-{left|center|right|justify}':
-            'text-algin: {left|center|right|justify};',
-          '.uppercase': 'text-transform: uppercase;',
-          '.lowercase': 'text-transform: lowercase;',
-          '.capitalize': 'text-transform: capitalize;',
-          '.normal-case': 'text-transform: none;',
-          '.underline': 'text-decoration: underline;',
-          '.overline': 'text-decoration: overline;',
-          '.line-through': 'text-decoration: line-through;',
-          '.no-line': 'text-decoration: no-line;'
-        }"
-      />
-    </section>
-
-    <section class="mb-12">
-      <h2>Background Color</h2>
-      <PTable
-        :headers="['Class', 'Properties']"
-        :values="{
-          '.bg-white': 'background-color: #fff;',
-          '.bg-black': 'background-color: #000;',
-          '.bg-transparent': 'background-color: transparent;',
-          '.bg-gray-{1-9}': 'background-color: {hsl value};',
-          '.bg-{name}-{1-9}': 'background-color: {hsl value};'
-        }"
-      />
-      <p>
-        Default color names: red, orange, yellow, green, cyan, blue, purple,
-        pink
-      </p>
-
-      <h3>Examples:</h3>
-      <p>Different colors</p>
-      <PExample
-        :html="
-          `<div class=&quot;bg-white p-4&quot;></div>
-<div class=&quot;bg-black p-4&quot;></div>
-<div class=&quot;bg-transparent p-4&quot;></div>
-<div class=&quot;bg-gray-5 p-4&quot;></div>
-<div class=&quot;bg-red-5 p-4&quot;></div>
-<div class=&quot;bg-orange-5 p-4&quot;></div>
-<div class=&quot;bg-yellow-5 p-4&quot;></div>
-<div class=&quot;bg-green-5 p-4&quot;></div>
-<div class=&quot;bg-cyan-5 p-4&quot;></div>
-<div class=&quot;bg-blue-5 p-4&quot;></div>
-<div class=&quot;bg-purple-5 p-4&quot;></div>
-<div class=&quot;bg-pink-5 p-4&quot;></div>`
-        "
-      />
-
-      <p>Different lightness</p>
-      <PExample
-        :html="
-          `<div class=&quot;bg-purple-1 p-4&quot;></div>
-<div class=&quot;bg-purple-2 p-4&quot;></div>
-<div class=&quot;bg-purple-3 p-4&quot;></div>
-<div class=&quot;bg-purple-4 p-4&quot;></div>
-<div class=&quot;bg-purple-5 p-4&quot;></div>
-<div class=&quot;bg-purple-6 p-4&quot;></div>
-<div class=&quot;bg-purple-7 p-4&quot;></div>
-<div class=&quot;bg-purple-8 p-4&quot;></div>
-<div class=&quot;bg-purple-9 p-4&quot;></div>`
-        "
       />
     </section>
 

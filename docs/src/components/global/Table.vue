@@ -1,5 +1,5 @@
 <template>
-  <table class="whitespace-pre-line w-full text-left">
+  <table class="w-full text-left whitespace-pre-line word-break-word">
     <thead v-if="headers.length">
       <tr>
         <th

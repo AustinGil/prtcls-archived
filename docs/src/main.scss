@@ -1,5 +1,26 @@
 @import "../../src/main";
 
+body {
+  @extend .font-sans, .line-h-4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend .line-h-2;
+}
+
+a {
+  @extend .color-purple-5;
+}
+
+button {
+  @extend .border-0, .bg-transparent;
+}
+
 code,
 pre {
   @extend .py-1, .px-2, .radius-2, .color-gray-1, .bg-gray-8;

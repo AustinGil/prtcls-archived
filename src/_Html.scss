@@ -12,8 +12,29 @@ body {
   @extend .m-0;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+pre {
+  @extend .my-0;
+
+  & + & {
+    @extend .mt-4;
+  }
+}
+
 ul[class],
 ol[class] {
   @extend .pl-0;
   list-style-type: none;
+}
+
+button {
+  font: inherit;
 }

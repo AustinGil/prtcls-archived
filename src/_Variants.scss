@@ -1,7 +1,10 @@
-@debug $classMap;
 @each $class, $definition in $classMap {
   $rule: nth($definition, 1);
   $value: nth($definition, 2);
+
+  .#{$class} {
+    #{$rule}: $value;
+  }
 
   @for $i from 1 through length($breakpoints) {
     $item: nth($breakpoints, $i);

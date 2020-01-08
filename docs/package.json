@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "codemirror": "^5.50.2",
-    "gridsome": "^0.7.0"
+    "gridsome": "^0.7.0",
+    "vuetensils": "^0.4.4"
   },
   "devDependencies": {
     "extract-text-webpack-plugin": "^3.0.2",
