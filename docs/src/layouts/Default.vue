@@ -51,6 +51,14 @@ export default {
     //   to: "/opacity"
     // },
     {
+      text: "Font Size",
+      to: "/font-size"
+    },
+    {
+      text: "Line Height",
+      to: "/line-height"
+    },
+    {
       text: "Color",
       to: "/color"
     },
