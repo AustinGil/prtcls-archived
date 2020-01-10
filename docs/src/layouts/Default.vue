@@ -42,29 +42,85 @@ export default {
   }),
 
   links: [
-    // {
-    //   text: "Display",
-    //   to: "/display"
-    // },
-    // {
-    //   text: "Opacity",
-    //   to: "/opacity"
-    // },
     {
-      text: "Font Size",
-      to: "/font-size"
+      text: "Display",
+      to: "/display"
     },
     {
-      text: "Line Height",
-      to: "/line-height"
+      text: "Opacity",
+      to: "/opacity"
+    },
+    {
+      text: "Visibility",
+      to: "/visibility"
+    },
+    {
+      text: "Position",
+      to: "/position"
+    },
+    {
+      text: "Align",
+      to: "/align"
+    },
+    {
+      text: "Justify",
+      to: "/justify"
+    },
+    {
+      text: "Grid Columns Rows",
+      to: "/grid-columns-rows"
+    },
+    {
+      text: "Grid Gap",
+      to: "/grid-gap"
+    },
+    {
+      text: "Grid Span",
+      to: "/grid-span"
+    },
+    {
+      text: "Flex Direction",
+      to: "/flex-direction"
+    },
+    {
+      text: "Flex Wrap",
+      to: "/flex-wrap"
+    },
+    {
+      text: "Width & Height",
+      to: "/width-height"
+    },
+    {
+      text: "Margin & Padding",
+      to: "/margin-padding"
+    },
+    {
+      text: "Border",
+      to: "/border"
+    },
+    {
+      text: "Border Radius",
+      to: "/border-radius"
     },
     {
       text: "Color",
       to: "/color"
     },
     {
+      text: "Font Family",
+      to: "/font-family"
+    },
+    {
+      text: "Font Size",
+      to: "/font-size"
+    },
+    {
       text: "Font Weight",
       to: "/font-weight"
+    },
+    {
+      text: "Line Height",
+      to: "/line-height"
     },
     {
       text: "Letter Spacing",
