@@ -2,8 +2,7 @@ $classMap: map-merge(
   $classMap,
   (
     display-none: (
-      display,
-      none
+      display: none
     )
   )
 );
@@ -15,8 +14,7 @@ $classMap: map-merge(
     $classMap,
     (
       $value: (
-        display,
-        $value
+        display: $value
       )
     )
   );
@@ -29,8 +27,7 @@ $classMap: map-merge(
     $classMap,
     (
       "opacity-#{$i}": (
-        opacity,
-        $value
+        opacity: $value
       )
     )
   );
@@ -41,31 +38,34 @@ $classMap: map-merge(
     $classMap,
     (
       $value: (
-        display,
-        $value
+        display: $value
       )
     )
   );
 }
 
-.visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
+$classMap: map-merge(
+  $classMap,
+  (
+    "visually-hidden": (
+      border: 0,
+      clip: rect(0 0 0 0),
+      height: 1px,
+      margin: -1px,
+      overflow: hidden,
+      padding: 0,
+      position: absolute,
+      width: 1px
+    )
+  )
+);
 
 @each $value in auto, hidden, visible, scroll {
   $classMap: map-merge(
     $classMap,
     (
       "overflow-#{$value}": (
-        overflow,
-        $value
+        overflow: $value
       )
     )
   );
@@ -73,8 +73,7 @@ $classMap: map-merge(
     $classMap,
     (
       "overflow-x-#{$value}": (
-        overflow,
-        $value
+        overflow: $value
       )
     )
   );
@@ -82,8 +81,7 @@ $classMap: map-merge(
     $classMap,
     (
       "overflow-y-#{$value}": (
-        overflow,
-        $value
+        overflow: $value
       )
     )
   );

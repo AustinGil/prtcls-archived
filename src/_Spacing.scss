@@ -1,100 +1,269 @@
 @each $value in 0, auto {
-  .mt-#{$value},
-  .my-#{$value},
-  .m-#{$value} {
-    margin-top: $value;
-  }
+  $classMap: map-merge(
+    $classMap,
+    (
+      m-#{$value}:
+        (
+          margin: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      my-#{$value}:
+        (
+          margin-top: $value,
+          margin-bottom: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      mx-#{$value}:
+        (
+          margin-left: $value,
+          margin-right: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      mt-#{$value}:
+        (
+          margin-top: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      mb-#{$value}:
+        (
+          margin-bottom: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      ml-#{$value}:
+        (
+          margin-left: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      mr-#{$value}:
+        (
+          margin-right: $value
+        )
+    )
+  );
 
-  .mb-#{$value},
-  .my-#{$value},
-  .m-#{$value} {
-    margin-bottom: $value;
-  }
-
-  .ml-#{$value},
-  .mx-#{$value},
-  .m-#{$value} {
-    margin-left: $value;
-  }
-
-  .mr-#{$value},
-  .mx-#{$value},
-  .m-#{$value} {
-    margin-right: $value;
-  }
-
-  .pt-#{$value},
-  .py-#{$value},
-  .p-#{$value} {
-    padding-top: $value;
-  }
-
-  .pb-#{$value},
-  .py-#{$value},
-  .p-#{$value} {
-    padding-bottom: $value;
-  }
-
-  .pl-#{$value},
-  .px-#{$value},
-  .p-#{$value} {
-    padding-left: $value;
-  }
-
-  .pr-#{$value},
-  .px-#{$value},
-  .p-#{$value} {
-    padding-right: $value;
-  }
+  $classMap: map-merge(
+    $classMap,
+    (
+      p-#{$value}:
+        (
+          padding: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      py-#{$value}:
+        (
+          padding-top: $value,
+          padding-bottom: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      px-#{$value}:
+        (
+          padding-left: $value,
+          padding-right: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      pt-#{$value}:
+        (
+          padding-top: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      pb-#{$value}:
+        (
+          padding-bottom: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      pl-#{$value}:
+        (
+          padding-left: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      pr-#{$value}:
+        (
+          padding-right: $value
+        )
+    )
+  );
 }
 
 @for $i from 1 through length($spacers) {
   $value: nth($spacers, $i);
-  .mt-#{$i},
-  .my-#{$i},
-  .m-#{$i} {
-    margin-top: $value;
-  }
 
-  .mb-#{$i},
-  .my-#{$i},
-  .m-#{$i} {
-    margin-bottom: $value;
-  }
+  $classMap: map-merge(
+    $classMap,
+    (
+      m-#{$i}:
+        (
+          margin: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      my-#{$i}:
+        (
+          margin-top: $value,
+          margin-bottom: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      mx-#{$i}:
+        (
+          margin-left: $value,
+          margin-right: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      mt-#{$i}:
+        (
+          margin-top: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      mb-#{$i}:
+        (
+          margin-bottom: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      ml-#{$i}:
+        (
+          margin-left: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      mr-#{$i}:
+        (
+          margin-right: $value
+        )
+    )
+  );
 
-  .ml-#{$i},
-  .mx-#{$i},
-  .m-#{$i} {
-    margin-left: $value;
-  }
-
-  .mr-#{$i},
-  .mx-#{$i},
-  .m-#{$i} {
-    margin-right: $value;
-  }
-
-  .pt-#{$i},
-  .py-#{$i},
-  .p-#{$i} {
-    padding-top: $value;
-  }
-
-  .pb-#{$i},
-  .py-#{$i},
-  .p-#{$i} {
-    padding-bottom: $value;
-  }
-
-  .pl-#{$i},
-  .px-#{$i},
-  .p-#{$i} {
-    padding-left: $value;
-  }
-
-  .pr-#{$i},
-  .px-#{$i},
-  .p-#{$i} {
-    padding-right: $value;
-  }
+  $classMap: map-merge(
+    $classMap,
+    (
+      p-#{$i}:
+        (
+          padding: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      py-#{$i}:
+        (
+          padding-top: $value,
+          padding-bottom: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      px-#{$i}:
+        (
+          padding-left: $value,
+          padding-right: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      pt-#{$i}:
+        (
+          padding-top: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      pb-#{$i}:
+        (
+          padding-bottom: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      pl-#{$i}:
+        (
+          padding-left: $value
+        )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      pr-#{$i}:
+        (
+          padding-right: $value
+        )
+    )
+  );
 }

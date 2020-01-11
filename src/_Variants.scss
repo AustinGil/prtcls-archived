@@ -1,9 +1,8 @@
-@each $class, $definition in $classMap {
-  $rule: nth($definition, 1);
-  $value: nth($definition, 2);
-
+@each $class, $rules in $classMap {
   .#{$class} {
-    #{$rule}: $value;
+    @each $property, $value in $rules {
+      #{$property}: $value;
+    }
   }
 
   @for $i from 1 through length($breakpoints) {
@@ -21,7 +20,9 @@
 
     @media (min-width: $mq) {
       .#{$prefix}\:#{$class} {
-        #{$rule}: $value;
+        @each $property, $value in $rules {
+          #{$property}: $value;
+        }
       }
     }
   }

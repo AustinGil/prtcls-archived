@@ -2,6 +2,15 @@
   <Layout>
     <h2>Justify</h2>
 
+    <PTable
+      :headers="['Class', 'Properties']"
+      :values="{
+        '.justify-{start|center|end|around|between|evenly}':
+          'justify-content: {start|center|end|space-around|space-between|space-evenly};'
+      }"
+      class="mb-5"
+    />
+
     <p>Justify start</p>
     <PExample
       :html="
@@ -66,18 +75,6 @@
     <PExample
       :html="
         `<div class=&quot;flex justify-evenly&quot;>
-  <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
-  <div class=&quot;border-1 border-gray-3 p-8 bg-gray-1&quot;></div>
-  <div class=&quot;border-1 border-gray-3 p-6 bg-gray-1&quot;></div>
-  <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
-</div>`
-      "
-    />
-
-    <p>Justify normal</p>
-    <PExample
-      :html="
-        `<div class=&quot;flex justify-normal&quot;>
   <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
   <div class=&quot;border-1 border-gray-3 p-8 bg-gray-1&quot;></div>
   <div class=&quot;border-1 border-gray-3 p-6 bg-gray-1&quot;></div>

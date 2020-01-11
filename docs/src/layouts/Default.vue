@@ -8,7 +8,7 @@
         Menu
       </button>
 
-      <VDrawer v-model="drawer">
+      <VDrawer v-model="drawer" bg-transition="fade-slide-right">
         <nav class="p-5">
           <h3 class="text-center">
             <g-link to="/" class="no-line">Particles CSS</g-link>
@@ -57,6 +57,10 @@ export default {
     {
       text: "Position",
       to: "/position"
+    },
+    {
+      text: "Overflow",
+      to: "/overflow"
     },
     {
       text: "Align",

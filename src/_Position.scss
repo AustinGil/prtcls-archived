@@ -1,7 +1,12 @@
 @each $value in static, fixed, absolute, relative, sticky {
-  .#{$value} {
-    position: $value;
-  }
+  $classMap: map-merge(
+    $classMap,
+    (
+      $value: (
+        position: $value
+      )
+    )
+  );
 }
 
 // @each $value in 0, auto {
@@ -10,38 +15,100 @@
 //   }
 // }
 
-.z-auto {
-  z-index: auto;
-}
+$classMap: map-merge(
+  $classMap,
+  (
+    z-auto: (
+      z-index: auto
+    )
+  )
+);
 @for $i from 0 through 5 {
   $value: $i * 10;
-  .z-#{$i} {
-    z-index: $value;
-  }
+  $classMap: map-merge(
+    $classMap,
+    (
+      z-#{$i}:
+        (
+          z-index: $value
+        )
+    )
+  );
 }
 
 @each $value in 0, auto {
-  .top-#{$value},
-  .inset-y-#{$value},
-  .inset-#{$value} {
-    top: $value;
-  }
+  $classMap: map-merge(
+    $classMap,
+    (
+      inset-#{$value}:
+        (
+          top: $value,
+          bottom: $value,
+          left: $value,
+          right: $value
+        )
+    )
+  );
 
-  .right-#{$value},
-  .inset-x-#{$value},
-  .inset-#{$value} {
-    right: $value;
-  }
+  $classMap: map-merge(
+    $classMap,
+    (
+      inset-y-#{$value}:
+        (
+          top: $value,
+          bottom: $value
+        )
+    )
+  );
 
-  .bottom-#{$value},
-  .inset-y-#{$value},
-  .inset-#{$value} {
-    bottom: $value;
-  }
+  $classMap: map-merge(
+    $classMap,
+    (
+      inset-x-#{$value}:
+        (
+          left: $value,
+          right: $value
+        )
+    )
+  );
 
-  .left-#{$value},
-  .inset-x-#{$value},
-  .inset-#{$value} {
-    left: $value;
-  }
+  $classMap: map-merge(
+    $classMap,
+    (
+      top-#{$value}:
+        (
+          top: $value
+        )
+    )
+  );
+
+  $classMap: map-merge(
+    $classMap,
+    (
+      bottom-#{$value}:
+        (
+          bottom: $value
+        )
+    )
+  );
+
+  $classMap: map-merge(
+    $classMap,
+    (
+      left-#{$value}:
+        (
+          left: $value
+        )
+    )
+  );
+
+  $classMap: map-merge(
+    $classMap,
+    (
+      right-#{$value}:
+        (
+          right: $value
+        )
+    )
+  );
 }

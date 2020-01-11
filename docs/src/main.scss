@@ -15,6 +15,13 @@ h6 {
 
 a {
   @extend .color-purple-5;
+  &:hover {
+    @extend .color-purple-7;
+  }
+}
+
+.active--exact {
+  @extend .color-purple-7;
 }
 
 button {
@@ -24,4 +31,22 @@ button {
 code,
 pre {
   @extend .py-1, .px-2, .radius-2, .color-gray-1, .bg-gray-8;
+}
+
+.fade-slide-right-enter-active,
+.fade-slide-right-leave-active {
+  transition: opacity 0.2s;
+
+  .vts-drawer__content {
+    transition: opacity 0.3s, transform 0.3s;
+  }
+}
+
+.fade-slide-right-enter,
+.fade-slide-right-leave-to {
+  opacity: 0;
+
+  .vts-drawer__content {
+    transform: translateX(-100%);
+  }
 }
