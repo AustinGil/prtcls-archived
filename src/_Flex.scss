@@ -79,3 +79,27 @@ $flexWraps: nowrap, wrap, wrap-reverse;
     )
   );
 }
+
+@each $name, $value in (initial, 0 1 auto), (1, 1 1 0%), (auto, 1 1 auto), (none, none) {
+  $classMap: map-merge(
+    $classMap,
+    (
+      flex-#{$name}:
+      (
+        flex: $value
+      )
+    )
+  )
+}
+
+@each $name, $value in (shrink, 1), (grow, 1) {
+  $classMap: map-merge(
+    $classMap,
+    (
+      flex-#{$name}:
+      (
+        flex-#{$name}: $value
+      )
+    )
+  )
+}
