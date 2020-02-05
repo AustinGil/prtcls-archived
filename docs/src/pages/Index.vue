@@ -73,7 +73,7 @@ module.exports = {
     <section>
       <h2>Theme</h2>
       <h3>Colors</h3>
-      <div
+      <template
         v-for="color in [
           'red',
           'orange',
@@ -85,16 +85,16 @@ module.exports = {
           'pink',
           'gray'
         ]"
-        :key="color"
-        class="grid columns-3 gap-4 mb-8"
       >
-        <h5 class="span-full m-0 capitalize">{{ color }}</h5>
-        <div
-          v-for="num in 9"
-          :key="num"
-          :class="`bg-${color}-${num} p-4`"
-        ></div>
-      </div>
+        <h5 :key="color" class="span-full m-0 capitalize">{{ color }}</h5>
+        <div :key="color" class="grid columns-3 gap-4 mb-8">
+          <div
+            v-for="num in 9"
+            :key="num"
+            :class="`bg-${color}-${num} p-4`"
+          ></div>
+        </div>
+      </template>
 
       <h4>Customization:</h4>
       <PTable
