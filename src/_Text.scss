@@ -1,23 +1,48 @@
-.normal-case {
-  text-transform: none;
-}
+$classMap: map-merge(
+  $classMap,
+  (
+    "normal-case": (
+      text-transform: none
+    )
+  )
+);
 @each $value in uppercase, lowercase, capitalize {
-  .#{$value} {
-    text-transform: $value;
-  }
+  $classMap: map-merge(
+    $classMap,
+    (
+      "#{$value}": (
+        text-transform: $value
+      )
+    )
+  );
 }
 
-.no-line {
-  text-decoration: none;
-}
+$classMap: map-merge(
+  $classMap,
+  (
+    "no-line": (
+      text-decoration: none
+    )
+  )
+);
 @each $value in underline, overline, line-through {
-  .#{$value} {
-    text-decoration: $value;
-  }
+  $classMap: map-merge(
+    $classMap,
+    (
+      "#{$value}": (
+        text-decoration: $value
+      )
+    )
+  );
 }
 
 @each $value in center, left, right, justify {
-  .text-#{$value} {
-    text-align: $value;
-  }
+  $classMap: map-merge(
+    $classMap,
+    (
+      "text-#{$value}": (
+        text-align: $value
+      )
+    )
+  );
 }

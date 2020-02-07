@@ -11,13 +11,13 @@
         '.m{t|b|l|r}-0': 'margin-{top|bottom|left|right}: 0;',
         '.m-{1-12}':
           'margin: {.25rem|.5rem|.75rem|1rem|1.25rem|1.5rem|2rem|2.5rem|3rem|4rem|5rem|6rem};',
-        '.p-auto': 'margin: auto;',
-        '.p-0': 'margin: 0;',
-        '.py-0': 'margin-top: 0;\nmargin-bottom: 0;',
-        '.px-0': 'margin-left: 0;\nmargin-right: 0;',
-        '.p{t|b|l|r}-0': 'margin-{top|bottom|left|right}: 0;',
+        '.p-auto': 'padding: auto;',
+        '.p-0': 'padding: 0;',
+        '.py-0': 'padding-top: 0;\npadding-bottom: 0;',
+        '.px-0': 'padding-left: 0;\npadding-right: 0;',
+        '.p{t|b|l|r}-0': 'padding-{top|bottom|left|right}: 0;',
         '.p-{1-12}':
-          'margin: {.25rem|.5rem|.75rem|1rem|1.25rem|1.5rem|2rem|2.5rem|3rem|4rem|5rem|6rem};'
+          'padding: {.25rem|.5rem|.75rem|1rem|1.25rem|1.5rem|2rem|2.5rem|3rem|4rem|5rem|6rem};'
       }"
     />
 

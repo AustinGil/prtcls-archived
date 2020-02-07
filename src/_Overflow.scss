@@ -1,36 +1,16 @@
-.overflow-auto {
-  overflow: auto;
-}
-.overflow-x-auto {
-  overflow-x: auto;
-}
-.overflow-y-auto {
-  overflow-y: auto;
-}
-.overflow-hidden {
-  overflow: hidden;
-}
-.overflow-x-hidden {
-  overflow-x: hidden;
-}
-.overflow-y-hidden {
-  overflow-y: hidden;
-}
-.overflow-scroll {
-  overflow: scroll;
-}
-.overflow-x-scroll {
-  overflow-x: scroll;
-}
-.overflow-y-scroll {
-  overflow-y: scroll;
-}
-.overflow-visible {
-  overflow: visible;
-}
-.overflow-x-visible {
-  overflow-x: visible;
-}
-.overflow-y-visible {
-  overflow-y: visible;
+@each $value in auto, hidden, scroll, visible {
+  $classMap: map-merge(
+    $classMap,
+    (
+      "overflow-#{$value}": (
+        overflow: $value
+      ),
+      "overflow-x-#{$value}": (
+        overflow-x: $value
+      ),
+      "overflow-y-#{$value}": (
+        overflow-y: $value
+      )
+    )
+  );
 }

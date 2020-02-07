@@ -2,15 +2,20 @@
   $prefix: nth($item, 1);
   $rule: nth($item, 2);
 
-  .#{$prefix}-white {
-    #{$rule}: $white;
-  }
-  .#{$prefix}-black {
-    #{$rule}: $black;
-  }
-  .#{$prefix}-transparent {
-    #{$rule}: transparent;
-  }
+  $classMap: map-merge(
+    $classMap,
+    (
+      "#{$prefix}-white": (
+        #{$rule}: $white
+      ),
+      "#{$prefix}-black": (
+        #{$rule}: $black
+      ),
+      "#{$prefix}-transparent": (
+        #{$rule}: transparent
+      )
+    )
+  );
 }
 
 $lums: 95%, 86%, 76%, 66%, 57%, 48%, 38%, 29%, 20%;
@@ -28,32 +33,31 @@ $lums: 95%, 86%, 76%, 66%, 57%, 48%, 38%, 29%, 20%;
       $s: 0;
     }
 
-    .color-#{$name}-#{$i} {
-      color: hsl($h, $s, $l);
-    }
-
-    .bg-#{$name}-#{$i} {
-      background-color: hsl($h, $s, $l);
-    }
-
-    .border-#{$name}-#{$i} {
-      border-color: hsl($h, $s, $l);
-    }
-
-    .border-t-#{$name}-#{$i} {
-      border-top-color: hsl($h, $s, $l);
-    }
-
-    .border-b-#{$name}-#{$i} {
-      border-bottom-color: hsl($h, $s, $l);
-    }
-
-    .border-l-#{$name}-#{$i} {
-      border-left-color: hsl($h, $s, $l);
-    }
-
-    .border-r-#{$name}-#{$i} {
-      border-right-color: hsl($h, $s, $l);
-    }
+    $classMap: map-merge(
+      $classMap,
+      (
+        "color-#{$name}-#{$i}": (
+          color: hsl($h, $s, $l)
+        ),
+        "bg-#{$name}-#{$i}": (
+          background-color: hsl($h, $s, $l)
+        ),
+        "border-#{$name}-#{$i}": (
+          border-color: hsl($h, $s, $l)
+        ),
+        "border-t-#{$name}-#{$i}": (
+          border-top-color: hsl($h, $s, $l)
+        ),
+        "border-b-#{$name}-#{$i}": (
+          border-bottom-color: hsl($h, $s, $l)
+        ),
+        "border-l-#{$name}-#{$i}": (
+          border-left-color: hsl($h, $s, $l)
+        ),
+        "border-r-#{$name}-#{$i}": (
+          border-right-color: hsl($h, $s, $l)
+        )
+      )
+    );
   }
 }

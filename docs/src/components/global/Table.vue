@@ -14,7 +14,7 @@
     <tbody class="font-mono">
       <template v-for="(value, key) in values">
         <tr :key="key">
-          <td class="p-2 border-b-1 border-gray-2 color-purple-7">
+          <td class="p-2 border-b-1 border-gray-2 color-purple-7 w-1/3">
             <span>{{ key }}</span>
           </td>
           <td class="p-2 border-b-1 border-gray-2 color-blue-7">

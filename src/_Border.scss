@@ -1,142 +1,171 @@
-.border-t-0,
-.border-y-0,
-.border-0 {
-  border-top: 0;
-}
-.border-b-0,
-.border-y-0,
-.border-0 {
-  border-bottom: 0;
-}
-.border-l-0,
-.border-x-0,
-.border-0 {
-  border-left: 0;
-}
-.border-r-0,
-.border-x-0,
-.border-0 {
-  border-right: 0;
-}
+$classMap: map-merge(
+  $classMap,
+  (
+    "border-0": (
+      border: 0
+    ),
+    "border-y-0": (
+      border-top: 0,
+      border-bottom: 0
+    ),
+    "border-x-0": (
+      border-left: 0,
+      border-right: 0
+    ),
+    "border-t-0": (
+      border-top: 0
+    ),
+    "border-b-0": (
+      border-bottom: 0
+    ),
+    "border-l-0": (
+      border-left: 0
+    ),
+    "border-r-0": (
+      border-right: 0
+    )
+  )
+);
+
 @for $i from 1 through length($borderWidths) {
   $value: nth($borderWidths, $i);
-  .border-t-#{$i},
-  .border-y-#{$i},
-  .border-#{$i} {
-    border-top: $value solid;
-  }
-  .border-b-#{$i},
-  .border-y-#{$i},
-  .border-#{$i} {
-    border-bottom: $value solid;
-  }
-  .border-l-#{$i},
-  .border-x-#{$i},
-  .border-#{$i} {
-    border-left: $value solid;
-  }
-  .border-r-#{$i},
-  .border-x-#{$i},
-  .border-#{$i} {
-    border-right: $value solid;
-  }
+
+  $classMap: map-merge(
+    $classMap,
+    (
+      "border-#{$i}": (
+        border: $value solid
+      ),
+      "border-y-#{$i}": (
+        border-top: $value solid,
+        border-bottom: $value solid
+      ),
+      "border-x-#{$i}": (
+        border-left: $value solid,
+        border-right: $value solid
+      ),
+      "border-t-#{$i}": (
+        border-top: $value solid
+      ),
+      "border-b-#{$i}": (
+        border-bottom: $value solid
+      ),
+      "border-l-#{$i}": (
+        border-left: $value solid
+      ),
+      "border-r-#{$i}": (
+        border-right: $value solid
+      )
+    )
+  );
 }
 
 @each $style in solid, dashed, dotted, double, none {
-  .border-t-#{$style},
-  .border-y-#{$style},
-  .border-#{$style} {
-    border-top-style: $style;
-  }
-  .border-b-#{$style},
-  .border-y-#{$style},
-  .border-#{$style} {
-    border-bottom-style: $style;
-  }
-  .border-l-#{$style},
-  .border-x-#{$style},
-  .border-#{$style} {
-    border-left-style: $style;
-  }
-  .border-r-#{$style},
-  .border-x-#{$style},
-  .border-#{$style} {
-    border-right-style: $style;
-  }
+  $classMap: map-merge(
+    $classMap,
+    (
+      "border-#{$style}": (
+        border: $style
+      ),
+      "border-y-#{$style}": (
+        border-top: $style,
+        border-bottom: $style
+      ),
+      "border-x-#{$style}": (
+        border-left: $style,
+        border-right: $style
+      ),
+      "border-t-#{$style}": (
+        border-top: $style
+      ),
+      "border-b-#{$style}": (
+        border-bottom: $style
+      ),
+      "border-l-#{$style}": (
+        border-left: $style
+      ),
+      "border-r-#{$style}": (
+        border-right: $style
+      )
+    )
+  );
 }
 
-.radius-tl-0,
-.radius-t-0,
-.radius-l-0,
-.radius-0 {
-  border-top-left-radius: 0;
-}
-.radius-tr-0,
-.radius-t-0,
-.radius-r-0,
-.radius-0 {
-  border-top-right-radius: 0;
-}
-.radius-br-0,
-.radius-b-0,
-.radius-r-0,
-.radius-0 {
-  border-bottom-right-radius: 0;
-}
-.radius-bl-0,
-.radius-b-0,
-.radius-l-0,
-.radius-0 {
-  border-bottom-left-radius: 0;
-}
-.radius-tl-full,
-.radius-t-full,
-.radius-l-full,
-.radius-full {
-  border-top-left-radius: 9999px;
-}
-.radius-tr-full,
-.radius-t-full,
-.radius-r-full,
-.radius-full {
-  border-top-right-radius: 9999px;
-}
-.radius-br-full,
-.radius-b-full,
-.radius-r-full,
-.radius-full {
-  border-bottom-right-radius: 9999px;
-}
-.radius-bl-full,
-.radius-b-full,
-.radius-l-full,
-.radius-full {
-  border-bottom-left-radius: 9999px;
+@each $key, $value in (0, 0), (full, 9999px) {
+  $classMap: map-merge(
+    $classMap,
+    (
+      "radius-#{$key}": (
+        border-radius: $value
+      ),
+      "radius-t-#{$key}": (
+        border-top-left-radius: $value,
+        border-top-right-radius: $value
+      ),
+      "radius-b-#{$key}": (
+        border-bottom-left-radius: $value,
+        border-bottom-right-radius: $value
+      ),
+      "radius-l-#{$key}": (
+        border-top-left-radius: $value,
+        border-bottom-left-radius: $value
+      ),
+      "radius-r-#{$key}": (
+        border-top-right-radius: $value,
+        border-bottom-right-radius: $value
+      ),
+      "radius-tl-#{$key}": (
+        border-top-left-radius: $value
+      ),
+      "radius-tr-#{$key}": (
+        border-top-right-radius: $value
+      ),
+      "radius-bl-#{$key}": (
+        border-bottom-left-radius: $value
+      ),
+      "radius-br-#{$key}": (
+        border-bottom-right-radius: $value
+      )
+    )
+  );
 }
 @for $i from 1 through length($radii) {
   $value: nth($radii, $i);
-  .radius-tl-#{$i},
-  .radius-t-#{$i},
-  .radius-l-#{$i},
-  .radius-#{$i} {
-    border-top-left-radius: $value;
-  }
-  .radius-tr-#{$i},
-  .radius-t-#{$i},
-  .radius-r-#{$i},
-  .radius-#{$i} {
-    border-top-right-radius: $value;
-  }
-  .radius-br-#{$i},
-  .radius-b-#{$i},
-  .radius-r-#{$i},
-  .radius-#{$i} {
-    border-bottom-right-radius: $value;
-  }
-  .radius-bl-#{$i},
-  .radius-b-#{$i},
-  .radius-l-#{$i},
-  .radius-#{$i} {
-    border-bottom-left-radius: $value;
-  }
+
+  $classMap: map-merge(
+    $classMap,
+    (
+      "radius-#{$i}": (
+        border-radius: $value
+      ),
+      "radius-t-#{$i}": (
+        border-top-left-radius: $value,
+        border-top-right-radius: $value
+      ),
+      "radius-b-#{$i}": (
+        border-bottom-left-radius: $value,
+        border-bottom-right-radius: $value
+      ),
+      "radius-l-#{$i}": (
+        border-top-left-radius: $value,
+        border-bottom-left-radius: $value
+      ),
+      "radius-r-#{$i}": (
+        border-top-right-radius: $value,
+        border-bottom-right-radius: $value
+      ),
+      "radius-tl-#{$i}": (
+        border-top-left-radius: $value
+      ),
+      "radius-tr-#{$i}": (
+        border-top-right-radius: $value
+      ),
+      "radius-bl-#{$i}": (
+        border-bottom-left-radius: $value
+      ),
+      "radius-br-#{$i}": (
+        border-bottom-right-radius: $value
+      )
+    )
+  );
 }
