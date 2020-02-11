@@ -59,14 +59,22 @@ module.exports = {
 
     <section class="mb-12">
       <h2>Base Styles</h2>
-      <p>There are very few styles affecting base HTML elements:</p>
+      <p>
+        There is a very conservative style reset that affects a few base HTML
+        elements:
+      </p>
       <ul>
         <li>Everything uses <code>box-sizing: border-box;</code></li>
         <li>Default margin is removed from <code>&lt;body&gt;</code></li>
         <li>
+          The default top and bottom margins are removed. Top margin is added to
+          sibling selectors such as <code>p + p</code>
+        </li>
+        <li>
           Any <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> element with a
           class defined gets the padding and disc-style-type removed
         </li>
+        <li>Buttons inherit font attributes</li>
       </ul>
     </section>
 
@@ -86,8 +94,10 @@ module.exports = {
           'gray'
         ]"
       >
-        <h5 :key="color" class="span-full m-0 capitalize">{{ color }}</h5>
-        <div :key="color" class="grid columns-3 gap-4 mb-8">
+        <h5 :key="`${color}-title`" class="span-full m-0 capitalize">
+          {{ color }}
+        </h5>
+        <div :key="`${color}-swatch`" class="grid columns-3 gap-4 mb-8">
           <div
             v-for="num in 9"
             :key="num"

@@ -24,6 +24,28 @@
     </ClientOnly>
 
     <slot />
+
+    <div v-if="slotKeys.length" class="grid columns-5 gap-4 items-start">
+      <div class="column-span-4">
+        <section
+          v-for="slot of slotKeys"
+          :key="slot"
+          :id="`${slot}`"
+          class="mt-12 first:mt-0"
+        >
+          <slot :name="slot" />
+        </section>
+      </div>
+
+      <nav class="sticky top-0">
+        <h4>On this page</h4>
+        <ul class="capitalize">
+          <li v-for="slot of slotKeys" :key="slot">
+            <a :href="`#${slot}`">{{ slot }}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </template>
 
@@ -138,6 +160,12 @@ export default {
       text: "Background Color",
       to: "/background-color"
     }
-  ]
+  ],
+
+  computed: {
+    slotKeys() {
+      return Object.keys(this.$slots).filter(key => key !== "default");
+    }
+  }
 };
 </script>

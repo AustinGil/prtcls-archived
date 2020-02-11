@@ -1,8 +1,8 @@
 <template>
-  <div class="grid columns-2 gap-3 shadow-1 border border-gray-1 radius-2 p-3">
+  <div class="grid columns-2 gap-3 shadow-1 border border-gray-1 radius-2 p-4">
     <div ref="editor"></div>
 
-    <div class="grid align-center overflow-auto">
+    <div class="grid align-center overflow-auto border-1 border-gray-3 p-4">
       <div v-html="content"></div>
     </div>
   </div>

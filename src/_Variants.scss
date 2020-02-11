@@ -5,6 +5,28 @@
     }
   }
 
+  @for $i from 1 through length($pseudos) {
+    $item: nth($pseudos, $i);
+
+    $prefix: $item;
+    $suffix: $item;
+
+    @if type-of($item) == list {
+      $prefix: nth($item, 1);
+      $suffix: nth($item, 1);
+
+      @if length($item) > 1 {
+        $suffix: nth($item, 2);
+      }
+    }
+
+    .#{$prefix}\:#{$class}:#{$suffix} {
+      @each $property, $value in $rules {
+        #{$property}: $value;
+      }
+    }
+  }
+
   @for $i from 1 through length($breakpoints) {
     $item: nth($breakpoints, $i);
 
