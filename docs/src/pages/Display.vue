@@ -1,10 +1,10 @@
 <template>
   <Layout>
     <h1>Display</h1>
-    <p>Apply display properties of an element</p>
+    <p class="mb-8">Apply display properties of an element</p>
 
     <template slot="classes">
-      <h2 class="mt-8">Classes</h2>
+      <h2>Classes</h2>
       <PTable
         :headers="['Class', 'Properties']"
         :values="{
@@ -30,9 +30,9 @@
         :html="
           `<div class=&quot;bg-gray-1&quot;>
   <div class=&quot;inline p-4 bg-gray-2&quot;>1</div>
-  <div class=&quot;inline p-4 bg-gray-2&quot;>2</div>
+  <div class=&quot;inline p-4 bg-gray-3&quot;>2</div>
   <div class=&quot;inline p-4 bg-gray-2&quot;>3</div>
-  <div class=&quot;inline p-4 bg-gray-2&quot;>4</div>
+  <div class=&quot;inline p-4 bg-gray-3&quot;>4</div>
 </div>`
         "
       />
@@ -43,11 +43,11 @@
       <p>Sets the display property to <code>block</code>.</p>
       <PExample
         :html="
-          `<div class=&quot;p-4 bg-gray-1&quot;>
+          `<div class=&quot;p-4 text-center bg-gray-1&quot;>
   <span class=&quot;block p-4 bg-gray-2&quot;>1</span>
   <span class=&quot;block p-4 bg-gray-3&quot;>2</span>
-  <span class=&quot;block p-4 bg-gray-4&quot;>3</span>
-  <span class=&quot;block p-4 bg-gray-5&quot;>4</span>
+  <span class=&quot;block p-4 bg-gray-2&quot;>3</span>
+  <span class=&quot;block p-4 bg-gray-3&quot;>4</span>
 </div>`
         "
       />
@@ -61,11 +61,106 @@
           `<div class=&quot;p-4 bg-gray-1&quot;>
   <div class=&quot;inline-block p-4 bg-gray-2&quot;>1</div>
   <div class=&quot;inline-block p-4 bg-gray-3&quot;>2</div>
-  <div class=&quot;inline-block p-4 bg-gray-4&quot;>3</div>
-  <div class=&quot;inline-block p-4 bg-gray-5&quot;>4</div>
+  <div class=&quot;inline-block p-4 bg-gray-2&quot;>3</div>
+  <div class=&quot;inline-block p-4 bg-gray-3&quot;>4</div>
 </div>`
         "
       />
+    </template>
+
+    <template slot="flex">
+      <h2>.flex</h2>
+      <p>Sets the display property to <code>flex</code>.</p>
+      <PExample
+        :html="
+          `<div class=&quot;flex p-4 text-center bg-gray-1&quot;>
+  <span class=&quot;flex-grow m-2 p-4 bg-gray-2&quot;>1</span>
+  <span class=&quot;flex-grow m-2 p-4 bg-gray-3&quot;>2</span>
+  <span class=&quot;flex-grow m-2 p-4 bg-gray-2&quot;>3</span>
+  <span class=&quot;flex-grow m-2 p-4 bg-gray-3&quot;>4</span>
+</div>`
+        "
+      />
+    </template>
+
+    <template slot="inline-flex">
+      <h2>.inline-flex</h2>
+      <p>Sets the display property to <code>inline-flex</code>.</p>
+      <PExample
+        :html="
+          `<div class=&quot;inline-flex p-4 bg-gray-1&quot;>
+  <div class=&quot;p-4 bg-gray-2&quot;>1</div>
+  <div class=&quot;p-4 bg-gray-3&quot;>2</div>
+  <div class=&quot;p-4 bg-gray-2&quot;>3</div>
+  <div class=&quot;p-4 bg-gray-3&quot;>4</div>
+</div>`
+        "
+      />
+    </template>
+
+    <template slot="grid">
+      <h2>.grid</h2>
+      <p>Sets the display property to <code>grid</code>.</p>
+      <PExample
+        :html="
+          `<div class=&quot;grid columns-3 p-4 text-center bg-gray-1&quot;>
+  <span class=&quot;p-4 bg-gray-2&quot;>1</span>
+  <span class=&quot;p-4 bg-gray-3&quot;>2</span>
+  <span class=&quot;p-4 bg-gray-2&quot;>3</span>
+  <span class=&quot;p-4 bg-gray-3&quot;>4</span>
+  <span class=&quot;p-4 bg-gray-2&quot;>5</span>
+  <span class=&quot;p-4 bg-gray-3&quot;>6</span>
+</div>`
+        "
+      />
+    </template>
+
+    <template slot="inline-grid">
+      <h2>.inline-grid</h2>
+      <p>Sets the display property to <code>inline-grid</code>.</p>
+      <PExample
+        :html="
+          `<div class=&quot;inline-grid columns-3 p-4 bg-gray-1&quot;>
+  <div class=&quot;p-4 bg-gray-2&quot;>1</div>
+  <div class=&quot;p-4 bg-gray-3&quot;>2</div>
+  <div class=&quot;p-4 bg-gray-2&quot;>3</div>
+  <div class=&quot;p-4 bg-gray-3&quot;>4</div>
+  <span class=&quot;p-4 bg-gray-2&quot;>5</span>
+  <span class=&quot;p-4 bg-gray-3&quot;>6</span>
+</div>`
+        "
+      />
+    </template>
+
+    <template slot="display-none">
+      <h2>.display-none</h2>
+      <p>Sets the display property to <code>none</code>.</p>
+      <PExample
+        :html="
+          `<div class=&quot;p-4 text-center bg-gray-1&quot;>
+  <div class=&quot;p-4 bg-gray-2&quot;>1</div>
+  <div class=&quot;display-none p-4 bg-gray-3&quot;>2</div>
+  <div class=&quot;display-none p-4 bg-gray-2&quot;>3</div>
+  <div class=&quot;p-4 bg-gray-3&quot;>4</div>
+</div>`
+        "
+      />
+    </template>
+
+    <template slot="responsive">
+      <h2>Responsive</h2>
+      <PResponsive
+        class="mt-4"
+        :classes="['flex', 'block', 'inline-block', 'grid', 'flex']"
+      >
+        <template #default="{ activeClass}">
+          <div :class="['p-2 bg-gray-1', activeClass]">
+            <div class="m-2 p-4 bg-gray-2">1</div>
+            <div class="m-2 p-4 bg-gray-2">2</div>
+            <div class="m-2 p-4 bg-gray-2">3</div>
+          </div>
+        </template>
+      </PResponsive>
     </template>
   </Layout>
 </template>

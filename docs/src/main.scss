@@ -28,6 +28,13 @@ button {
   @extend .border-0, .bg-transparent;
 }
 
+input.visually-hidden:focus + * {
+  outline-width: 1px;
+  outline-style: auto;
+  outline-color: Highlight;
+  outline-color: -webkit-focus-ring-color;
+}
+
 code,
 pre {
   @extend .py-1, .px-2, .radius-2, .color-gray-1, .bg-gray-8;

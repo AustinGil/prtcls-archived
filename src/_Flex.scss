@@ -85,21 +85,45 @@ $flexWraps: nowrap, wrap, wrap-reverse;
     $classMap,
     (
       flex-#{$name}:
-      (
-        flex: $value
-      )
+        (
+          flex: $value
+        )
     )
-  )
+  );
 }
 
-@each $name, $value in (shrink, 1), (grow, 1) {
+$classMap: map-merge(
+  $classMap,
+  (
+    flex-grow: (
+      flex-grow: 1
+    )
+  )
+);
+$classMap: map-merge(
+  $classMap,
+  (
+    flex-shrink: (
+      flex-shrink: 1
+    )
+  )
+);
+@for $i from 0 through 4 {
   $classMap: map-merge(
     $classMap,
     (
-      flex-#{$name}:
-      (
-        flex-#{$name}: $value
+      "flex-grow-#{$i}": (
+        flex-grow: $i
       )
     )
-  )
+  );
+
+  $classMap: map-merge(
+    $classMap,
+    (
+      "flex-shrink-#{$i}": (
+        flex-shrink: $i
+      )
+    )
+  );
 }

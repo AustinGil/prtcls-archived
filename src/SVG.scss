@@ -1,0 +1,10 @@
+@for $i from 1 through 3 {
+  $classMap: map-merge(
+    $classMap,
+    (
+      "stroke-#{$i}": (
+        stroke-width: $i
+      )
+    )
+  );
+}

@@ -1,0 +1,5 @@
+:root {
+  @each $name, $value in $customProps {
+    --prtcls-#{$name}: #{$value};
+  }
+}

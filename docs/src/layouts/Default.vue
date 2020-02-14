@@ -37,7 +37,7 @@
         </section>
       </div>
 
-      <nav class="sticky top-0">
+      <nav class="sticky top-0 pt-4">
         <h4>On this page</h4>
         <ul class="capitalize">
           <li v-for="slot of slotKeys" :key="slot">

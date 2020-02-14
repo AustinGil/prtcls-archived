@@ -42,3 +42,24 @@ ol[class] {
 button {
   font: inherit;
 }
+
+fieldset {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+img,
+figure,
+svg {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+svg {
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 0;
+}
