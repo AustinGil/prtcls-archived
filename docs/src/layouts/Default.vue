@@ -1,9 +1,9 @@
 <template>
-  <div class="max-w-4 my-10 mx-auto px-4">
+  <div class="max-w-10 my-10 mx-auto px-4">
     <ClientOnly>
       <button
         @click="drawer = !drawer"
-        class="fixed z-1 right-0 mr-3 radius-1 p-4 size-3 color-white bg-purple-5"
+        class="fixed z-1 right-0 mr-3 radius-1 p-2 size-3 color-white bg-purple-5"
       >
         Menu
       </button>
@@ -37,7 +37,7 @@
         </section>
       </div>
 
-      <nav class="sticky top-0 pt-4">
+      <nav class="sticky top-0 border-1 border-gray-2 p-4 bg-white">
         <h4>On this page</h4>
         <ul class="capitalize">
           <li v-for="slot of slotKeys" :key="slot">

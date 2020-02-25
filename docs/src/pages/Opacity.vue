@@ -3,7 +3,7 @@
     <h1>Opacity</h1>
     <p class="mb-8">Apply opacity properties of an element</p>
 
-    <template slot="classes">
+    <template #classes>
       <h2>Classes</h2>
       <PTable
         :headers="['Class', 'Properties']"
@@ -15,8 +15,8 @@
       />
     </template>
 
-    <template slot="opacity">
-      <h2>.opacity-{num}</h2>
+    <template #opacity>
+      <h2>.opacity-[0-10]</h2>
       <p>Sets the opacity property to a value between 0 and 1.</p>
       <PExample
         :html="
@@ -33,6 +33,27 @@
 <div class=&quot;opacity-10 p-4 bg-black&quot;></div>`
         "
       />
+    </template>
+
+    <template #responsive>
+      <h2>Responsive</h2>
+      <PResponsive
+        class="mt-4"
+        :classes="[
+          'opacity-10',
+          'opacity-3',
+          'opacity-7',
+          'opacity-0',
+          'opacity-5'
+        ]"
+      >
+        <template #default="{ activeClass}">
+          <img
+            src="https://www.fillmurray.com/700/450"
+            :class="`${activeClass} block m-auto`"
+          />
+        </template>
+      </PResponsive>
     </template>
   </Layout>
 </template>

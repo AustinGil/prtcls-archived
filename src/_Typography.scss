@@ -10,7 +10,7 @@
 }
 
 @for $i from 1 through length($fontSizes) {
-  $value: nth($fontSizes, $i);
+  $value: nth($fontSizes, $i) / $remBase * 1rem;
   $classMap: map-merge(
     $classMap,
     (

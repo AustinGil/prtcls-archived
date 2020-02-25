@@ -28,19 +28,19 @@
   }
 
   @for $i from 1 through length($breakpoints) {
-    $item: nth($breakpoints, $i);
+    $item: nth($breakpoints, $i) / $remBase * 1rem;
 
-    $prefix: mq#{$i};
-    $mq: $item;
+    $prefix: bp#{$i};
+    $bp: $item;
 
     @if type-of($item) == list {
       @if length($item) > 1 {
         $prefix: nth($item, 2);
-        $mq: nth($item, 1);
+        $bp: nth($item, 1);
       }
     }
 
-    @media (min-width: $mq) {
+    @media (min-width: $bp) {
       .#{$prefix}\:#{$class} {
         @each $property, $value in $rules {
           #{$property}: $value;

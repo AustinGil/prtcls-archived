@@ -8,7 +8,8 @@ $classMap: map-merge(
 );
 
 @each $value in inline, block, inline-block, flex, inline-flex, grid, inline-grid, table, table-row,
-  table-cell
+  table-cell, table-caption, table-column, table-column-group, table-footer-group,
+  table-header-group, table-row-group
 {
   $classMap: map-merge(
     $classMap,
@@ -38,7 +39,7 @@ $classMap: map-merge(
     $classMap,
     (
       $value: (
-        display: $value
+        visibility: $value
       )
     )
   );

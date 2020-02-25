@@ -28,7 +28,7 @@ $classMap: map-merge(
 );
 
 @for $i from 1 through length($borderWidths) {
-  $value: nth($borderWidths, $i);
+  $value: nth($borderWidths, $i) / $remBase * 1rem;
 
   $classMap: map-merge(
     $classMap,
@@ -130,7 +130,7 @@ $classMap: map-merge(
   );
 }
 @for $i from 1 through length($radii) {
-  $value: nth($radii, $i);
+  $value: nth($radii, $i) / $remBase * 1rem;
 
   $classMap: map-merge(
     $classMap,

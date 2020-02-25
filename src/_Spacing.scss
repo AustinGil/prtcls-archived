@@ -133,7 +133,7 @@
 }
 
 @for $i from 1 through length($spacers) {
-  $value: nth($spacers, $i);
+  $value: nth($spacers, $i) / $remBase * 1rem;
 
   $classMap: map-merge(
     $classMap,

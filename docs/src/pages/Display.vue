@@ -3,7 +3,7 @@
     <h1>Display</h1>
     <p class="mb-8">Apply display properties of an element</p>
 
-    <template slot="classes">
+    <template #classes>
       <h2>Classes</h2>
       <PTable
         :headers="['Class', 'Properties']"
@@ -18,12 +18,18 @@
           '.table': 'display: table;',
           '.table-row': 'display: table-row;',
           '.table-cell': 'display: table-cell;',
+          '.table-caption': 'display: table-caption;',
+          '.table-column': 'display: table-column;',
+          '.table-column-group': 'display: table-column-group;',
+          '.table-footer-group': 'display: table-footer-group;',
+          '.table-header-group': 'display: table-header-group;',
+          '.table-row-group': 'display: table-row-group;',
           '.display-none': 'display: none;'
         }"
       />
     </template>
 
-    <template slot="inline">
+    <template #inline>
       <h2>.inline</h2>
       <p>Sets the display property to <code>inline</code>.</p>
       <PExample
@@ -38,7 +44,7 @@
       />
     </template>
 
-    <template slot="block">
+    <template #block>
       <h2>.block</h2>
       <p>Sets the display property to <code>block</code>.</p>
       <PExample
@@ -53,7 +59,7 @@
       />
     </template>
 
-    <template slot="inline-block">
+    <template #inline-block>
       <h2>.inline-block</h2>
       <p>Sets the display property to <code>inline-block</code>.</p>
       <PExample
@@ -68,7 +74,7 @@
       />
     </template>
 
-    <template slot="flex">
+    <template #flex>
       <h2>.flex</h2>
       <p>Sets the display property to <code>flex</code>.</p>
       <PExample
@@ -83,7 +89,7 @@
       />
     </template>
 
-    <template slot="inline-flex">
+    <template #inline-flex>
       <h2>.inline-flex</h2>
       <p>Sets the display property to <code>inline-flex</code>.</p>
       <PExample
@@ -98,7 +104,7 @@
       />
     </template>
 
-    <template slot="grid">
+    <template #grid>
       <h2>.grid</h2>
       <p>Sets the display property to <code>grid</code>.</p>
       <PExample
@@ -115,7 +121,7 @@
       />
     </template>
 
-    <template slot="inline-grid">
+    <template #inline-grid>
       <h2>.inline-grid</h2>
       <p>Sets the display property to <code>inline-grid</code>.</p>
       <PExample
@@ -132,7 +138,7 @@
       />
     </template>
 
-    <template slot="display-none">
+    <template #display-none>
       <h2>.display-none</h2>
       <p>Sets the display property to <code>none</code>.</p>
       <PExample
@@ -147,7 +153,7 @@
       />
     </template>
 
-    <template slot="responsive">
+    <template #responsive>
       <h2>Responsive</h2>
       <PResponsive
         class="mt-4"

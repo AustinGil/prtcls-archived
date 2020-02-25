@@ -16,8 +16,8 @@
             type="radio"
             class="visually-hidden"
           />
-          <PSvg :icon="`mq${num - 1}`" size="60" tabindex="-1" />
-          <p>{{ num - 1 === 0 ? "all" : `mq${num - 1}` }}</p>
+          <PSvg :icon="`bp${num - 1}`" size="60" tabindex="-1" />
+          <p>{{ num - 1 === 0 ? "all" : `bp${num - 1}` }}</p>
         </label>
       </div>
     </fieldset>
@@ -42,7 +42,7 @@
 export default {
   name: "PResponsive",
 
-  mqs: ["all", "40rem", "48rem", "64rem", "80rem"],
+  bps: ["all", "40rem", "48rem", "64rem", "80rem"],
 
   props: {
     classes: {
@@ -64,7 +64,7 @@ export default {
       const classList = classes
         .map((cls, idx) => {
           if (idx === 0) return cls;
-          return `mq${idx}:${cls}`;
+          return `bp${idx}:${cls}`;
         })
         .map((cls, idx) => {
           if (idx !== activeIndex) return cls;

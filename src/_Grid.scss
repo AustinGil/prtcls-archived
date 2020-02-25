@@ -58,13 +58,14 @@ $classMap: map-merge(
   )
 );
 @for $i from 1 through length($gaps) {
+  $value: nth($gaps, $i) / $remBase * 1rem;
   $classMap: map-merge(
     $classMap,
     (
       gap-#{$i}:
         (
-          grid-column-gap: nth($gaps, $i),
-          grid-row-gap: nth($gaps, $i)
+          grid-column-gap: $value,
+          grid-row-gap: $value
         )
     )
   );
@@ -73,7 +74,7 @@ $classMap: map-merge(
     (
       column-gap-#{$i}:
         (
-          grid-column-gap: nth($gaps, $i)
+          grid-column-gap: $value
         )
     )
   );
@@ -82,7 +83,7 @@ $classMap: map-merge(
     (
       row-gap-#{$i}:
         (
-          grid-row-gap: nth($gaps, $i)
+          grid-row-gap: $value
         )
     )
   );
