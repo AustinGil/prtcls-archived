@@ -66,99 +66,99 @@ export default {
   links: [
     {
       text: "Display",
-      to: "/display"
+      to: "/display/"
     },
     {
       text: "Opacity",
-      to: "/opacity"
+      to: "/opacity/"
     },
     {
       text: "Visibility",
-      to: "/visibility"
+      to: "/visibility/"
     },
     {
       text: "Position",
-      to: "/position"
+      to: "/position/"
     },
     {
       text: "Overflow",
-      to: "/overflow"
+      to: "/overflow/"
     },
     {
       text: "Align",
-      to: "/align"
+      to: "/align/"
     },
     {
       text: "Justify",
-      to: "/justify"
+      to: "/justify/"
     },
     {
       text: "Grid Columns Rows",
-      to: "/grid-columns-rows"
+      to: "/grid-columns-rows/"
     },
     {
       text: "Grid Gap",
-      to: "/grid-gap"
+      to: "/grid-gap/"
     },
     {
       text: "Grid Span",
-      to: "/grid-span"
+      to: "/grid-span/"
     },
     {
       text: "Flex Direction",
-      to: "/flex-direction"
+      to: "/flex-direction/"
     },
     {
       text: "Flex Wrap",
-      to: "/flex-wrap"
+      to: "/flex-wrap/"
     },
     {
       text: "Width & Height",
-      to: "/width-height"
+      to: "/width-height/"
     },
     {
       text: "Margin & Padding",
-      to: "/margin-padding"
+      to: "/margin-padding/"
     },
     {
       text: "Border",
-      to: "/border"
+      to: "/border/"
     },
     {
       text: "Border Radius",
-      to: "/border-radius"
+      to: "/border-radius/"
     },
     {
       text: "Color",
-      to: "/color"
+      to: "/color/"
     },
     {
       text: "Font Family",
-      to: "/font-family"
+      to: "/font-family/"
     },
     {
       text: "Font Size",
-      to: "/font-size"
+      to: "/font-size/"
     },
     {
       text: "Font Weight",
-      to: "/font-weight"
+      to: "/font-weight/"
     },
     {
       text: "Line Height",
-      to: "/line-height"
+      to: "/line-height/"
     },
     {
       text: "Letter Spacing",
-      to: "/letter-spacing"
+      to: "/letter-spacing/"
     },
     {
       text: "Text Styling",
-      to: "/text-styling"
+      to: "/text-styling/"
     },
     {
       text: "Background Color",
-      to: "/background-color"
+      to: "/background-color/"
     }
   ],
 
