@@ -1,9 +1,8 @@
-$fontSans: "Montserrat", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-
 @import "../../src/main";
 
 body {
-  @extend .font-sans, .line-h-4;
+  @extend .line-h-4;
+  font-family: "Montserrat", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
 
 h1,
