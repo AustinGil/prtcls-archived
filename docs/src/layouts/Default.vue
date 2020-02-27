@@ -1,18 +1,27 @@
 <template>
-  <div class="max-w-10 my-10 mx-auto px-4">
-    <ClientOnly>
-      <button
-        @click="drawer = !drawer"
-        class="fixed z-1 right-0 mr-3 radius-1 p-2 size-3 color-white bg-purple-5"
-      >
-        Menu
-      </button>
+  <div>
+    <header class="flex justify-between p-4 border-b-1 border-gray-2">
+      <g-link to="/">
+        <img
+          src="/img/icon.svg"
+          :alt="$static.metadata.siteName"
+          width="32"
+          height="40"
+        />
+        <span class="visually-hidden">Particles CSS</span>
+      </g-link>
 
-      <VDrawer v-model="drawer" bg-transition="fade-slide-right">
-        <nav class="p-5">
-          <h3 class="text-center">
-            <g-link to="/" class="no-line">Particles CSS</g-link>
-          </h3>
+      <a href="https://github.com/stegosource/prtcls">
+        <PSvg icon="icon-github" class="size-6" />
+        <span class="visually-hidden">GitHub</span>
+      </a>
+    </header>
+
+    <div class="my-10 grid columns-12 gap-4 items-start mx-auto px-4">
+      <aside
+        class="column-span-3 sticky top-0 border-1 border-gray-2 p-4 bg-white"
+      >
+        <nav>
           <h3>Rules</h3>
           <ul class="nav">
             <li v-for="(link, i) in $options.links" :key="i">
@@ -20,31 +29,34 @@
             </li>
           </ul>
         </nav>
-      </VDrawer>
-    </ClientOnly>
+      </aside>
 
-    <slot />
+      <main class="column-span-6">
+        <div class="c-3">
+          <slot />
 
-    <div v-if="slotKeys.length" class="grid columns-5 gap-4 items-start">
-      <div class="column-span-4">
-        <section
-          v-for="slot of slotKeys"
-          :key="slot"
-          :id="`${slot}`"
-          class="mt-12 first:mt-0"
-        >
-          <slot :name="slot" />
-        </section>
-      </div>
+          <section
+            v-for="slot of slotKeys"
+            :key="slot"
+            :id="`${slot}`"
+            class="mt-12 first:mt-0"
+          >
+            <slot :name="slot" />
+          </section>
+        </div>
+      </main>
 
-      <nav class="sticky top-0 border-1 border-gray-2 p-4 bg-white">
+      <aside
+        v-if="slotKeys.length"
+        class="column-span-3 sticky top-0 border-1 border-gray-2 p-4 bg-white"
+      >
         <h4>On this page</h4>
         <ul class="capitalize">
           <li v-for="slot of slotKeys" :key="slot">
             <a :href="`#${slot}`">{{ slot }}</a>
           </li>
         </ul>
-      </nav>
+      </aside>
     </div>
   </div>
 </template>
@@ -169,3 +181,4 @@ export default {
   }
 };
 </script>
+
