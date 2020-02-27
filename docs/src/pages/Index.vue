@@ -2,7 +2,12 @@
   <Layout>
     <section class="mb-12">
       <h1 class="size-8">
-        <img src="/img/logo.svg" :alt="$static.metadata.siteName" width="480" height="75">
+        <img
+          src="/img/logo.svg"
+          :alt="$static.metadata.siteName"
+          width="480"
+          height="75"
+        />
       </h1>
       <p>A customizable SCSS library for utility-first CSS</p>
     </section>
@@ -10,32 +15,47 @@
     <template #about>
       <h2>About</h2>
       <p>Particles CSS is utility-first CSS library focused on a few things:</p>
-        <h4>Semantic</h4>
-        <p>Class names follow a very close naming convention to the CSS spec. Learn Particles, and you learn CSS. Know CSS, then you know Particles.</p>
-        <h4>Intuitive</h4>
-        <p>Class names should be easy to understand, learn, and even guess. There's no arbitrary names, units, or scales to learn.</p>
-        <h4>Efficient</h4>
-        <p>It should take away as much energy and time spent thinking about options. Other libraries are not flexible enough, and custom CSS is too flexible.</p>
-        <h4>Customizable</h4>
-        <p>The library should be customizable to your brand. It uses SCSS variables and CSS custom properties (variables).</p>
+      <h4>Semantic</h4>
+      <p>
+        Class names follow a very close naming convention to the CSS spec. Learn
+        Particles, and you learn CSS. Know CSS, then you know Particles.
+      </p>
+      <h4>Intuitive</h4>
+      <p>
+        Class names should be easy to understand, learn, and even guess. There's
+        no arbitrary names, units, or scales to learn.
+      </p>
+      <h4>Efficient</h4>
+      <p>
+        It should take away as much energy and time spent thinking about
+        options. Other libraries are not flexible enough, and custom CSS is too
+        flexible.
+      </p>
+      <h4>Customizable</h4>
+      <p>
+        The library should be customizable to your brand. It uses SCSS variables
+        and CSS custom properties (variables).
+      </p>
     </template>
 
     <template #installation>
       <h2>Getting Started</h2>
       <h3>Installation</h3>
-      <p>Install the project with:
-        <pre>npm install prtcls</pre>
-      </p>
+      <p>Install the project with:</p>
+      <pre>npm install prtcls</pre>
       <p>
         Import the library into one of you SCSS files:
-        <pre>// main.scss
-@import "~prtcls";</pre>
       </p>
+      <pre>
+// main.scss
+@import "~prtcls";</pre
+      >
       <h3>Customization</h3>
       <p>
         You can customize Particles' SCSS variables above the import statement.
       </p>
-      <pre>// main.scss
+      <pre>
+// main.scss
 // customize variables here
 @import "~prtcls";</pre
       >
@@ -54,9 +74,10 @@ pre {
 }</pre
       >
       <h3>Optimize for production with PurgeCSS</h3>
-      <p>You will most likely want to remove unused CSS with something like
-        <a href="https://www.purgecss.com/">PurgeCSS</a>.
-        If you're using Webpack, it might look like this:
+      <p>
+        You will most likely want to remove unused CSS with something like
+        <a href="https://www.purgecss.com/">PurgeCSS</a>. If you're using
+        Webpack, it might look like this:
       </p>
       <pre>
 // webpack.config.js
@@ -100,14 +121,17 @@ module.exports = {
     <template #prefixes>
       <h2>Prefixes</h2>
       <h3>Responsive</h3>
-      <p>Add these prefixes to any Particles CSS class to apply the rules only at certain the respective breakpoints.</p>
+      <p>
+        Add these prefixes to any Particles CSS class to apply the rules only at
+        certain the respective breakpoints.
+      </p>
       <PTable
         :headers="['Prefix', 'Breakpoint']"
         :values="{
-          'bp1': '40rem (640px)',
-          'bp2': '48rem (768px)',
-          'bp3': '64rem (1024px)',
-          'bp4': '80rem (1280px)',
+          bp1: '40rem (640px)',
+          bp2: '48rem (768px)',
+          bp3: '64rem (1024px)',
+          bp4: '80rem (1280px)'
         }"
       />
       <PResponsive
@@ -124,25 +148,35 @@ module.exports = {
       </PResponsive>
 
       <h3>Pseudo-Classes</h3>
-      <p>Add these prefixes to any Particles CSS class to apply the rules only for the respective pseudo-classes.</p>
+      <p>
+        Add these prefixes to any Particles CSS class to apply the rules only
+        for the respective pseudo-classes.
+      </p>
       <PTable
         :headers="['Prefix', 'Breakpoint']"
         :values="{
-          'hover': ':hover',
-          'focus': ':focus',
-          'within': ':focus-within',
-          'first': ':first-child',
-          'last': ':last-child',
-          'even': ':nth-child(even)',
-          'odd': ':nth-child(odd)',
-          'active': ':active',
-          'visited': ':visited',
-          'required': ':required',
-          'invalid': ':invalid',
-          'empty': ':empty',
+          hover: ':hover',
+          focus: ':focus',
+          within: ':focus-within',
+          first: ':first-child',
+          last: ':last-child',
+          even: ':nth-child(even)',
+          odd: ':nth-child(odd)',
+          active: ':active',
+          visited: ':visited',
+          required: ':required',
+          invalid: ':invalid',
+          empty: ':empty'
         }"
       />
-      <p>For more general information on what pseudo-classes are and how to use them, please see the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">MDN article about them</a>.</p>
+      <p>
+        For more general information on what pseudo-classes are and how to use
+        them, please see the
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"
+          >MDN article about them</a
+        >.
+      </p>
     </template>
 
     <!-- <template #sizes>
@@ -159,8 +193,15 @@ module.exports = {
 
     <template #colors>
       <h2>Colors</h2>
-      <p>Particles CSS provides a default color palette that you can use for any of the CSS properties that apply a color (color, background-color, border-color, etc).</p>
-      <p>The classes will change between CSS properties, but the format for the colors will be the same: [class]-[color]-[variant 1-9].</p>
+      <p>
+        Particles CSS provides a default color palette that you can use for any
+        of the CSS properties that apply a color (color, background-color,
+        border-color, etc).
+      </p>
+      <p>
+        The classes will change between CSS properties, but the format for the
+        colors will be the same: [class]-[color]-[variant 1-9].
+      </p>
       <p>For example: <code>color-purple-5</code></p>
       <p>Here's all the colors generated by default.</p>
       <template
