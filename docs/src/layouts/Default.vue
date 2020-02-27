@@ -17,10 +17,10 @@
       </a>
     </header>
 
-    <div class="my-10 grid columns-12 gap-4 items-start mx-auto px-4">
-      <aside
-        class="column-span-2 sticky top-0 border-1 border-gray-2 p-4 bg-white"
-      >
+    <div
+      class="layout-default grid columns-3 gap-4 items-start my-10 mx-auto px-4"
+    >
+      <aside class="sticky top-0 border-1 border-gray-2 p-4 bg-white">
         <nav>
           <h3>Rules</h3>
           <ul class="nav">
@@ -31,24 +31,22 @@
         </nav>
       </aside>
 
-      <main class="column-span-8">
-        <div class="c-3">
-          <slot />
+      <main class="max-w-10 mx-auto">
+        <slot />
 
-          <section
-            v-for="slot of slotKeys"
-            :key="slot"
-            :id="`${slot}`"
-            class="mt-12 first:mt-0"
-          >
-            <slot :name="slot" />
-          </section>
-        </div>
+        <section
+          v-for="slot of slotKeys"
+          :key="slot"
+          :id="`${slot}`"
+          class="mt-12 first:mt-0"
+        >
+          <slot :name="slot" />
+        </section>
       </main>
 
       <aside
         v-if="slotKeys.length"
-        class="column-span-2 sticky top-0 border-1 border-gray-2 p-4 bg-white"
+        class="sticky top-0 border-1 border-gray-2 p-4 bg-white"
       >
         <h4>On this page</h4>
         <ul class="capitalize">
@@ -182,3 +180,8 @@ export default {
 };
 </script>
 
+<style lang="scss">
+.layout-default {
+  grid-template-columns: auto 1fr auto;
+}
+</style>
