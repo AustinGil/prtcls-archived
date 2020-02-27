@@ -48,59 +48,59 @@
     )
   );
 }
-@for $denominator from 2 through 12 {
-  @for $i from 1 through length($sizes) {
-    $value: nth($sizes, $i) / $remBase * 1rem;
-    $classMap: map-merge(
-      $classMap,
-      (
-        "w-#{$i}": (
-          width: $value
-        )
-      )
-    );
-    $classMap: map-merge(
-      $classMap,
-      (
-        "min-w-#{$i}": (
-          min-width: $value
-        )
-      )
-    );
-    $classMap: map-merge(
-      $classMap,
-      (
-        "max-w-#{$i}": (
-          max-width: $value
-        )
-      )
-    );
-    $classMap: map-merge(
-      $classMap,
-      (
-        "h-#{$i}": (
-          height: $value
-        )
-      )
-    );
-    $classMap: map-merge(
-      $classMap,
-      (
-        "min-h-#{$i}": (
-          min-height: $value
-        )
-      )
-    );
-    $classMap: map-merge(
-      $classMap,
-      (
-        "max-h-#{$i}": (
-          max-height: $value
-        )
-      )
-    );
-  }
 
+@for $i from 1 through length($sizes) {
+  $value: nth($sizes, $i) / $remBase * 1rem;
+  $classMap: map-merge(
+    $classMap,
+    (
+      "w-#{$i}": (
+        width: $value
+      )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      "min-w-#{$i}": (
+        min-width: $value
+      )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      "max-w-#{$i}": (
+        max-width: $value
+      )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      "h-#{$i}": (
+        height: $value
+      )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      "min-h-#{$i}": (
+        min-height: $value
+      )
+    )
+  );
+  $classMap: map-merge(
+    $classMap,
+    (
+      "max-h-#{$i}": (
+        max-height: $value
+      )
+    )
+  );
+}
+@for $denominator from 2 through 12 {
   @for $numerator from 1 through ($denominator - 1) {
     $classMap: map-merge(
       $classMap,

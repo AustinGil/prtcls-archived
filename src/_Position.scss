@@ -9,12 +9,6 @@
   );
 }
 
-// @each $value in 0, auto {
-//   .#{$value} {
-//     position: $value;
-//   }
-// }
-
 $classMap: map-merge(
   $classMap,
   (
@@ -72,43 +66,18 @@ $classMap: map-merge(
     )
   );
 
-  $classMap: map-merge(
-    $classMap,
-    (
-      top-#{$value}:
-        (
-          top: $value
-        )
-    )
-  );
+  @each $side in top, bottom, left, right {
+    $classMap: map-merge($classMap, (#{$side}-#{$value}: (#{$side}: $value)));
+  }
+}
 
-  $classMap: map-merge(
-    $classMap,
-    (
-      bottom-#{$value}:
-        (
-          bottom: $value
-        )
-    )
-  );
-
-  $classMap: map-merge(
-    $classMap,
-    (
-      left-#{$value}:
-        (
-          left: $value
-        )
-    )
-  );
-
-  $classMap: map-merge(
-    $classMap,
-    (
-      right-#{$value}:
-        (
-          right: $value
-        )
-    )
-  );
+@for $denominator from 2 through 4 {
+  @for $numerator from 1 through ($denominator - 1) {
+    @each $side in top, bottom, left, right {
+      $classMap: map-merge(
+        $classMap,
+        (#{$side}-#{$numerator}\/#{$denominator}: (#{$side}: $numerator / $denominator * 100%))
+      );
+    }
+  }
 }

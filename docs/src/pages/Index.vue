@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <section class="mb-12">
+    <section class="mb-12 text-center">
       <h1 class="size-8">
         <img
           src="/img/logo.svg"

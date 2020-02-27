@@ -19,7 +19,7 @@
 
     <div class="my-10 grid columns-12 gap-4 items-start mx-auto px-4">
       <aside
-        class="column-span-3 sticky top-0 border-1 border-gray-2 p-4 bg-white"
+        class="column-span-2 sticky top-0 border-1 border-gray-2 p-4 bg-white"
       >
         <nav>
           <h3>Rules</h3>
@@ -31,7 +31,7 @@
         </nav>
       </aside>
 
-      <main class="column-span-6">
+      <main class="column-span-8">
         <div class="c-3">
           <slot />
 
@@ -48,7 +48,7 @@
 
       <aside
         v-if="slotKeys.length"
-        class="column-span-3 sticky top-0 border-1 border-gray-2 p-4 bg-white"
+        class="column-span-2 sticky top-0 border-1 border-gray-2 p-4 bg-white"
       >
         <h4>On this page</h4>
         <ul class="capitalize">
