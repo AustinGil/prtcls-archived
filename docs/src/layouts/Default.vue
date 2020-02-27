@@ -17,9 +17,7 @@
       </a>
     </header>
 
-    <div
-      class="layout-default grid columns-3 gap-4 items-start my-10 mx-auto px-4"
-    >
+    <div class="layout-default grid gap-4 items-start my-10 mx-auto px-4">
       <aside class="sticky top-0 border-1 border-gray-2 p-4 bg-white">
         <nav>
           <h3>Rules</h3>
