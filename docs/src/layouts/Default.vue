@@ -29,7 +29,7 @@
         </nav>
       </aside>
 
-      <main class="max-w-10 mx-auto">
+      <main class="w-full max-w-10 mx-auto">
         <slot />
 
         <section
@@ -93,24 +93,16 @@ export default {
       to: "/overflow/"
     },
     {
+      text: "Grid",
+      to: "/grid/"
+    },
+    {
       text: "Align",
       to: "/align/"
     },
     {
       text: "Justify",
       to: "/justify/"
-    },
-    {
-      text: "Grid Columns Rows",
-      to: "/grid-columns-rows/"
-    },
-    {
-      text: "Grid Gap",
-      to: "/grid-gap/"
-    },
-    {
-      text: "Grid Span",
-      to: "/grid-span/"
     },
     {
       text: "Flex Direction",

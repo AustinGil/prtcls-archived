@@ -31,53 +31,53 @@ $classMap: map-merge(
 }
 
 @each $value in 0, auto {
-  $classMap: map-merge(
-    $classMap,
-    (
-      inset-#{$value}:
-        (
-          top: $value,
-          bottom: $value,
-          left: $value,
-          right: $value
-        )
-    )
-  );
+  // $classMap: map-merge(
+  //   $classMap,
+  //   (
+  //     inset-#{$value}:
+  //       (
+  //         top: $value,
+  //         bottom: $value,
+  //         left: $value,
+  //         right: $value
+  //       )
+  //   )
+  // );
 
-  $classMap: map-merge(
-    $classMap,
-    (
-      inset-y-#{$value}:
-        (
-          top: $value,
-          bottom: $value
-        )
-    )
-  );
+  // $classMap: map-merge(
+  //   $classMap,
+  //   (
+  //     inset-y-#{$value}:
+  //       (
+  //         top: $value,
+  //         bottom: $value
+  //       )
+  //   )
+  // );
 
-  $classMap: map-merge(
-    $classMap,
-    (
-      inset-x-#{$value}:
-        (
-          left: $value,
-          right: $value
-        )
-    )
-  );
+  // $classMap: map-merge(
+  //   $classMap,
+  //   (
+  //     inset-x-#{$value}:
+  //       (
+  //         left: $value,
+  //         right: $value
+  //       )
+  //   )
+  // );
 
   @each $side in top, bottom, left, right {
     $classMap: map-merge($classMap, (#{$side}-#{$value}: (#{$side}: $value)));
   }
 }
 
-@for $denominator from 2 through 4 {
-  @for $numerator from 1 through ($denominator - 1) {
-    @each $side in top, bottom, left, right {
-      $classMap: map-merge(
-        $classMap,
-        (#{$side}-#{$numerator}\/#{$denominator}: (#{$side}: $numerator / $denominator * 100%))
-      );
-    }
-  }
-}
+// @for $denominator from 2 through 4 {
+//   @for $numerator from 1 through ($denominator - 1) {
+//     @each $side in top, bottom, left, right {
+//       $classMap: map-merge(
+//         $classMap,
+//         (#{$side}-#{$numerator}\/#{$denominator}: (#{$side}: $numerator / $denominator * 100%))
+//       );
+//     }
+//   }
+// }

@@ -18,12 +18,48 @@
       />
     </template>
 
-    <template #overflow>
-      <h2>.overflow</h2>
-      <p>Sets the general overflow property.</p>
+    <template #overflow-hidden>
+      <h2>.overflow-hidden</h2>
+      <p>Sets the general overflow property to <code>hidden</code>.</p>
       <PExample
         :html="
-          `<div class=&quot;max-h-4 p-3 bg-gray-2&quot;>
+          `<div class=&quot;overflow-hidden max-h-3 p-3 bg-gray-2&quot;>
+  ${$options.text}
+</div>`
+        "
+      />
+    </template>
+
+    <template #overflow-visible>
+      <h2>.overflow-visible</h2>
+      <p>Sets the general overflow property to <code>visible</code>.</p>
+      <PExample
+        :html="
+          `<div class=&quot;overflow-visible max-h-3 p-3 bg-gray-2&quot;>
+  ${$options.text}
+</div>`
+        "
+      />
+    </template>
+
+    <template #overflow-scroll>
+      <h2>.overflow-scroll</h2>
+      <p>Sets the general overflow property to <code>scroll</code>.</p>
+      <PExample
+        :html="
+          `<div class=&quot;overflow-scroll h-3 p-3 bg-gray-2&quot;>
+  Not nearly enough content...
+</div>`
+        "
+      />
+    </template>
+
+    <template #overflow-auto>
+      <h2>.overflow-auto</h2>
+      <p>Sets the general overflow property to <code>auto</code>.</p>
+      <PExample
+        :html="
+          `<div class=&quot;overflow-auto max-h-3 p-3 bg-gray-2&quot;>
   ${$options.text}
 </div>`
         "

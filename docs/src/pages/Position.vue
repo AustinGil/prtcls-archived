@@ -22,22 +22,34 @@
           '.left-0': 'left: 0;',
           '.left-auto': 'left: auto;',
           '.right-0': 'right: 0;',
-          '.right-auto': 'right: auto;',
-          '.inset-0': 'top: 0, bottom: 0, left: 0, right: 0;',
+          '.right-auto': 'right: auto;'
+        }"
+      />
+      <!-- '.inset-0': 'top: 0, bottom: 0, left: 0, right: 0;',
           '.inset-auto': 'top: auto, bottom: auto, left: auto, right: auto;',
           '.inset-x-0': 'left: 0, right: 0;',
           '.inset-x-auto': 'left: auto, right: auto;',
           '.inset-y-0': 'top: 0, bottom: 0;',
-          '.inset-y-auto': 'top: auto, bottom: auto;'
-        }"
-      />
+          '.inset-y-auto': 'top: auto, bottom: auto;' -->
     </template>
 
     <template #positioning>
       <h2>Positioning</h2>
       <PExample
         :html="
-          `<small>.bottom-0.right-0</small>
+          `<small>.top-0.left-0</small>
+<div class=&quot;relative w-3 h-3 bg-gray-1&quot;>
+  <div class=&quot;absolute top-0 left-0 p-3 bg-gray-3&quot;></div>
+</div>
+<small>.top-0.right-0</small>
+<div class=&quot;relative w-3 h-3 bg-gray-1&quot;>
+  <div class=&quot;absolute top-0 right-0 p-3 bg-gray-3&quot;></div>
+</div>
+<small>.bottom-0.left-0</small>
+<div class=&quot;relative w-3 h-3 bg-gray-1&quot;>
+  <div class=&quot;absolute bottom-0 left-0 p-3 bg-gray-3&quot;></div>
+</div>
+<small>.bottom-0.right-0</small>
 <div class=&quot;relative w-3 h-3 bg-gray-1&quot;>
   <div class=&quot;absolute bottom-0 right-0 p-3 bg-gray-3&quot;></div>
 </div>`
@@ -45,7 +57,7 @@
       />
     </template>
 
-    <template #inset>
+    <!-- <template #inset>
       <h2>Inset</h2>
       <PExample
         :html="
@@ -65,7 +77,7 @@
 </div>`
         "
       />
-    </template>
+    </template> -->
   </Layout>
 </template>
 

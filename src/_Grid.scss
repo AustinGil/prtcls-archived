@@ -3,6 +3,9 @@
  * NOTE: Algin and Justify are defined in Flex.scss
  */
 
+$gridMax: 12 !default;
+$gaps: 4, 8, 16, 24, 32, 48, 64, 96 !default;
+
 $classMap: map-merge(
   $classMap,
   (
