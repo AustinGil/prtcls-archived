@@ -4,44 +4,19 @@
     (
       "w-#{$name}": (
         width: $value
-      )
-    )
-  );
-  $classMap: map-merge(
-    $classMap,
-    (
+      ),
       "min-w-#{$name}": (
         min-width: $value
-      )
-    )
-  );
-  $classMap: map-merge(
-    $classMap,
-    (
+      ),
       "max-w-#{$name}": (
         max-width: $value
-      )
-    )
-  );
-  $classMap: map-merge(
-    $classMap,
-    (
+      ),
       "h-#{$name}": (
         height: $value
-      )
-    )
-  );
-  $classMap: map-merge(
-    $classMap,
-    (
+      ),
       "min-h-#{$name}": (
         min-height: $value
-      )
-    )
-  );
-  $classMap: map-merge(
-    $classMap,
-    (
+      ),
       "max-h-#{$name}": (
         max-height: $value
       )
@@ -56,44 +31,19 @@
     (
       "w-#{$i}": (
         width: $value
-      )
-    )
-  );
-  $classMap: map-merge(
-    $classMap,
-    (
+      ),
       "min-w-#{$i}": (
         min-width: $value
-      )
-    )
-  );
-  $classMap: map-merge(
-    $classMap,
-    (
+      ),
       "max-w-#{$i}": (
         max-width: $value
-      )
-    )
-  );
-  $classMap: map-merge(
-    $classMap,
-    (
+      ),
       "h-#{$i}": (
         height: $value
-      )
-    )
-  );
-  $classMap: map-merge(
-    $classMap,
-    (
+      ),
       "min-h-#{$i}": (
         min-height: $value
-      )
-    )
-  );
-  $classMap: map-merge(
-    $classMap,
-    (
+      ),
       "max-h-#{$i}": (
         max-height: $value
       )
@@ -108,48 +58,23 @@
         w-#{$numerator}\/#{$denominator}:
           (
             width: $numerator / $denominator * 100%
-          )
-      )
-    );
-    $classMap: map-merge(
-      $classMap,
-      (
+          ),
         min-w-#{$numerator}\/#{$denominator}:
           (
             min-width: $numerator / $denominator * 100%
-          )
-      )
-    );
-    $classMap: map-merge(
-      $classMap,
-      (
+          ),
         max-w-#{$numerator}\/#{$denominator}:
           (
             max-width: $numerator / $denominator * 100%
-          )
-      )
-    );
-    $classMap: map-merge(
-      $classMap,
-      (
+          ),
         h-#{$numerator}\/#{$denominator}:
           (
             height: $numerator / $denominator * 100%
-          )
-      )
-    );
-    $classMap: map-merge(
-      $classMap,
-      (
+          ),
         min-h-#{$numerator}\/#{$denominator}:
           (
             min-height: $numerator / $denominator * 100%
-          )
-      )
-    );
-    $classMap: map-merge(
-      $classMap,
-      (
+          ),
         max-h-#{$numerator}\/#{$denominator}:
           (
             max-height: $numerator / $denominator * 100%

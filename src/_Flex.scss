@@ -97,12 +97,7 @@ $classMap: map-merge(
   (
     flex-grow: (
       flex-grow: 1
-    )
-  )
-);
-$classMap: map-merge(
-  $classMap,
-  (
+    ),
     flex-shrink: (
       flex-shrink: 1
     )
@@ -114,13 +109,7 @@ $classMap: map-merge(
     (
       "flex-grow-#{$i}": (
         flex-grow: $i
-      )
-    )
-  );
-
-  $classMap: map-merge(
-    $classMap,
-    (
+      ),
       "flex-shrink-#{$i}": (
         flex-shrink: $i
       )

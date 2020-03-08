@@ -60,30 +60,3 @@ $classMap: map-merge(
     )
   )
 );
-
-@each $value in auto, hidden, visible, scroll {
-  $classMap: map-merge(
-    $classMap,
-    (
-      "overflow-#{$value}": (
-        overflow: $value
-      )
-    )
-  );
-  $classMap: map-merge(
-    $classMap,
-    (
-      "overflow-x-#{$value}": (
-        overflow: $value
-      )
-    )
-  );
-  $classMap: map-merge(
-    $classMap,
-    (
-      "overflow-y-#{$value}": (
-        overflow: $value
-      )
-    )
-  );
-}

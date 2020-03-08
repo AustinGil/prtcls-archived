@@ -11,9 +11,19 @@ $classMap: map-merge(
   (
     columns-auto: (
       grid-template-columns: repeat(auto-fit, minmax(0, 1fr))
+    ),
+    rows-auto: (
+      grid-template-rows: auto
+    ),
+    flow-row: (
+      grid-auto-flow: row
+    ),
+    flow-column: (
+      grid-auto-flow: column
     )
   )
 );
+
 @for $i from 1 through $gridMax {
   $classMap: map-merge(
     $classMap,
@@ -21,12 +31,7 @@ $classMap: map-merge(
       columns-#{$i}:
         (
           grid-template-columns: repeat($i, minmax(0, 1fr))
-        )
-    )
-  );
-  $classMap: map-merge(
-    $classMap,
-    (
+        ),
       rows-#{$i}:
         (
           grid-template-rows: repeat($i, 1fr)
@@ -39,22 +44,11 @@ $classMap: map-merge(
   $classMap,
   (
     gap-0: (
-      grid-column-gap: 0,
-      grid-row-gap: 0
-    )
-  )
-);
-$classMap: map-merge(
-  $classMap,
-  (
+      grid-gap: 0
+    ),
     column-gap-0: (
       grid-column-gap: 0
-    )
-  )
-);
-$classMap: map-merge(
-  $classMap,
-  (
+    ),
     row-gap-0: (
       grid-row-gap: 0
     )
@@ -67,23 +61,12 @@ $classMap: map-merge(
     (
       gap-#{$i}:
         (
-          grid-column-gap: $value,
-          grid-row-gap: $value
-        )
-    )
-  );
-  $classMap: map-merge(
-    $classMap,
-    (
+          grid-gap: $value
+        ),
       column-gap-#{$i}:
         (
           grid-column-gap: $value
-        )
-    )
-  );
-  $classMap: map-merge(
-    $classMap,
-    (
+        ),
       row-gap-#{$i}:
         (
           grid-row-gap: $value
@@ -96,15 +79,10 @@ $classMap: map-merge(
   $classMap,
   (
     column-span-full: (
-      grid-column: 1/-1
-    )
-  )
-);
-$classMap: map-merge(
-  $classMap,
-  (
+      grid-column: #{1}/#{-1}
+    ),
     row-span-full: (
-      grid-row: 1/-1
+      grid-row: #{1}/#{-1}
     )
   )
 );
