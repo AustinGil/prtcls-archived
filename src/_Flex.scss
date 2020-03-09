@@ -24,62 +24,6 @@ $flexWraps: nowrap, wrap, wrap-reverse;
   );
 }
 
-@each $name, $value in (baseline, baseline), (center, center), (end, flex-end), (start, flex-start),
-  (stretch, stretch)
-{
-  $classMap: map-merge(
-    $classMap,
-    (
-      items-#{$name}:
-        (
-          align-items: $value
-        )
-    )
-  );
-}
-
-@each $name, $value in (auto, auto), (center, center), (end, flex-end), (start, flex-start),
-  (stretch, stretch)
-{
-  $classMap: map-merge(
-    $classMap,
-    (
-      self-#{$name}:
-        (
-          align-self: $value
-        )
-    )
-  );
-}
-
-@each $name, $value in (center, center), (end, flex-end), (start, flex-start), (stretch, stretch),
-  (around, space-around), (between, space-between), (evenly, space-evenly)
-{
-  $classMap: map-merge(
-    $classMap,
-    (
-      content-#{$name}:
-        (
-          align-content: $value
-        )
-    )
-  );
-}
-
-@each $name, $value in (center, center), (end, flex-end), (start, flex-start),
-  (around, space-around), (between, space-between), (evenly, space-evenly)
-{
-  $classMap: map-merge(
-    $classMap,
-    (
-      justify-#{$name}:
-        (
-          justify-content: $value
-        )
-    )
-  );
-}
-
 @each $name, $value in (initial, 0 1 auto), (1, 1 1 0%), (auto, 1 1 auto), (none, none) {
   $classMap: map-merge(
     $classMap,
@@ -103,16 +47,3 @@ $classMap: map-merge(
     )
   )
 );
-@for $i from 0 through 4 {
-  $classMap: map-merge(
-    $classMap,
-    (
-      "flex-grow-#{$i}": (
-        flex-grow: $i
-      ),
-      "flex-shrink-#{$i}": (
-        flex-shrink: $i
-      )
-    )
-  );
-}

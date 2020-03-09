@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="flex justify-between p-4 border-b-1 border-gray-2">
+    <header class="flex justify-content-between p-4 border-b-1 border-gray-2">
       <g-link to="/">
         <img
           src="/img/icon.svg"
@@ -17,7 +17,7 @@
       </a>
     </header>
 
-    <div class="layout-default grid gap-4 items-start my-10 mx-auto px-4">
+    <div class="layout-default grid gap-4 align-items-start my-10 mx-auto px-4">
       <aside class="sticky top-0 border-1 border-gray-2 p-4 bg-white">
         <nav>
           <h3>Rules</h3>
@@ -97,20 +97,12 @@ export default {
       to: "/grid/"
     },
     {
-      text: "Align",
-      to: "/align/"
+      text: "Flexbox",
+      to: "/flexbox/"
     },
     {
-      text: "Justify",
-      to: "/justify/"
-    },
-    {
-      text: "Flex Direction",
-      to: "/flex-direction/"
-    },
-    {
-      text: "Flex Wrap",
-      to: "/flex-wrap/"
+      text: "Align & Justify",
+      to: "/align-justify/"
     },
     {
       text: "Width & Height",
