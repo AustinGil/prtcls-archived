@@ -8,7 +8,8 @@
       <PTable
         :headers="['Variable', 'Default']"
         :values="{
-          $gridMax: 'Sets the max number of grid columns and rows. Defualt: 12',
+          $maxColumns:
+            'Sets the max number of grid columns and rows. Defualt: 12',
           $gaps:
             'List of options for grid-gaps. Defualt: .25rem, .5rem, 1rem, 1.5rem, 2rem, 3rem, 4rem'
         }"
@@ -21,6 +22,7 @@
         :headers="['Class', 'Properties']"
         :values="{
           '.grid': 'display: grid;',
+          '.inline-grid': 'display: inline-grid;',
           '.columns-auto':
             'grid-template-columns: repeat(auto-fit, minmax(0, 1fr))',
           '.columns-{1-12}': 'grid-template-columns: {1-12};',

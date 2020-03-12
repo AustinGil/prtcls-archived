@@ -1,85 +1,89 @@
-@each $name, $value in (0, 0), (auto, auto), (full, 100%), (screen, 100vw) {
-  $classMap: map-merge(
-    $classMap,
-    (
-      "w-#{$name}": (
-        width: $value
-      ),
-      "min-w-#{$name}": (
-        min-width: $value
-      ),
-      "max-w-#{$name}": (
-        max-width: $value
-      ),
-      "h-#{$name}": (
-        height: $value
-      ),
-      "min-h-#{$name}": (
-        min-height: $value
-      ),
-      "max-h-#{$name}": (
-        max-height: $value
-      )
-    )
-  );
-}
+$sizes: 8, 16, 24, 32, 48, 64, 96, 128, 256, 384, 512, 640, 768, 1024, 1280 !default;
+$maxDenominator: $maxColumns !default;
 
-@for $i from 1 through length($sizes) {
-  $value: nth($sizes, $i) / $remBase * 1rem;
-  $classMap: map-merge(
-    $classMap,
-    (
-      "w-#{$i}": (
-        width: $value
-      ),
-      "min-w-#{$i}": (
-        min-width: $value
-      ),
-      "max-w-#{$i}": (
-        max-width: $value
-      ),
-      "h-#{$i}": (
-        height: $value
-      ),
-      "min-h-#{$i}": (
-        min-height: $value
-      ),
-      "max-h-#{$i}": (
-        max-height: $value
-      )
-    )
-  );
-}
-@for $denominator from 2 through 12 {
-  @for $numerator from 1 through ($denominator - 1) {
+@each $shorty, $prop in ("w", "width"), ("h", "height") {
+  @each $name, $value in (0, 0), (auto, auto), (full, 100%) {
     $classMap: map-merge(
       $classMap,
       (
-        w-#{$numerator}\/#{$denominator}:
-          (
-            width: $numerator / $denominator * 100%
-          ),
-        min-w-#{$numerator}\/#{$denominator}:
-          (
-            min-width: $numerator / $denominator * 100%
-          ),
-        max-w-#{$numerator}\/#{$denominator}:
-          (
-            max-width: $numerator / $denominator * 100%
-          ),
-        h-#{$numerator}\/#{$denominator}:
-          (
-            height: $numerator / $denominator * 100%
-          ),
-        min-h-#{$numerator}\/#{$denominator}:
-          (
-            min-height: $numerator / $denominator * 100%
-          ),
-        max-h-#{$numerator}\/#{$denominator}:
-          (
-            max-height: $numerator / $denominator * 100%
-          )
+        "#{$shorty}-#{$name}": (
+          #{$prop}: $value
+        ),
+        "min-#{$shorty}-#{$name}": (
+          min-#{$prop}: $value
+        ),
+        "max-#{$shorty}-#{$name}": (
+          max-#{$prop}: $value
+        )
       )
     );
   }
+
+  @each $unit in "vw", "vh" {
+    $classMap: map-merge(
+      $classMap,
+      (
+        "#{$shorty}-screen": (
+          #{$prop}: 100$unit
+        ),
+        "min-#{$shorty}-screen": (
+          min-#{$prop}: 100$unit
+        ),
+        "max-#{$shorty}-screen": (
+          max-#{$prop}: 100$unit
+        )
+      )
+    );
+  }
+
+  @for $i from 1 through length($sizes) {
+    $value: nth($sizes, $i) / $remBase * 1rem;
+    $classMap: map-merge(
+      $classMap,
+      (
+        "#{$shorty}-#{$i}": (
+          #{$prop}: $value
+        ),
+        "min-#{$shorty}-#{$i}": (
+          min-#{$prop}: $value
+        ),
+        "max-#{$shorty}-#{$i}": (
+          max-#{$prop}: $value
+        )
+      )
+    );
+  }
+
+  @for $denominator from 2 through $maxDenominator {
+    @for $numerator from 1 through ($denominator - 1) {
+      $classMap: map-merge(
+        $classMap,
+        (
+          #{$shorty}-#{$numerator}\/#{$denominator}: (#{$prop}: $numerator / $denominator * 100%),
+          min-#{$shorty}-#{$numerator}\/#{$denominator}:
+            (min-#{$prop}: $numerator / $denominator * 100%),
+          max-#{$shorty}-#{$numerator}\/#{$denominator}:
+            (max-#{$prop}: $numerator / $denominator * 100%)
+        )
+      );
+    }
+  }
+}
+
+@for $i from 1 through length($breakpoints) {
+  $value: nth($breakpoints, $i) / $remBase * 1rem;
+  $classMap: map-merge(
+    $classMap,
+    (
+      "w-bp#{$i}": (
+        width: $value
+      ),
+      "min-w-bp#{$i}": (
+        min-width: $value
+      ),
+      "max-w-bp#{$i}": (
+        max-width: $value
+      )
+    )
+  );
 }

@@ -81,14 +81,14 @@
           :key="item"
           :html="
             `<small>.grid.align-content-${item}</small>
-<div class=&quot;grid columns-auto align-content-${item} h-3 border-1&quot;>
+<div class=&quot;grid columns-auto align-content-${item} h-8 border-1&quot;>
   <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
   <div class=&quot;border-1 border-gray-3 p-8 bg-gray-1&quot;></div>
   <div class=&quot;border-1 border-gray-3 p-6 bg-gray-1&quot;></div>
   <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
 </div>
 <small>.flex.align-content-${item}</small>
-<div class=&quot;flex align-content-${item} h-3 border-1&quot;>
+<div class=&quot;flex align-content-${item} h-8 border-1&quot;>
   <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
   <div class=&quot;border-1 border-gray-3 p-8 bg-gray-1&quot;></div>
   <div class=&quot;border-1 border-gray-3 p-6 bg-gray-1&quot;></div>
@@ -111,13 +111,13 @@
         <PExample
           :key="item"
           :html="
-            `<div class=&quot;grid columns-auto h-3 border-1&quot;>
+            `<div class=&quot;grid columns-auto h-8 border-1&quot;>
   <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
   <div class=&quot;align-self-${item} border-1 border-gray-3 p-4 bg-purple-1&quot;></div>
   <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
   <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
 </div>
-<div class=&quot;flex h-3 border-1&quot;>
+<div class=&quot;flex h-8 border-1&quot;>
   <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
   <div class=&quot;align-self-${item} border-1 border-gray-3 p-4 bg-purple-1&quot;></div>
   <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>

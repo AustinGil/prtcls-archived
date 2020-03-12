@@ -29,7 +29,7 @@
         </nav>
       </aside>
 
-      <main class="w-full max-w-10 mx-auto">
+      <main class="w-full max-w-15 mx-auto">
         <slot />
 
         <section
@@ -115,10 +115,6 @@ export default {
     {
       text: "Border",
       to: "/border/"
-    },
-    {
-      text: "Border Radius",
-      to: "/border-radius/"
     },
     {
       text: "Color",

@@ -8,6 +8,8 @@
       <PTable
         :headers="['Class', 'Properties']"
         :values="{
+          '.flex': 'display: flex;',
+          '.inline-flex': 'display: inline-flex;',
           '.flex-row': 'flex-direction: row;',
           '.flex-row-reverse': 'flex-direction: row-reverse;',
           '.flex-column': 'flex-direction: column;',

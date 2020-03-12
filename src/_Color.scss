@@ -56,6 +56,14 @@ $lums: 95%, 86%, 76%, 66%, 57%, 48%, 38%, 29%, 20%;
         ),
         "border-r-#{$name}-#{$i}": (
           border-right-color: hsl($h, $s, $l)
+        ),
+        "border-y-#{$name}-#{$i}": (
+          border-top-color: hsl($h, $s, $l),
+          border-bottom-color: hsl($h, $s, $l)
+        ),
+        "border-x-#{$name}-#{$i}": (
+          border-left-color: hsl($h, $s, $l),
+          border-right-color: hsl($h, $s, $l)
         )
       )
     );

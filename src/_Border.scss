@@ -1,3 +1,6 @@
+$borderWidths: 1, 2, 4, 8 !default;
+$radii: 4, 8, 12, 16 !default;
+
 $classMap: map-merge(
   $classMap,
   (
@@ -65,27 +68,27 @@ $classMap: map-merge(
     $classMap,
     (
       "border-#{$style}": (
-        border: $style
+        border-style: $style
       ),
       "border-y-#{$style}": (
-        border-top: $style,
-        border-bottom: $style
+        border-top-style: $style,
+        border-bottom-style: $style
       ),
       "border-x-#{$style}": (
-        border-left: $style,
-        border-right: $style
+        border-left-style: $style,
+        border-right-style: $style
       ),
       "border-t-#{$style}": (
-        border-top: $style
+        border-top-style: $style
       ),
       "border-b-#{$style}": (
-        border-bottom: $style
+        border-bottom-style: $style
       ),
       "border-l-#{$style}": (
-        border-left: $style
+        border-left-style: $style
       ),
       "border-r-#{$style}": (
-        border-right: $style
+        border-right-style: $style
       )
     )
   );

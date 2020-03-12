@@ -1,22 +1,17 @@
 $remBase: 16;
 
-$sizes: 32, 64, 128, 256, 384, 512, 640, 768, 1024, 1280 !default;
-
 $breakpoints: 640, 768, 1024, 1280 !default;
 
 $pseudos: hover, focus, (within, focus-within), active, visited, disabled, (first, first-child),
   (last, last-child), (even, nth-child(even)), (odd, nth-child(odd)), empty, invalid, required !default;
+
+$maxColumns: 12 !default;
 
 $white: #fff !default;
 $black: #000 !default;
 $colors: ("gray", 0), ("red", 0), ("orange", 25), ("yellow", 55), ("green", 110), ("cyan", 170),
   ("blue", 210), ("purple", 270), ("pink", 320) !default;
 $saturation: 70% !default;
-
-$spacers: 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 256, 512 !default;
-
-$borderWidths: 1, 2, 4, 8 !default;
-$radii: 4, 8, 12, 16 !default;
 
 $fontSans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
   "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
