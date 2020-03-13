@@ -117,12 +117,12 @@ export default {
       to: "/border/"
     },
     {
-      text: "Color",
-      to: "/color/"
+      text: "Font",
+      to: "/font/"
     },
     {
-      text: "Font Family",
-      to: "/font-family/"
+      text: "Color",
+      to: "/color/"
     },
     {
       text: "Font Size",

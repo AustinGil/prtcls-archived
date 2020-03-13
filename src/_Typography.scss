@@ -1,8 +1,28 @@
+$fontSans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+  "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  "Noto Color Emoji" !default;
+$fontSerif: Georgia, Cambria, "Times New Roman", Times, serif !default;
+$fontMono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$fonts: $fontSans, $fontSerif, $fontMono !default;
+$fontSizes: 12, 16, 20, 24, 32, 40, 48, 64, 96, 128 !default;
+
 @each $key, $value in (sans, $fontSans), (serif, $fontSerif), (mono, $fontMono) {
   $classMap: map-merge(
     $classMap,
     (
       "font-#{$key}": (
+        font-family: $value
+      )
+    )
+  );
+}
+
+@for $i from 1 through length($fonts) {
+  $value: nth($fonts, $i);
+  $classMap: map-merge(
+    $classMap,
+    (
+      "font-#{$i}": (
         font-family: $value
       )
     )
