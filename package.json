@@ -1,6 +1,6 @@
 {
   "name": "prtcls",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "src/main.scss",
   "files": [
     "src",
