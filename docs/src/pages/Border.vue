@@ -66,8 +66,8 @@
         "
       />
       <p>
-        See the <g-link to="/#colors">colors section</g-link> for more details
-        about what colors are available.
+        See the <g-link to="/color">colors section</g-link> for more information
+        about colors.
       </p>
     </template>
 

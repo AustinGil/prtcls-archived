@@ -2,8 +2,8 @@
   <Layout>
     <h1>Color</h1>
 
-    <template #colors>
-      <h2>Colors</h2>
+    <template #palette>
+      <h2>Palette</h2>
       <p>
         Particles CSS provides a default color palette that you can use for any
         of the CSS properties that apply a color (color, background-color,
@@ -63,25 +63,25 @@
       </p>
     </template>
 
-    <PTable
-      :headers="['Class', 'Properties']"
-      :values="{
-        '.color-white': 'color: #fff;',
-        '.color-black': 'color: #000;',
-        '.color-transparent': 'color: transparent;',
-        '.color-gray-{1-9}': 'color: {hsl value};',
-        '.color-{name}-{1-9}': 'color: {hsl value};'
-      }"
-    />
-    <p>
-      Default color names: red, orange, yellow, green, cyan, blue, purple, pink
-    </p>
+    <template #classes>
+      <h2>Classes</h2>
+      <PTable
+        :headers="['Class', 'Properties']"
+        :values="{
+          '.color-white': 'color: #fff;',
+          '.color-black': 'color: #000;',
+          '.color-transparent': 'color: transparent;',
+          '.color-gray-{1-9}': 'color: {hsl value};',
+          '.color-{name}-{1-9}': 'color: {hsl value};'
+        }"
+      />
+    </template>
 
-    <h3>Examples:</h3>
-    <p>Different colors</p>
-    <PExample
-      :html="
-        `<div class=&quot;color-white bg-black&quot;>Somewhere, something incredible is waiting to be known.</div>
+    <template #color>
+      <h2>Color</h2>
+      <PExample
+        :html="
+          `<div class=&quot;color-white bg-black&quot;>Somewhere, something incredible is waiting to be known.</div>
 <div class=&quot;color-black&quot;>Somewhere, something incredible is waiting to be known.</div>
 <div class=&quot;color-transparent&quot;>Somewhere, something incredible is waiting to be known.</div>
 <div class=&quot;color-gray-5&quot;>Somewhere, something incredible is waiting to be known.</div>
@@ -93,13 +93,13 @@
 <div class=&quot;color-blue-5&quot;>Somewhere, something incredible is waiting to be known.</div>
 <div class=&quot;color-purple-5&quot;>Somewhere, something incredible is waiting to be known.</div>
 <div class=&quot;color-pink-5&quot;>Somewhere, something incredible is waiting to be known.</div>`
-      "
-    />
+        "
+      />
 
-    <p>Different lightness</p>
-    <PExample
-      :html="
-        `<div class=&quot;color-purple-1&quot;>Somewhere, something incredible is waiting to be known.</div>
+      <p>Different lightness</p>
+      <PExample
+        :html="
+          `<div class=&quot;color-purple-1&quot;>Somewhere, something incredible is waiting to be known.</div>
 <div class=&quot;color-purple-2&quot;>Somewhere, something incredible is waiting to be known.</div>
 <div class=&quot;color-purple-3&quot;>Somewhere, something incredible is waiting to be known.</div>
 <div class=&quot;color-purple-4&quot;>Somewhere, something incredible is waiting to be known.</div>
@@ -108,8 +108,9 @@
 <div class=&quot;color-purple-7&quot;>Somewhere, something incredible is waiting to be known.</div>
 <div class=&quot;color-purple-8&quot;>Somewhere, something incredible is waiting to be known.</div>
 <div class=&quot;color-purple-9&quot;>Somewhere, something incredible is waiting to be known.</div>`
-      "
-    />
+        "
+      />
+    </template>
   </Layout>
 </template>
 

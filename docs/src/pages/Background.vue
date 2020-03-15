@@ -34,6 +34,10 @@
 <div class=&quot;bg-pink-5 p-4&quot;></div>`
         "
       />
+      <p>
+        See the <g-link to="/color">colors section</g-link> for more information
+        about colors.
+      </p>
     </template>
 
     <template #lightness>
