@@ -49,5 +49,16 @@ export default {
 <style lang="scss">
 .prtcls-table {
   max-height: 500px;
+
+  // http://lea.verou.me/2012/04/background-attachment-local/
+  background: linear-gradient(#fff 30%, transparent),
+    linear-gradient(transparent, #fff 70%) 0 100%,
+    radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.2), transparent),
+    radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.2), transparent)
+      0 100%;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
 }
 </style>
