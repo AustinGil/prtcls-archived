@@ -7,8 +7,10 @@
           :alt="$static.metadata.siteName"
           width="32"
           height="40"
+          class="mr-1"
         />
         <span class="visually-hidden">Particles CSS</span>
+        <span>v{{ $options.version }}</span>
       </g-link>
 
       <a href="https://github.com/stegosource/prtcls">
@@ -20,7 +22,7 @@
     <div class="layout-default grid gap-4 align-items-start my-10 mx-auto px-4">
       <aside class="sticky top-0 border-1 border-gray-2 p-4 bg-white">
         <nav>
-          <h3>Rules</h3>
+          <h3>Sections</h3>
           <ul class="nav">
             <li v-for="(link, i) in $options.links" :key="i">
               <g-link :to="link.to">{{ link.text }}</g-link>
@@ -66,12 +68,20 @@ query {
 </static-query>
 
 <script>
+import pkg from "../../../package.json";
+
 export default {
   data: () => ({
     drawer: false
   }),
 
+  version: pkg.version,
+
   links: [
+    {
+      text: "About",
+      to: "/"
+    },
     {
       text: "Display",
       to: "/display/"
@@ -121,32 +131,16 @@ export default {
       to: "/font/"
     },
     {
+      text: "Text",
+      to: "/text/"
+    },
+    {
       text: "Color",
       to: "/color/"
     },
     {
-      text: "Font Size",
-      to: "/font-size/"
-    },
-    {
-      text: "Font Weight",
-      to: "/font-weight/"
-    },
-    {
-      text: "Line Height",
-      to: "/line-height/"
-    },
-    {
-      text: "Letter Spacing",
-      to: "/letter-spacing/"
-    },
-    {
-      text: "Text Styling",
-      to: "/text-styling/"
-    },
-    {
-      text: "Background Color",
-      to: "/background-color/"
+      text: "Background",
+      to: "/background/"
     }
   ],
 

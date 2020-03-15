@@ -46,3 +46,30 @@ $classMap: map-merge(
     )
   );
 }
+
+$lineHeights: 1, 1.25, 1.375, 1.5, 1.625, 2;
+$letterSpacers: -0.05em, -0.025em, 0, 0.025em, 0.05em, 0.1em;
+
+@for $i from 1 through length($lineHeights) {
+  $value: nth($lineHeights, $i);
+  $classMap: map-merge(
+    $classMap,
+    (
+      "line-h-#{$i}": (
+        line-height: $value
+      )
+    )
+  );
+}
+
+@for $i from 1 through length($letterSpacers) {
+  $value: nth($letterSpacers, $i);
+  $classMap: map-merge(
+    $classMap,
+    (
+      "spacing-#{$i}": (
+        letter-spacing: $value
+      )
+    )
+  );
+}
