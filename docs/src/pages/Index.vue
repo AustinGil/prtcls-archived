@@ -153,7 +153,7 @@ module.exports = {
         for the respective pseudo-classes.
       </p>
       <PTable
-        :headers="['Prefix', 'Breakpoint']"
+        :headers="['Prefix', 'Pseudo-class']"
         :values="{
           hover: ':hover',
           focus: ':focus',
