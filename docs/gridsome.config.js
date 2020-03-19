@@ -7,7 +7,14 @@
 
 module.exports = {
   siteName: "Particles CSS",
-  plugins: [],
+  plugins: [
+    {
+      use: "@gridsome/plugin-google-analytics",
+      options: {
+        id: "UA-32074770-17"
+      }
+    }
+  ],
   configureWebpack: {
     // plugins: [...(process.env.NODE_ENV === "production" ? [purgecss] : [])]
   }

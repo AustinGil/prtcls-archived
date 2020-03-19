@@ -47,8 +47,14 @@ ol[class] {
   list-style-type: none;
 }
 
-button {
+button,
+input,
+select,
+textarea {
   font: inherit;
+}
+
+button {
   @extend .border-0, .p-0, .bg-transparent;
 }
 
