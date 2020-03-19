@@ -4,6 +4,10 @@
   $classMap: map-merge(
     $classMap,
     (
+      align-#{$name}:
+        (
+          align-items: $value
+        ),
       align-items-#{$name}:
         (
           align-items: $value
@@ -35,6 +39,11 @@
       align-content-#{$name}:
         (
           align-content: $value
+        ),
+      justify-#{$name}:
+        // stretch doesnt work here
+        (
+          justify-content: $value
         ),
       justify-content-#{$name}:
         // stretch doesnt work here
