@@ -20,10 +20,10 @@
             'align-self: {auto|start|center|end|stretch};',
           '.jusitfy-{start|center|end|around|between|evenly|stretch}':
             'jusitfy-content: {start|center|end|space-around|space-between|space-evenly|stretch};',
-          '.jusitfy-items-{start|center|end|stretch}':
-            'jusitfy-items: {start|center|end|stretch};',
           '.jusitfy-content-{start|center|end|around|between|evenly|stretch}':
             'jusitfy-content: {start|center|end|space-around|space-between|space-evenly|stretch};',
+          '.jusitfy-items-{start|center|end|stretch}':
+            'jusitfy-items: {start|center|end|stretch};',
           '.jusitfy-self-{start|center|end|stretch}':
             'jusitfy-self: {start|center|end|stretch};'
         }"
