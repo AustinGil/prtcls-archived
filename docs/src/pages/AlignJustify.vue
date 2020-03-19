@@ -10,22 +10,22 @@
       <PTable
         :headers="['Class', 'Properties']"
         :values="{
-          '.align-{start|center|end|baseline|stretch}':
-            'align-items: {start|center|end|baseline|stretch};',
-          '.align-items-{start|center|end|baseline|stretch}':
-            'align-items: {start|center|end|baseline|stretch};',
-          '.align-content-{start|center|end|around|between|evenly|stretch}':
-            'align-content: {start|center|end|space-around|space-between|space-evenly|stretch};',
-          '.align-self-{auto|start|center|end|stretch}':
-            'align-self: {auto|start|center|end|stretch};',
-          '.jusitfy-{start|center|end|around|between|evenly|stretch}':
-            'jusitfy-content: {start|center|end|space-around|space-between|space-evenly|stretch};',
-          '.jusitfy-content-{start|center|end|around|between|evenly|stretch}':
-            'jusitfy-content: {start|center|end|space-around|space-between|space-evenly|stretch};',
-          '.jusitfy-items-{start|center|end|stretch}':
-            'jusitfy-items: {start|center|end|stretch};',
-          '.jusitfy-self-{start|center|end|stretch}':
-            'jusitfy-self: {start|center|end|stretch};'
+          '.align-{start, center, end, baseline, stretch}':
+            'align-items: {flex-start, center, flex-end, baseline, stretch};',
+          '.align-items-{start, center, end, baseline, stretch}':
+            'align-items: {flex-start, center, flex-end, baseline, stretch};',
+          '.align-content-{start, center, end, around, between, evenly, stretch}':
+            'align-content: {flex-start, center, flex-end, space-around, space-between, space-evenly, stretch};',
+          '.align-self-{auto, start, center, end, stretch}':
+            'align-self: {auto, start, center, end, stretch};',
+          '.jusitfy-{start, center, end, around, between, evenly, stretch}':
+            'jusitfy-content: {flex-start, center, flex-end, space-around, space-between, space-evenly, stretch};',
+          '.jusitfy-content-{start, center, end, around, between, evenly, stretch}':
+            'jusitfy-content: {flex-start, center, flex-end, space-around, space-between, space-evenly, stretch};',
+          '.jusitfy-items-{start, center, end, stretch}':
+            'jusitfy-items: {flex-start, center, flex-end, stretch};',
+          '.jusitfy-self-{start, center, end, stretch}':
+            'jusitfy-self: {flex-start, center, flex-end, stretch};'
         }"
       />
     </template>

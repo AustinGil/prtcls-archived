@@ -23,7 +23,7 @@
       <p>Sets the general overflow property to <code>hidden</code>.</p>
       <PExample
         :html="
-          `<div class=&quot;overflow-hidden max-h-3 p-3 bg-gray-2&quot;>
+          `<div class=&quot;overflow-hidden max-h-8 p-3 bg-gray-2&quot;>
   ${$options.text}
 </div>`
         "
@@ -35,7 +35,7 @@
       <p>Sets the general overflow property to <code>visible</code>.</p>
       <PExample
         :html="
-          `<div class=&quot;overflow-visible max-h-3 p-3 bg-gray-2&quot;>
+          `<div class=&quot;overflow-visible max-h-8 p-3 bg-gray-2&quot;>
   ${$options.text}
 </div>`
         "
@@ -59,7 +59,7 @@
       <p>Sets the general overflow property to <code>auto</code>.</p>
       <PExample
         :html="
-          `<div class=&quot;overflow-auto max-h-3 p-3 bg-gray-2&quot;>
+          `<div class=&quot;overflow-auto max-h-8 p-3 bg-gray-2&quot;>
   ${$options.text}
 </div>`
         "

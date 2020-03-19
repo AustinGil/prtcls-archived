@@ -99,10 +99,6 @@ export default {
       to: "/position/"
     },
     {
-      text: "Overflow",
-      to: "/overflow/"
-    },
-    {
       text: "Grid",
       to: "/grid/"
     },
@@ -117,6 +113,10 @@ export default {
     {
       text: "Width & Height",
       to: "/width-height/"
+    },
+    {
+      text: "Overflow",
+      to: "/overflow/"
     },
     {
       text: "Margin & Padding",
