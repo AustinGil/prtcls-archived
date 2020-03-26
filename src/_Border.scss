@@ -4,6 +4,35 @@ $radii: 4, 8, 12, 16 !default;
 $classMap: map-merge(
   $classMap,
   (
+    "border": (
+      border: 1px solid
+    ),
+    "border-y": (
+      border-top: 1px solid,
+      border-bottom: 1px solid
+    ),
+    "border-x": (
+      border-left: 1px solid,
+      border-right: 1px solid
+    ),
+    "border-t": (
+      border-top: 1px solid
+    ),
+    "border-b": (
+      border-bottom: 1px solid
+    ),
+    "border-l": (
+      border-left: 1px solid
+    ),
+    "border-r": (
+      border-right: 1px solid
+    )
+  )
+);
+
+$classMap: map-merge(
+  $classMap,
+  (
     "border-0": (
       border: 0
     ),

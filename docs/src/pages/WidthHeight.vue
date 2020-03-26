@@ -38,6 +38,32 @@
       />
     </template>
 
+    <template #width>
+      <h2>.w-{fraction}</h2>
+      <p>Sets the width of an item to the fractional percentage.</p>
+
+      <PExample
+        :html="
+          `<div class=&quot;border-1&quot;>
+  <div class=&quot;w-1/2 h-3 bg-purple-1&quot;></div>
+</div>`
+        "
+      />
+    </template>
+
+    <template #height>
+      <h2>.h-{fraction}</h2>
+      <p>Sets the height of an item to the fractional percentage.</p>
+
+      <PExample
+        :html="
+          `<div class=&quot;h-5 border-1&quot;>
+  <div class=&quot;h-1/2 h-3 bg-purple-1&quot;></div>
+</div>`
+        "
+      />
+    </template>
+
     <template #min-max>
       <h2>Min & Max</h2>
       <p>
@@ -47,13 +73,6 @@
         <code>max-{width|height}</code> respectively. For example:
         <code>.min-w-1/2</code> would render <code>min-width: 50%;</code>
       </p>
-    </template>
-
-    <template #width>
-      <h2>.w-{fraction}</h2>
-      <p>Sets the width of an item to the fractional percentage.</p>
-
-      <PExample :html="`<div class=&quot;w-1/2 h-3 bg-purple-1&quot;></div>`" />
     </template>
   </Layout>
 </template>

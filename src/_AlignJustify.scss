@@ -30,8 +30,8 @@
   );
 }
 
-@each $name, $value in (start, start), (end, end), (center, center), (between, space-between),
-  (around, space-around), (evenly, space-evenly), (stretch, stretch)
+@each $name, $value in (start, flex-start), (end, flex-end), (center, center),
+  (between, space-between), (around, space-around), (evenly, space-evenly), (stretch, stretch)
 {
   $classMap: map-merge(
     $classMap,

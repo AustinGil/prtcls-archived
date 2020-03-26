@@ -83,10 +83,10 @@
       <PExample
         :html="
           `<div class=&quot;p-4 mb-4 border-1 border-gray-3 bg-purple-2&quot;>
-  <div class=&quot;p-4 border-1 border-gray-3 bg-gray-1&quot;></div>
+  <div class=&quot;border-gray-3 bg-gray-1&quot;>Here's the content</div>
 </div>
-<div class=&quot;px-5 border-1 border-gray-3 bg-purple-2&quot;>
-  <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
+<div class=&quot;px-6 border-1 border-gray-3 bg-purple-2&quot;>
+  <div class=&quot;border-gray-3 bg-gray-1&quot;>Here's the content</div>
 </div>`
         "
       />

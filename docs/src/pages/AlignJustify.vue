@@ -31,25 +31,25 @@
     </template>
 
     <template #align-items>
-      <h2>.align-items-{position}</h2>
+      <h2>.align-{position}</h2>
       <p>Aligns grid items along block axis or flex items along cross axis.</p>
 
       <template
         v-for="item in ['start', 'center', 'end', 'baseline', 'stretch']"
       >
-        <h3 :key="item">.align-items-{{ item }}</h3>
+        <h3 :key="`${item}-header`">.align-{{ item }}</h3>
         <PExample
-          :key="item"
+          :key="`${item}-example`"
           :html="
-            `<small>.grid.align-items-${item}</small>
-<div class=&quot;grid columns-auto align-items-${item}&quot;>
+            `<small>.grid.align-${item}</small>
+<div class=&quot;grid columns-auto align-${item}&quot;>
   <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
   <div class=&quot;border-1 border-gray-3 p-8 bg-gray-1&quot;></div>
   <div class=&quot;border-1 border-gray-3 p-6 bg-gray-1&quot;></div>
   <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
 </div>
-<small>.flex.align-items-${item}</small>
-<div class=&quot;flex align-items-${item}&quot;>
+<small>.flex.align-${item}</small>
+<div class=&quot;flex align-${item}&quot;>
   <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
   <div class=&quot;border-1 border-gray-3 p-8 bg-gray-1&quot;></div>
   <div class=&quot;border-1 border-gray-3 p-6 bg-gray-1&quot;></div>
@@ -80,9 +80,9 @@
           'stretch'
         ]"
       >
-        <h3 :key="item">.align-content-{{ item }}</h3>
+        <h3 :key="`${item}-header`">.align-content-{{ item }}</h3>
         <PExample
-          :key="item"
+          :key="`${item}-example`"
           :html="
             `<small>.grid.align-content-${item}</small>
 <div class=&quot;grid columns-auto align-content-${item} h-8 border-1&quot;>
@@ -111,9 +111,9 @@
       </p>
 
       <template v-for="item in ['auto', 'start', 'center', 'end', 'stretch']">
-        <h3 :key="item">.align-self-{{ item }}</h3>
+        <h3 :key="`${item}-header`">.align-self-{{ item }}</h3>
         <PExample
-          :key="item"
+          :key="`${item}-example`"
           :html="
             `<div class=&quot;grid columns-auto h-8 border-1&quot;>
   <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
@@ -125,6 +125,104 @@
   <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
   <div class=&quot;align-self-${item} border-1 border-gray-3 p-4 bg-purple-1&quot;></div>
   <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+          "
+        />
+      </template>
+    </template>
+
+    <template #justify-content>
+      <h2>.justify-{position}</h2>
+      <p>Aligns grid items along block axis or flex items along cross axis.</p>
+
+      <template
+        v-for="item in [
+          'start',
+          'center',
+          'end',
+          'around',
+          'between',
+          'evenly',
+          'stretch'
+        ]"
+      >
+        <h3 :key="`${item}-header`">.justify-{{ item }}</h3>
+        <PExample
+          :key="`${item}-example`"
+          :html="
+            `<small>.grid.justify-${item}</small>
+<div class=&quot;grid columns-auto justify-${item}&quot;>
+  <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border-1 border-gray-3 p-8 bg-gray-1&quot;></div>
+  <div class=&quot;border-1 border-gray-3 p-6 bg-gray-1&quot;></div>
+  <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>
+<small>.flex.justify-${item}</small>
+<div class=&quot;flex justify-${item}&quot;>
+  <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border-1 border-gray-3 p-8 bg-gray-1&quot;></div>
+  <div class=&quot;border-1 border-gray-3 p-6 bg-gray-1&quot;></div>
+  <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+          "
+        />
+      </template>
+    </template>
+
+    <template #justify-items>
+      <h2>.justify-items-{position}</h2>
+      <p>Justify grid items along block axis or flex items along cross axis.</p>
+
+      <template
+        v-for="item in ['start', 'center', 'end', 'baseline', 'stretch']"
+      >
+        <h3 :key="`${item}-header`">.justify-items-{{ item }}</h3>
+        <PExample
+          :key="`${item}-example`"
+          :html="
+            `<small>.grid.justify-items-${item}</small>
+<div class=&quot;grid columns-auto justify-items-${item}&quot;>
+  <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border-1 border-gray-3 p-8 bg-gray-1&quot;></div>
+  <div class=&quot;border-1 border-gray-3 p-6 bg-gray-1&quot;></div>
+  <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>
+<small>.flex.justify-items-${item}</small>
+<div class=&quot;flex justify-items-${item}&quot;>
+  <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border-1 border-gray-3 p-8 bg-gray-1&quot;></div>
+  <div class=&quot;border-1 border-gray-3 p-6 bg-gray-1&quot;></div>
+  <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>`
+          "
+        />
+      </template>
+    </template>
+
+    <template #justify-self>
+      <h2>.justify-self-{position}</h2>
+      <p>Justify grid self along block axis or flex self along cross axis.</p>
+
+      <template
+        v-for="item in ['start', 'center', 'end', 'baseline', 'stretch']"
+      >
+        <h3 :key="`${item}-header`">.justify-self-{{ item }}</h3>
+        <PExample
+          :key="`${item}-example`"
+          :html="
+            `<small>.grid.justify-self-${item}</small>
+<div class=&quot;grid columns-auto justify-self-${item}&quot;>
+  <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border-1 border-gray-3 p-8 bg-gray-1&quot;></div>
+  <div class=&quot;border-1 border-gray-3 p-6 bg-gray-1&quot;></div>
+  <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
+</div>
+<small>.flex.justify-self-${item}</small>
+<div class=&quot;flex justify-self-${item}&quot;>
+  <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
+  <div class=&quot;border-1 border-gray-3 p-8 bg-gray-1&quot;></div>
+  <div class=&quot;border-1 border-gray-3 p-6 bg-gray-1&quot;></div>
   <div class=&quot;border-1 border-gray-3 p-4 bg-gray-1&quot;></div>
 </div>`
           "

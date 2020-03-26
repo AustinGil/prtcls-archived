@@ -8,6 +8,7 @@
       <PTable
         :headers="['Class', 'Properties']"
         :values="{
+          '.border': 'border: 1px solid;',
           '.border-0': 'border: 0;',
           '.border-{1-4}': 'border: {0.0625rem|0.125rem|0.25rem|0.5rem} solid;',
           '.border-{solid|dashed|dotted|none}':
@@ -30,6 +31,12 @@
           $radii: '0.25rem (4px), 0.5rem (8px), 0.75rem (12px), 1rem (16px)'
         }"
       />
+    </template>
+
+    <template #border>
+      <h2>.border</h2>
+      <p>A shortcut for <code>border: 1px solid;</code>.</p>
+      <PExample :html="`<div class=&quot;border p-4 bg-gray-1&quot;></div>`" />
     </template>
 
     <template #border-width>
