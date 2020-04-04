@@ -1,55 +1,72 @@
-@each $name, $value in (stretch, stretch), (start, flex-start), (end, flex-end), (center, center),
-  (baseline, baseline)
-{
+$itemAlignments: (stretch, stretch), (start, flex-start), (end, flex-end), (center, center),
+  (baseline, baseline);
+@each $name, $value in $itemAlignments {
   $classMap: map-merge(
     $classMap,
     (
       align-#{$name}:
         (
-          align-items: $value
+          align-items: $value,
         ),
       align-items-#{$name}:
         (
-          align-items: $value
+          align-items: $value,
         ),
       align-self-#{$name}:
         (
-          align-self: $value
+          align-self: $value,
         ),
       justify-items-#{$name}:
         // baseline doesnt work here
         (
-          justify-items: $value
+          justify-items: $value,
         ),
       justify-self-#{$name}:
         // baseline doesnt work here
         (
-          justify-self: $value
+          justify-self: $value,
         )
     )
   );
 }
 
-@each $name, $value in (start, flex-start), (end, flex-end), (center, center),
-  (between, space-between), (around, space-around), (evenly, space-evenly), (stretch, stretch)
-{
+$contentAlignments: (start, flex-start), (end, flex-end), (center, center), (between, space-between),
+  (around, space-around), (evenly, space-evenly), (stretch, stretch);
+@each $name, $value in $contentAlignments {
   $classMap: map-merge(
     $classMap,
     (
       align-content-#{$name}:
         (
-          align-content: $value
+          align-content: $value,
         ),
       justify-#{$name}:
         // stretch doesnt work here
         (
-          justify-content: $value
+          justify-content: $value,
         ),
       justify-content-#{$name}:
         // stretch doesnt work here
         (
-          justify-content: $value
+          justify-content: $value,
+        ),
+      place-#{$name}:
+        (
+          place-content: $value,
+        ),
+      place-content-#{$name}:
+        (
+          place-content: $value,
+        ),
+      place-self-#{$name}:
+        (
+          place-self: $value,
         )
     )
   );
+}
+
+:export {
+  itemAlignments: $itemAlignments;
+  contentAlignments: $contentAlignments;
 }
