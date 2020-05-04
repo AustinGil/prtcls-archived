@@ -23,7 +23,7 @@ $customProps: ();
   $customProps: map-merge(
     $customProps,
     (
-      "bp#{$i}": $value
+      "bp#{$i}": $value,
     )
   );
 }

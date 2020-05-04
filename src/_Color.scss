@@ -6,14 +6,14 @@
     $classMap,
     (
       "#{$prefix}-white": (
-        #{$rule}: $white
+        #{$rule}: $white,
       ),
       "#{$prefix}-black": (
-        #{$rule}: $black
+        #{$rule}: $black,
       ),
       "#{$prefix}-transparent": (
-        #{$rule}: transparent
-      )
+        #{$rule}: transparent,
+      ),
     )
   );
 }
@@ -37,41 +37,113 @@ $lums: 95%, 86%, 76%, 66%, 57%, 48%, 38%, 29%, 20%;
       $classMap,
       (
         "color-#{$name}-#{$i}": (
-          color: hsl($h, $s, $l)
+          color:
+            hsla(
+              var(--color-hue, $h),
+              var(--color-saturation, $s),
+              var(--color-lightness, $l),
+              var(--color-alpha, 1)
+            ),
         ),
         "bg-#{$name}-#{$i}": (
-          background-color: hsl($h, $s, $l)
+          background-color:
+            hsla(
+              var(--bg-hue, $h),
+              var(--bg-saturation, $s),
+              var(--bg-lightness, $l),
+              var(--bg-alpha, 1)
+            ),
         ),
         "border-#{$name}-#{$i}": (
-          border-color: hsl($h, $s, $l)
+          border-color:
+            hsla(
+              var(--border-hue, $h),
+              var(--border-saturation, $s),
+              var(--border-lightness, $l),
+              var(--border-alpha, 1)
+            ),
         ),
         "border-t-#{$name}-#{$i}": (
-          border-top-color: hsl($h, $s, $l)
+          border-top-color:
+            hsla(
+              var(--border-hue, $h),
+              var(--border-saturation, $s),
+              var(--border-lightness, $l),
+              var(--border-alpha, 1)
+            ),
         ),
         "border-b-#{$name}-#{$i}": (
-          border-bottom-color: hsl($h, $s, $l)
+          border-bottom-color:
+            hsla(
+              var(--border-hue, $h),
+              var(--border-saturation, $s),
+              var(--border-lightness, $l),
+              var(--border-alpha, 1)
+            ),
         ),
         "border-l-#{$name}-#{$i}": (
-          border-left-color: hsl($h, $s, $l)
+          border-left-color:
+            hsla(
+              var(--border-hue, $h),
+              var(--border-saturation, $s),
+              var(--border-lightness, $l),
+              var(--border-alpha, 1)
+            ),
         ),
         "border-r-#{$name}-#{$i}": (
-          border-right-color: hsl($h, $s, $l)
+          border-right-color:
+            hsla(
+              var(--border-hue, $h),
+              var(--border-saturation, $s),
+              var(--border-lightness, $l),
+              var(--border-alpha, 1)
+            ),
         ),
         "border-y-#{$name}-#{$i}": (
-          border-top-color: hsl($h, $s, $l),
-          border-bottom-color: hsl($h, $s, $l)
+          border-top-color:
+            hsla(
+              var(--border-hue, $h),
+              var(--border-saturation, $s),
+              var(--border-lightness, $l),
+              var(--border-alpha, 1)
+            ),
+          border-bottom-color:
+            hsla(
+              var(--border-hue, $h),
+              var(--border-saturation, $s),
+              var(--border-lightness, $l),
+              var(--border-alpha, 1)
+            ),
         ),
         "border-x-#{$name}-#{$i}": (
-          border-left-color: hsl($h, $s, $l),
-          border-right-color: hsl($h, $s, $l)
-        )
+          border-left-color:
+            hsla(
+              var(--border-hue, $h),
+              var(--border-saturation, $s),
+              var(--border-lightness, $l),
+              var(--border-alpha, 1)
+            ),
+          border-right-color:
+            hsla(
+              var(--border-hue, $h),
+              var(--border-saturation, $s),
+              var(--border-lightness, $l),
+              var(--border-alpha, 1)
+            ),
+        ),
       )
     );
 
     $customProps: map-merge(
       $customProps,
       (
-        "#{$name}-#{$i}": hsl($h, $s, $l)
+        "#{$name}-#{$i}":
+          hsla(
+            var(--color-hue, $h),
+            var(--color-saturation, $s),
+            var(--color-lightness, $l),
+            var(--color-alpha, 1)
+          ),
       )
     );
   }

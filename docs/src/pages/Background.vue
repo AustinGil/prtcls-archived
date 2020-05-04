@@ -56,6 +56,37 @@
         "
       />
     </template>
+
+    <template #opacity-alpha>
+      <h2>Opacity/Alpha</h2>
+      <PExample
+        :html="
+          `<div class='bg-png'>
+<div class=&quot;bg-opacity-0 bg-purple-5 p-4&quot;></div>
+<div class=&quot;bg-opacity-1 bg-purple-5 p-4&quot;></div>
+<div class=&quot;bg-opacity-2 bg-purple-5 p-4&quot;></div>
+<div class=&quot;bg-opacity-3 bg-purple-5 p-4&quot;></div>
+<div class=&quot;bg-opacity-4 bg-purple-5 p-4&quot;></div>
+<div class=&quot;bg-opacity-5 bg-purple-5 p-4&quot;></div>
+<div class=&quot;bg-opacity-6 bg-purple-5 p-4&quot;></div>
+<div class=&quot;bg-opacity-7 bg-purple-5 p-4&quot;></div>
+<div class=&quot;bg-opacity-8 bg-purple-5 p-4&quot;></div>
+<div class=&quot;bg-opacity-9 bg-purple-5 p-4&quot;></div>
+<div class=&quot;bg-opacity-10 bg-purple-5 p-4&quot;></div>
+</div>`
+        "
+      />
+    </template>
   </Layout>
 </template>
 
+<style lang="scss">
+.bg-png {
+  background-image: linear-gradient(45deg, lightgrey 25%, transparent 25%),
+    linear-gradient(-45deg, lightgrey 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, lightgrey 75%),
+    linear-gradient(-45deg, transparent 75%, lightgrey 75%);
+  background-size: 1rem 1rem;
+  background-position: 0 0, 0 0.5rem, 0.5rem -0.5rem, -0.5rem 0px;
+}
+</style>
