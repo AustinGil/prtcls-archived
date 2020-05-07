@@ -14,11 +14,11 @@
   "scripts": {
     "build": "rm -rf dist && parcel build src/main.scss --no-content-hash",
     "publish": "release-it",
-    "p": "parcel build --no-cache p.css"
+    "p": "parcel build --no-cache src/plugin.css"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "release-it": "^13.5.8",
-    "sass": "^1.24.0"
+    "sass": "^1.26.5"
   }
 }
