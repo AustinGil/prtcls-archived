@@ -4,7 +4,7 @@
     :class="{ 'prtcls-svg--icon': !!icon }"
     :style="{ fontSize: size && `${parseInt(size)}px` }"
   >
-    <use :xlink:href="`#${href}`" />
+    <use :href="`/img/icons.svg#${href}`" />
   </svg>
 </template>
 

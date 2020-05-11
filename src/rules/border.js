@@ -28,27 +28,27 @@ const xprt = {
     "border-right": "1px solid",
   },
   ".border-0": {
-    border: 0,
+    border: "0",
   },
   ".border-y-0": {
-    "border-top": 0,
-    "border-bottom": 0,
+    "border-top": "0",
+    "border-bottom": "0",
   },
   ".border-x-0": {
-    "border-left": 0,
-    "border-right": 0,
+    "border-left": "0",
+    "border-right": "0",
   },
   ".border-t-0": {
-    "border-top": 0,
+    "border-top": "0",
   },
   ".border-b-0": {
-    "border-bottom": 0,
+    "border-bottom": "0",
   },
   ".border-l-0": {
-    "border-left": 0,
+    "border-left": "0",
   },
   ".border-r-0": {
-    "border-right": 0,
+    "border-right": "0",
   },
 };
 
@@ -105,7 +105,7 @@ each(["solid", "dashed", "dotted", "double", "none"], (val) => {
   };
 });
 
-each({ 0: 0, full: "999px" }, ([key, val]) => {
+each({ 0: "0", full: "999px" }, ([key, val]) => {
   xprt[`.radius-${key}`] = {
     "border-radius": val,
   };

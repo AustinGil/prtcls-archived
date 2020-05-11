@@ -8,7 +8,7 @@ exports.isObject = (v) => typeof v === "object" && v !== null;
  * This callback is displayed as part of the Requester class.
  * @callback eachCb
  * @param {*} item
- * @param {number|string} index
+ * @param {number|string} [index]
  */
 /**
  * @param {*[]|object} v
@@ -28,8 +28,14 @@ exports.each = (v, cb) => {
   } else if (this.isObject(v)) {
     const entries = Object.entries(v);
     let i = 0;
-    while (i < v.length) {
+    while (i < entries.length) {
       cb(entries[i][1], entries[i][0]);
+      i++;
+    }
+  } else if (Number.isInteger(v)) {
+    let i = 0;
+    while (i < v) {
+      cb(i);
       i++;
     }
   }
