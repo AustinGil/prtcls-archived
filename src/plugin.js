@@ -15,14 +15,19 @@ const files = [
   "objectFit",
   "overflow",
   "position",
+  "shadow",
+  "size",
+  "spacing",
+  "text",
+  "whitespace",
 ];
 
 // TODO: variables
 const breakpoints = {
-  1: `${640 / 16}em`,
-  2: `${768 / 16}em`,
-  3: `${1024 / 16}em`,
-  4: `${1280 / 16}em`,
+  bp1: `${640 / 16}em`,
+  bp2: `${768 / 16}em`,
+  bp3: `${1024 / 16}em`,
+  bp4: `${1280 / 16}em`,
 };
 const pseudos = {
   hover: "hover",
@@ -43,12 +48,19 @@ const pseudos = {
 // Docs: https://api.postcss.org/postcss.html
 // Article: https://dev.to/mariowhowrites/parsing-open-source-tailwind-css-39j7
 module.exports = postcss.plugin("prtcls", (config) => (root) => {
-  // if (!_.isObject(config)) {
+  // if (!isObject(config)) {
   // delete require.cache[require.resolve(config)];
   // }
 
+  const atRules = Object.entries(breakpoints).reduce((map, [prefix, bp]) => {
+    map.set(prefix, postcss.atRule({ name: "media", params: `(min-width: ${bp})` }));
+    return map;
+  }, new Map());
+
   each(files, (name) => {
     const moduul = require(`./rules/${name}`);
+
+    // TODO: can any of this be faster?
     each(moduul, (decls, /** @type{string} */ selector) => {
       const rule = postcss.rule({ selector });
       each(decls, (value, /** @type{string} */ prop) => {
@@ -57,30 +69,21 @@ module.exports = postcss.plugin("prtcls", (config) => (root) => {
       root.append(rule);
 
       // Pseudos
-      // TODO: can this be faster?
       each(pseudos, (suffix, prefix) => {
-        const pseudoSelector = `.${prefix}\:${selector.slice(1)}:${suffix}`;
-        const pseudoRule = postcss.rule({ selector: pseudoSelector });
-        each(decls, (value, /** @type{string} */ prop) => {
-          pseudoRule.append(postcss.decl({ prop, value }));
-        });
+        const pseudoRule = rule.clone({ selector: `.${prefix}\:${selector.slice(1)}:${suffix}` });
         root.append(pseudoRule);
       });
 
       // Breakpoints
-      // each(breakpoints, (bp, key) => {
-      //   const prefix = `bp${key}`;
-
-      //   // @media (min-width: $bp) {
-      //   //   @each $class, $rules in $classMap {
-      //   //     .#{$prefix}\:#{$class} {
-      //   //       @each $property, $value in $rules {
-      //   //         #{$property}: $value;
-      //   //       }
-      //   //     }
-      //   //   }
-      //   // }
-      // });
+      each(breakpoints, (bp, prefix) => {
+        const atRule = atRules.get(prefix);
+        const bpRule = rule.clone({ selector: `.${prefix}\:${selector.slice(1)}` });
+        atRule.append(bpRule);
+      });
     });
+  });
+
+  atRules.forEach((atRule) => {
+    root.append(atRule);
   });
 });

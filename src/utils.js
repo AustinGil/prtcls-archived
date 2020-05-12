@@ -15,11 +15,13 @@ exports.isObject = (v) => typeof v === "object" && v !== null;
  * @param {eachCb} cb
  */
 exports.each = (v, cb) => {
-  // v.forEach(cb)
   // for (let i = 0, len = v.length; i < len; i++) {
   //   cb(v[i]);
   // }
   if (Array.isArray(v)) {
+    // for (let i = 0, len = v.length; i < len; i++) {
+    //   cb(v[i], i);
+    // }
     let i = 0;
     while (i < v.length) {
       cb(v[i], i);
@@ -27,12 +29,18 @@ exports.each = (v, cb) => {
     }
   } else if (this.isObject(v)) {
     const entries = Object.entries(v);
+    // for (let i = 0, len = entries.length; i < len; i++) {
+    //   cb(entries[i][1], entries[i][0]);
+    // }
     let i = 0;
     while (i < entries.length) {
       cb(entries[i][1], entries[i][0]);
       i++;
     }
   } else if (Number.isInteger(v)) {
+    // for (let i = 0, len = v; i < len; i++) {
+    //   cb(i);
+    // }
     let i = 0;
     while (i < v) {
       cb(i);
